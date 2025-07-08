@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.804958212817">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.11.0">
+
+    <!-- Primary Meta Tags -->
+    <title>NumPy pour la Physique : Feuille d’Activit&#233;s</title>
+    <meta name="title" content="NumPy pour la Physique : Feuille d’Activités">
+    <meta name="description" content="Crée un tableau NumPy avec les vitesses suivantes (en m/s) : 10, 20, 30, 40, 50.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.example.com/numpy/5-b-exos-numpy/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.example.com/numpy/5-b-exos-numpy/">
+    <meta property="og:title" content="NumPy pour la Physique : Feuille d’Activités">
+    <meta property="og:description" content="Crée un tableau NumPy avec les vitesses suivantes (en m/s) : 10, 20, 30, 40, 50.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.example.com/numpy/5-b-exos-numpy/">
+    <meta property="twitter:title" content="NumPy pour la Physique : Feuille d’Activités">
+    <meta property="twitter:description" content="Crée un tableau NumPy avec les vitesses suivantes (en m/s) : 10, 20, 30, 40, 50.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=3.11.0.804958212817" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.804958212817" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.804958212817" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.804958212817" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">PYTHON pour la Physique au lycée</span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="numpy-pour-la-physique--feuille-dactivités" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#numpy-pour-la-physique--feuille-dactivités">#</doc-anchor-trigger>
+        <span>NumPy pour la Physique : Feuille d’Activités</span>
+    </h1>
+</doc-anchor-target>
+<hr>
+<doc-anchor-target id="1-créer-un-tableau-1d">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-créer-un-tableau-1d">#</doc-anchor-trigger>
+        <span>1. Créer un Tableau 1D</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Crée un tableau NumPy avec les vitesses suivantes (en m/s) : 10, 20, 30, 40, 50.</p>
+</doc-tab>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np  # Importation de la bibliothèque NumPy
+vitesses = np.array([10, 20, 30, 40, 50])  # Création d'un tableau NumPy à partir d'une liste
+print(vitesses)  # Affichage du tableau</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>Sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[10 20 30 40 50]</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="2-calculer-lénergie-cinétique">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-calculer-lénergie-cinétique">#</doc-anchor-trigger>
+        <span>2. Calculer l’Énergie Cinétique</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Pour une masse de 2 kg, calcule l’énergie cinétique pour chaque vitesse du tableau précédent.
+(Énergie cinétique = 0.5 × m × v²)</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">masse = 2  # Masse en kilogrammes
+energie_cinetique = 0.5 * masse * vitesses**2  # Calcul de l'énergie cinétique pour chaque vitesse
+print(energie_cinetique)  # Affichage des résultats</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[ 100.  400.  900. 1600. 2500.]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="3-créer-un-tableau-de-temps">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-créer-un-tableau-de-temps">#</doc-anchor-trigger>
+        <span>3. Créer un Tableau de Temps</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Crée un tableau NumPy représentant le temps de 0 à 5 secondes par pas de 0,5 seconde.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">temps = np.arange(0, 5.5, 0.5)  # Création d'un tableau avec np.arange (début, fin exclue, pas)
+print(temps)  # Affichage du tableau</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[0.  0.5 1.  1.5 2.  2.5 3.  3.5 4.  4.5 5. ]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="4-calculer-un-déplacement">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-calculer-un-déplacement">#</doc-anchor-trigger>
+        <span>4. Calculer un Déplacement</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Pour une vitesse constante de 3 m/s, calcule le déplacement à chaque instant.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">vitesse = 3  # Vitesse constante en m/s
+deplacement = vitesse * temps  # Calcul du déplacement à chaque instant (d = v*t)
+print(deplacement)  # Affichage des résultats</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[ 0.   1.5  3.   4.5  6.   7.5  9.  10.5 12.  13.5 15. ]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="5-addition-de-vecteurs">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-addition-de-vecteurs">#</doc-anchor-trigger>
+        <span>5. Addition de Vecteurs</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Étant donnés deux vecteurs force : F1 = N, F2 = N, calcule le vecteur résultant.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">F1 = np.array([3, 4, 0])  # Création du vecteur F1
+F2 = np.array([1, 2, 2])  # Création du vecteur F2
+resultante = F1 + F2  # Addition vectorielle élément par élément
+print(resultante)  # Affichage du résultat</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[4 6 2]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="6-module-dun-vecteur">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#6-module-dun-vecteur">#</doc-anchor-trigger>
+        <span>6. Module d’un Vecteur</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Calcule le module du vecteur résultant précédent.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">module = np.linalg.norm(resultante)  # Calcul de la norme du vecteur avec np.linalg.norm
+print(module)  # Affichage du résultat</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">7.483314773547883</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="7-produit-scalaire">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#7-produit-scalaire">#</doc-anchor-trigger>
+        <span>7. Produit Scalaire</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Calcule le produit scalaire de F1 et F2.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">produit_scalaire = np.dot(F1, F2)  # Calcul du produit scalaire avec np.dot
+print(produit_scalaire)  # Affichage du résultat</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">11</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="8-produit-vectoriel">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#8-produit-vectoriel">#</doc-anchor-trigger>
+        <span>8. Produit Vectoriel</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Calcule le produit vectoriel de F1 et F2.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">produit_vectoriel = np.cross(F1, F2)  # Calcul du produit vectoriel avec np.cross
+print(produit_vectoriel)  # Affichage du résultat</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[ 8 -6 -2]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="9-simuler-une-chute-libre">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#9-simuler-une-chute-libre">#</doc-anchor-trigger>
+        <span>9. Simuler une Chute Libre</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Avec une vitesse initiale de 0 m/s et g = 9,8 m/s², calcule la vitesse à chaque seconde pendant 5 s.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">t = np.arange(0, 6, 1)  # Création d'un tableau de temps de 0 à 5 s
+g = 9.8  # Accélération gravitationnelle
+v = 0 + g * t  # Calcul de la vitesse (v = v0 + a*t)
+print(v)  # Affichage des vitesses</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[ 0.   9.8 19.6 29.4 39.2 49. ]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="10-sinus-dangles">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#10-sinus-dangles">#</doc-anchor-trigger>
+        <span>10. Sinus d’Angles</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Crée un tableau d’angles de 0° à 90° par pas de 15°, puis calcule leur sinus.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">angles_deg = np.arange(0, 91, 15)  # Création du tableau d'angles en degrés
+angles_rad = np.deg2rad(angles_deg)  # Conversion des angles en radians
+sinus = np.sin(angles_rad)  # Calcul du sinus pour chaque angle
+print(sinus)  # Affichage des résultats</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[0.         0.25881905 0.5        0.70710678 0.8660254  0.96592583 1.        ]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="11-mouvement-rectiligne-uniformément-accéléré">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#11-mouvement-rectiligne-uniformément-accéléré">#</doc-anchor-trigger>
+        <span>11. Mouvement Rectiligne Uniformément Accéléré</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Un mobile part du repos avec une accélération de 2 m/s². Calcule vitesse et position chaque seconde pendant 10 s.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">a = 2  # Accélération en m/s²
+t = np.arange(0, 11, 1)  # Temps de 0 à 10 s
+v = a * t  # Vitesse (v = a*t)
+x = 0.5 * a * t**2  # Position (x = 0.5*a*t²)
+print(&quot;Vitesse (m/s):&quot;, v)
+print(&quot;Position (m):&quot;, x)</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Vitesse (m/s): [ 0  2  4  6  8 10 12 14 16 18 20]
+Position (m): [  0.   1.   4.   9.  16.  25.  36.  49.  64.  81. 100.]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="12-énergie-mécanique-lors-dune-chute">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-énergie-mécanique-lors-dune-chute">#</doc-anchor-trigger>
+        <span>12. Énergie Mécanique lors d&#x27;une Chute</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Une balle de 0,2 kg tombe de 20 m. Calcule Ep, Ec et Em à chaque mètre.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">m = 0.2  # Masse en kg
+g = 9.8  # Accélération gravitationnelle
+h = np.arange(20, -1, -1)  # Hauteurs de 20 à 0 m
+Ep = m * g * h  # Énergie potentielle
+Ec = m * g * (20 - h)  # Énergie cinétique (énergie potentielle perdue)
+Em = Ep + Ec  # Énergie mécanique totale
+print(&quot;Ep (J):&quot;, Ep)
+print(&quot;Ec (J):&quot;, Ec)
+print(&quot;Em (J):&quot;, Em)</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Em (J): [39.2 39.2 ... 39.2]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="13-période-dun-pendule-simple">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#13-période-dun-pendule-simple">#</doc-anchor-trigger>
+        <span>13. Période d&#x27;un Pendule Simple</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Pour des longueurs L = [0.2, 0.4, 0.6, 0.8, 1.0] m, calcule la période théorique T.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">L = np.array([0.2, 0.4, 0.6, 0.8, 1.0])  # Longueurs en mètres
+g = 9.8
+T = 2 * np.pi * np.sqrt(L / g)  # Calcul de la période
+print(np.round(T, 2))  # Arrondi à 2 décimales</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[0.90 1.27 1.55 1.79 2.01]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="14-résistance-équivalente-en-parallèle">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#14-résistance-équivalente-en-parallèle">#</doc-anchor-trigger>
+        <span>14. Résistance Équivalente en Parallèle</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Calcule la résistance équivalente de trois résistances (100, 220, 470 Ω) en parallèle.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">R = np.array([100, 220, 470])  # Résistances en ohms
+Req = 1 / np.sum(1 / R)  # Formule des résistances en parallèle
+print(round(Req, 2), &quot;Ω&quot;)  # Affichage arrondi</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">62.76 Ω</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="15-chute-avec-frottements-méthode-deuler">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#15-chute-avec-frottements-méthode-deuler">#</doc-anchor-trigger>
+        <span>15. Chute avec Frottements (Méthode d&#x27;Euler)</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Simule la vitesse d&#x27;un objet de 80 g tombant avec F_f = -0.1v pendant 5 s.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">m = 0.08  # Masse en kg
+g = 9.8
+k = 0.1  # Coefficient de frottement
+dt = 0.5  # Pas de temps
+t = np.arange(0, 5.5, dt)  # Temps de 0 à 5 s
+v = np.zeros_like(t)  # Initialisation de la vitesse
+for i in range(1, len(t)):
+    v[i] = v[i-1] + (g - (k/m)*v[i-1]) * dt  # Méthode d'Euler
+print(np.round(v, 2))  # Arrondi à 2 décimales</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[ 0.    4.9   8.34 10.53 11.87 12.65 13.08 13.32 13.47 13.56 13.62]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="16-ajustement-linéaire-loi-dohm">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#16-ajustement-linéaire-loi-dohm">#</doc-anchor-trigger>
+        <span>16. Ajustement Linéaire (Loi d&#x27;Ohm)</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Ajuste une droite aux données U = V et I = [0,0.12,0.23,0.31,0.41,0.51] A.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">U = np.array([0, 1, 2, 3, 4, 5])
+I = np.array([0, 0.12, 0.23, 0.31, 0.41, 0.51])
+coeffs = np.polyfit(U, I, 1)  # Ajustement linéaire
+a, b = coeffs
+print(f&quot;a = {round(a,3)} A/V, b = {round(b,3)} A&quot;)</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">a = 0.102 A/V, b = 0.009 A</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="17-vitesse-moyenne-et-instantanée">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#17-vitesse-moyenne-et-instantanée">#</doc-anchor-trigger>
+        <span>17. Vitesse Moyenne et Instantanée</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Calcule la vitesse moyenne et instantanée pour x = [0,1.5,3.2,5.1,7.1,9.4] m à t = 0-5 s.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.array([0, 1.5, 3.2, 5.1, 7.1, 9.4])
+t = np.arange(6)
+v_moy = (x[-1] - x[0]) / (t[-1] - t[0])  # Vitesse moyenne
+v_inst = np.diff(x) / np.diff(t)  # Vitesses instantanées
+print(f&quot;Vitesse moyenne : {round(v_moy,2)} m/s&quot;)
+print(&quot;Vitesses instantanées :&quot;, np.round(v_inst, 2))</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Vitesse moyenne : 1.88 m/s
+Vitesses instantanées : [1.5 1.7 1.9 2.  2.3]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="18-loi-de-snell-descartes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#18-loi-de-snell-descartes">#</doc-anchor-trigger>
+        <span>18. Loi de Snell-Descartes</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Pour des angles d’incidence [0°,10°,20°,30°,40°,50°], calcule les angles de réfraction dans du verre (n=1.5).</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">n1, n2 = 1.0, 1.5
+theta1_deg = np.array([0, 10, 20, 30, 40, 50])
+theta1_rad = np.deg2rad(theta1_deg)
+sin_theta2 = (n1 / n2) * np.sin(theta1_rad)
+theta2_rad = np.arcsin(sin_theta2)
+theta2_deg = np.rad2deg(theta2_rad)
+print(np.round(theta2_deg, 2))</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[ 0.    6.65 13.26 19.47 24.94 29.02]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="19-décroissance-radioactive">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#19-décroissance-radioactive">#</doc-anchor-trigger>
+        <span>19. Décroissance Radioactive</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Simule la décroissance de 5000 noyaux avec une demi-vie de 3 jours pendant 15 jours.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">N0 = 5000
+demi_vie = 3
+t = np.arange(0, 16, 1)
+lmbda = np.log(2) / demi_vie
+N = N0 * np.exp(-lmbda * t)
+print(np.round(N).astype(int))</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">[5000 3969 3150 2500 1980 1568 1242 984 780 619 491 389 308 244 193 153]</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="20-énergie-solaire-reçue">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#20-énergie-solaire-reçue">#</doc-anchor-trigger>
+        <span>20. Énergie Solaire Reçue</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Énoncé :</strong>
+Calcule l’énergie reçue par un panneau de 1,5 m² exposé à une irradiance horaire variable pendant 8h.</p>
+<doc-panel id="afficher-la-solution" collapsed>
+    <template #title>Afficher la solution</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">surface = 1.5
+irradiance = np.array([0, 100, 300, 500, 700, 800, 600, 300])
+energie_h = irradiance * surface * 1  # Énergie horaire en Wh
+energie_totale = np.sum(energie_h) / 1000  # Conversion en kWh
+print(&quot;Énergie totale :&quot;, round(energie_totale,2), &quot;kWh&quot;)</code></pre>
+</doc-codeblock></div>
+<p><strong>Sortie :</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">Énergie totale : 4.95 kWh</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<p><strong>Félicitations !</strong> Tu as terminé tous les exercices. <span class="docs-emoji">&#x1F389;</span></p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../numpy/5-b-numpy-xo/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Num​Py pour la Physique : Feuille d’Activités</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../matplotlib/6-matplotlib/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Bibliothéque matplotlib.​pyplot</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© Copyright 2025 Shahriar Zayyani. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "NumPy pour la Physique : Feuille d’Activités", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>

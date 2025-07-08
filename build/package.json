@@ -1,0 +1,13 @@
+{
+  "scripts":
+  {"start" : "retype",
+   "build": "retype build",
+   "watch": "retype watch",
+   "serve": "retype serve",
+   "deploy": "retype deploy",
+   "clean": "retype clean"
+  },
+  "dependencies": {
+    "retypeapp-win-x64": "^3.11.0"
+  }
+}

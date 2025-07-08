@@ -1,0 +1,30 @@
+input: .
+output: .retype
+
+
+# -----------------------------------------------------------------------------
+
+breadcrumb:
+  enabled: true               # Enabled by default on Pro projects
+  home: Home                  # Custom label for the first item
+  home: ":icon-home:"         # or, use an icon
+  separator: "|"              # Custom item separator
+  
+
+url: docs.example.com # Use your website address here
+
+start:
+  # Uncomment the next line to try Retype Pro features
+  # pro: true
+
+branding:
+  title: PYTHON pour la Physique au lycée
+  label: Docs
+
+links:
+- text: Getting Started
+  link: https://retype.com/guides/getting-started/
+- text: PCNDS
+  link: https://pcnds.szayyani.com
+footer:
+  copyright: "&copy; Copyright {{ 2025 }} Shahriar Zayyani. All rights reserved."
