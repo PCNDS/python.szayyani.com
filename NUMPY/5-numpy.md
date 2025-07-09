@@ -67,6 +67,7 @@ Voici quelques exemples :
 
 ## la fonction `linalg.solve` : 
 
+
 Celle-là est un de nos grands amis, car `linalg.solve` nous permet de résoudres des équations algébrique, mais surtout des systèmes d'équations. 
 
 C'est donc un outil puissant pour nous en physique car nos problèmes se réduisent très souvent en un système d'équation à résoudre (et ce même dans des domains de physique bien plus avance tel que la mécanique quantique). 
@@ -101,6 +102,61 @@ print(X) #pour afficher le résultat
 
 La vraie puissance de cette fonction est dans ça capacité à résoudre des systèmes d'équation, telle que vous l'avez appris en fin du collège. 
 
+Prenons un exemple simple: deux équations linéaires avec deux variables inconcue $x$ et $y$: 
+$$4x + 3y = 10 $$ $$3x + 2y = 6$$
+
+On peut réécrire ce système sous forme $A\cdot X = b$ : 
+$$
+\begin{bmatrix}4 & 3\\\ 3 & 2\end{bmatrix} \cdot \begin{bmatrix} x \\\ y \end{bmatrix} = \begin{bmatrix} 10 \\\ 6 \end{bmatrix}
+$$
+
+où $A = \begin{bmatrix}4 & 3\\\ 3 & 2\end{bmatrix}$ et $b= \begin{bmatrix} 10 \\\ 6 \end{bmatrix}$. Le matrice $\begin{bmatrix} x \\\ y \end{bmatrix}$ correspond donc à la *solution* que `linalg.solve` doit nous trouver. 
+
++++ code
+```python!
+import numpy as np 
+
+# définissons nos données 
+A = np.array([[4, 3], [3, 2]])
+b = np.array([10, 6])
+
+#passons à la résolution 
+X = np.linalg.solve(A,b)
+
+print(X) #pour afficher le résultat    
+```
++++
++++ sortie
+```python!
+>>> 2 #X est donc la matrice avec les deux solutions pour x et y
+```
++++
+
+
+
+
 
 
 ## Calculs mathématiques sur des séries de nombres 
+
+
+
+---
+Il y a bien sur **beaucoup** d'autre fonction dans `numpy` mais pour nous (en physique au lycée) celles-là suffiront. 
+
+> {% hint style="info" %}
+> Point de comparaison entre bibliothéques `math` et `numpy` : 
+> 
+> ```python
+> import math
+> import numpy as np
+> 
+> # Utilisation de math (sur un scalaire)
+> print(math.sqrt(4))  # Résultat : 2.0
+> 
+> # Utilisation de NumPy (sur un array)
+> ```python
+> array = np.array([1, 4, 9])
+> print(np.sqrt(array))  # Résultat : [1. 2. 3.]
+> ```
+> {% endhint %}
