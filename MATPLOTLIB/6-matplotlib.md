@@ -1,3 +1,8 @@
+---
+icon : graph
+order : 999
+---
+
 # Bibliothéque `matplotlib.pyplot`
 
 Il s'agit d'une bibliothéque *essentielle* pour nous en physique car c'est notre outil principal de visualization de nos résultats expérimentaux. 
