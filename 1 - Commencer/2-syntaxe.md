@@ -7,18 +7,18 @@ PYTHON comme toute langue a des règles de syntaxe et de grammaire à respecter,
 
 Sans entrer trop en détail, il est important de noter que le langage PYTHON est très sensible à certaines règles de syntaxe notamment : 
 
-## Ordre des choses : 
+### Ordre des choses : 
 PYTHON lit le code dans l'ordre du haut vers le bas. C'est à dire si vous mentionnez une variable avant de l'avoir défini/affectée PYTHON aura du mal à executer le code. 
 
 De la même manière, chaque nouvelle instruction peut remplacer une ancienne instruction en cas de conflit. Exemple : Vous définissez `a = 10` au début du programme, et plus tard vous donnez l'instruction `a = 15`, pour le programme, désormais la variable `a` a une valeur de `15` et non `10`.
 
-## **Majuscule** et **minuscule** 
+### **Majuscule** et **minuscule** 
 ... ne sont pas pareilles. Une *variable* nommée `variable` n'est pas la même que `Variable` et encore différent que `VariAblE`. Pour PYTHON il s'agit de trois objets différents. 
 
-## "**Ponctuation**" 
+### "**Ponctuation**" 
 ... est très important : on ne peut pas remplacer des `: ; , . " " ' '` de manière interchangeable. Au fur et à mesur vous allez apprendre le bon usage de cela, mais il faut vraiment le respecter scrupuleusement 
 
-## Indentation 
+### Indentation 
 de même pour "**l'indentation**" qui est essentielle pour la bonne organisation et structuration de votre programme. Par exemple, considérons les deux exemples suivants : 
 
 ```python
@@ -31,7 +31,7 @@ print("1 est positif")
 Dans le 2eme cas il y aura une erreur, car, en raison de manque d'indentation, PYTHON ne reconnait pas que le message à "printer" appartient à la condition précédente. 
 La questions d'indentation est particulièrement important dans les "boucles" (`if`, `for`, `while`, etc). De manière générale, tout texte "indenté" qui suit une ligne apartient au même "bloc". 
 
-## 'Types' de données
+### 'Types' de données
 
 Un mot bref sur les différents "types" de données dans PYTHON. Voici une liste très brève des "types" les plus pertinentes pour nous : 
 
@@ -44,7 +44,7 @@ Un mot bref sur les différents "types" de données dans PYTHON. Voici une liste
     - `list` : une liste, une collection ordonées d'objet. 
 - type 'Booléen' `bool` : représentant des vrais ou faux. Exemple : `true`, `false`. 
 
-## Commentaires `#` : 
+### Commentaires `#` : 
 pour faire un commentaire : Tout text qui suit le symbole `#` est considéré comme un commentaire et NON comme du code à compiler par PYTHON.  Voici deux exemple : 
 ```python
 # définissons un ARRAY avec nos mesures
