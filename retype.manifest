@@ -1,6 +1,6 @@
 {
   "version": "3.11.0",
-  "created": "2025-07-07T17:13:35Z",
+  "created": "2025-07-10T12:11:41Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -18,10 +18,28 @@
       "path": "1-commencer\\4-biblis\\index.html"
     },
     {
+      "path": "2-math\\7-math\\index.html"
+    },
+    {
+      "path": "3-numpy\\5-numpy\\index.html"
+    },
+    {
+      "path": "3-numpy\\numpy-array\\index.html"
+    },
+    {
+      "path": "3-numpy\\numpy-linalgsolve\\index.html"
+    },
+    {
       "path": "404.html"
     },
     {
       "path": "CNAME"
+    },
+    {
+      "path": "exercices\\5-b-exos-numpy\\index.html"
+    },
+    {
+      "path": "exercices\\5-b-numpy-xo\\index.html"
     },
     {
       "path": "favicon_io.zip",
@@ -31,7 +49,8 @@
       "path": "index.html"
     },
     {
-      "path": "math\\7-math\\index.html"
+      "path": "math\\7-math\\index.html",
+      "old": true
     },
     {
       "path": "matplotlib\\6-matplotlib\\index.html"
@@ -40,13 +59,16 @@
       "path": "modelisation\\8-modelisation\\index.html"
     },
     {
-      "path": "numpy\\5-b-exos-numpy\\index.html"
+      "path": "numpy\\5-b-exos-numpy\\index.html",
+      "old": true
     },
     {
-      "path": "numpy\\5-b-numpy-xo\\index.html"
+      "path": "numpy\\5-b-numpy-xo\\index.html",
+      "old": true
     },
     {
-      "path": "numpy\\5-numpy\\index.html"
+      "path": "numpy\\5-numpy\\index.html",
+      "old": true
     },
     {
       "path": "package-lock.json"

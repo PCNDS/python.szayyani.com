@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805223613026">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805464700085">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.805223613026" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.805464700085" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.805223613026" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.805464700085" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.805223613026" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.805223613026" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.805464700085" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.805464700085" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -180,32 +180,32 @@
 <p>PYTHON comme toute langue a des règles de syntaxe et de grammaire à respecter, d&#x27;autant plus qu&#x27;une langue parlé que la moindre irrespect de ces règles de logique empêcherait l&#x27;execution de votre code !</p>
 <p>Sans entrer trop en détail, il est important de noter que le langage PYTHON est très sensible à certaines règles de syntaxe notamment :</p>
 <doc-anchor-target id="ordre-des-choses-">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ordre-des-choses-">#</doc-anchor-trigger>
         <span>Ordre des choses :</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>PYTHON lit le code dans l&#x27;ordre du haut vers le bas. C&#x27;est à dire si vous mentionnez une variable avant de l&#x27;avoir défini/affectée PYTHON aura du mal à executer le code.</p>
 <p>De la même manière, chaque nouvelle instruction peut remplacer une ancienne instruction en cas de conflit. Exemple : Vous définissez <code v-pre>a = 10</code> au début du programme, et plus tard vous donnez l&#x27;instruction <code v-pre>a = 15</code>, pour le programme, désormais la variable <code v-pre>a</code> a une valeur de <code v-pre>15</code> et non <code v-pre>10</code>.</p>
 <doc-anchor-target id="majuscule-et-minuscule">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#majuscule-et-minuscule">#</doc-anchor-trigger>
         <span><strong>Majuscule</strong> et <strong>minuscule</strong></span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>... ne sont pas pareilles. Une <em>variable</em> nommée <code v-pre>variable</code> n&#x27;est pas la même que <code v-pre>Variable</code> et encore différent que <code v-pre>VariAblE</code>. Pour PYTHON il s&#x27;agit de trois objets différents.</p>
 <doc-anchor-target id="ponctuation">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ponctuation">#</doc-anchor-trigger>
         <span>&quot;<strong>Ponctuation</strong>&quot;</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>... est très important : on ne peut pas remplacer des <code v-pre>: ; , . &quot; &quot; ' '</code> de manière interchangeable. Au fur et à mesur vous allez apprendre le bon usage de cela, mais il faut vraiment le respecter scrupuleusement</p>
 <doc-anchor-target id="indentation">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#indentation">#</doc-anchor-trigger>
         <span>Indentation</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>de même pour &quot;<strong>l&#x27;indentation</strong>&quot; qui est essentielle pour la bonne organisation et structuration de votre programme. Par exemple, considérons les deux exemples suivants :</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -218,10 +218,10 @@ print(&quot;1 est positif&quot;)</code></pre>
 <p>Dans le 2eme cas il y aura une erreur, car, en raison de manque d&#x27;indentation, PYTHON ne reconnait pas que le message à &quot;printer&quot; appartient à la condition précédente.
 La questions d&#x27;indentation est particulièrement important dans les &quot;boucles&quot; (<code v-pre>if</code>, <code v-pre>for</code>, <code v-pre>while</code>, etc). De manière générale, tout texte &quot;indenté&quot; qui suit une ligne apartient au même &quot;bloc&quot;.</p>
 <doc-anchor-target id="types-de-données">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#types-de-données">#</doc-anchor-trigger>
         <span>&#x27;Types&#x27; de données</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Un mot bref sur les différents &quot;types&quot; de données dans PYTHON. Voici une liste très brève des &quot;types&quot; les plus pertinentes pour nous :</p>
 <ul>
@@ -241,10 +241,10 @@ La questions d&#x27;indentation est particulièrement important dans les &quot;b
 <li>type &#x27;Booléen&#x27; <code v-pre>bool</code> : représentant des vrais ou faux. Exemple : <code v-pre>true</code>, <code v-pre>false</code>.</li>
 </ul>
 <doc-anchor-target id="commentaires--">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#commentaires--">#</doc-anchor-trigger>
         <span>Commentaires <code v-pre>#</code> :</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>pour faire un commentaire : Tout text qui suit le symbole <code v-pre>#</code> est considéré comme un commentaire et NON comme du code à compiler par PYTHON.  Voici deux exemple :</p>
 <div class="codeblock-wrapper"><doc-codeblock>
