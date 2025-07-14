@@ -1,5 +1,5 @@
 ---
-Title : Les fonctions `array` & `arange`
+Title : Création des `Arrays` : `arage` & `linspace`
 order : 800
 ---
 
