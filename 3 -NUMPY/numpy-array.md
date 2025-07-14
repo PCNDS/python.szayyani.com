@@ -64,9 +64,91 @@ La méthode la plus simple et la plus directe (mais pas forcément la plus utile
 
 +++ Code
 ```python
-A = np.array([4,3],[3,2])
-B = np.array()
+A = np.array([[4,3],[3,2]])
+B = np.array([[4,3,0,-5]])
+
+print("A est ", A) #pour afficher l'array A
+print("B est ", B)
 ```
 +++ Sortie
-
+```pyton
+>>> A est  [[4 3]
+ [3 2]]
+ >>> B est  [[ 4  3  0 -5]]
+``` 
 +++
+
+Il y a d'autres méthodes de créer une matrice avec la fonction `array`, mais pour le moment ce que l'on a vu suffira. 
+
+Dans les cas précédents on a pu utiliser la fonction `array` car nous avions déjà les valeurs que l'on voulait mettre dans notre matrice. Cela peut être très utile par exemple dans le cas des mesures expérimentales que nous avons relevées lors d'une expérience (des distances parcourues par un objet, des valeur de pH mesurées avec un pH-mètre, etc). 
+
+En revanche, parfois nous voulons juste une séries de valeurs à un intervalle régulier. Pour cela nous avons deux fonctions très pratiques et simples : `arange` et `linspace`
+
+### La fonction `arange`
+
+La fonction `arange` permet la création d'un *array* en précisant **la valeur minimale, la valeur minimal** et **le pas** entre les valeurs, c'est à dire *l'intervalle entre valeurs successives*. 
+
+Allons directement à un exemple pour mieux comprendre : 
+
++++ code
+```python
+D = np.arange(0, 10, 1) #une série de valeurs allant de 0 à 10 avec un pas de 1
+
+print(D)
+```
++++ sortie
+```python
+>>> [0 1 2 3 4 5 6 7 8 9]
+```
++++
+
+C'est aussi simple que ça. Voilà un autre exemple : 
+
++++ code
+```python
+D = np.arange(-2,2, 0.5) #une série de valeurs allant de -2 à 2 avec un pas de 0.5
+
+print(D)
+```
++++ sortie
+```python
+>>>[-2.  -1.5 -1.  -0.5  0.   0.5  1.   1.5]
+```
++++
+
+!!!important
+Notez qu'avec la fonction `arange` la limite maximale n'est pas incluse dans l'array formé. 
+!!!
+
+### La fonction `linspace`
+
+Le fonctionnement de `linspace` est quasi-identique à celui de `arange` avec une différence principale : avec `linspace` on précise le nombre de valeurs dans la série entre les valeurs max/min, tandis qu'avec `arange` on précise le pas. 
+
+Voici un exemple : 
+
++++ code
+```python
+D = np.linspace(0,10, 11) #une série de 11 valeurs allant de 0 à 10
+
+print(D)
+```
++++ sortie
+```python
+>>> [ 0.  1.  2.  3.  4.  5.  6.  7.  8.  9. 10.]
+```
++++
+
+et voici un autre exemple : 
+
++++ code
+```python
+D = np.linspace(-5, 5, 5) #une série de 5 valeurs allant de -5 à 5
+
+print(D)
+```
++++ sortie
+```python
+>>> [-5.  -2.5  0.   2.5  5. ]
+```
++++
+
