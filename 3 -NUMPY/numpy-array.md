@@ -1,5 +1,5 @@
 ---
-Title : Création des `Arrays` : `arage` & `linspace`
+Title : Comment créer des `Arrays`
 order : 800
 ---
 
@@ -53,7 +53,7 @@ $A$, $B$, $C$ et $D$ sont quatre matrices différentes. Leurs dimensions sont $A
 3\times 1 \quad ; \quad D\to 3\times 2$. 
 
 !!! Remarque
-Nous allons pas entrer en détail sur le sense mathématiques et physique de ces matrices encore, car le niveau est bien au-delà de ce que nous faisons au lycée, par en tant qu'exemple vous pouvez voir que matrice $C$ peut représent un *vecteur* : les trois chiffres représentent les coordonnées du vecteur $\vec{v} = (4, 3, -5)$. Par conséquent toute opérations effectuée sur cette matrice, représentent des opérations/manipulations faites au vecteur $\vec{v}$. 
+Nous n'allons pas entrer en détail sur le sense mathématiques et physique de ces matrices encore, car le niveau est bien au-delà de ce que nous faisons au lycée, par en tant qu'exemple vous pouvez voir que matrice $C$ peut représent un *vecteur* : les trois chiffres représentent les coordonnées du vecteur $\vec{v} = (4, 3, -5)$. Par conséquent toute opérations effectuée sur cette matrice, représentent des opérations/manipulations faites au vecteur $\vec{v}$. 
 !!!
 
 Comment peut on donc créer des *arrays*? On va apprendre trois méthodes simples. 
