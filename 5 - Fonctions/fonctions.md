@@ -74,3 +74,36 @@ def puissance(a,b) : #on veut calculer a pris à la puissance b
 100000
 ```
 +++
+
+On a une autre manière de faire la même chose que dans l'exemple précédent : 
+
++++ Code
+```python
+def puissance(a,b) : #on veut calculer a pris à la puissance b 
+    res = a**b
+    return res
+```
++++ Résultats
+```bash
+>>> print(puissance(2,3))
+8
+>>> print(puissance(10,5))
+100000
+```
++++
+
+Un autre exemple plus applicable pour nous en physique : on peut définir une fonction qui calcule la vitesse à partir d'une distance et d'une durée : 
+
++++ Code
+```python
+def vitesse(d,t) : 
+    v = d/t
+    return v)
+```
++++ Résultats
+```bash
+>>> vitesse(100,5) #on parcourt 100 m en 5 secondes
+>>> print("la vitesse est donc ", v, "metres par secondes")
+la vitesse est donc 20 metres par secondes
+```
++++
