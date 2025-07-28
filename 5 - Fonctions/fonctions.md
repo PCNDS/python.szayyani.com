@@ -44,4 +44,33 @@ une fois définie nous pouvons utiliser cette fonction avec différentes valeurs
 6.25
 ```
 
+Une fonction n'est pas que pour les calculs mathématiques, mais aussi d'autres opérations. Voici un exemple :
 
++++ Code
+```python
+def salut(a) : 
+    return print("Salut ", a,  "!")
+```
++++ Résultats 
+```bash 
+>>> salut(David)
+Salut David !
+>>> salut(pénélope)
+Salut pénélope !
+```
+
+Voyons quelques exemples de fonction prenant deux arguments. 
+
++++ Code
+```python
+def puissance(a,b) : #on veut calculer a pris à la puissance b 
+    return print(a**b)
+```
++++ Résultats
+```bash
+>>> puissance(2,3)
+8
+>>> puissance(10,5)
+100000
+```
++++
