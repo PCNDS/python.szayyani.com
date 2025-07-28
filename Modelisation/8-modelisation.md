@@ -1,3 +1,7 @@
+---
+title : Modélisation avec `polyfit`
+order : 900
+---
 # Modélisation graphique avec Python
 
 On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque `matplotlib.pyplot` pour l’affichage du nuage des points.

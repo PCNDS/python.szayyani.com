@@ -8,7 +8,7 @@ order : 1
 
 ### Installation d'un IDE
 
-Un IDE (Independent Development Environement) - EDI en français - est *l'espace* dans lequel on écrit et on compile notre code. 
+Un IDE (Integrated Development Environement) - EDI en français - est *l'espace* dans lequel on écrit et on compile notre code. 
 
 Il y a littéralement des centaines d'IDE pour coder en PYTHON, utilisable gratuitement. La majorité sont à télécharger et installer sur votre PC/Mac, et un certain nombre sont utilisable directement sur internet (dans le *nuage*) et donc nécessite aucune installation 
 
