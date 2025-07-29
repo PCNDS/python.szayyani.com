@@ -2,7 +2,7 @@
 order : 999
 icon : number
 ---
-# :icon-book: Bibliothéque `numpy`
+# :icon-number: Bibliothéque `numpy`
 
 `numpy` est une des bibliothéques les plus utiles pour nous en physique (mais aussi dans tout autre domaines y compris la *Data Science* l'apprentissage machine )
 
@@ -30,19 +30,18 @@ Dans les parties suivantes nous allons plonger un plus grand détail dans l'util
 ---
 Il y a bien sur **beaucoup** d'autre fonction dans `numpy` mais pour nous (en physique au lycée) celles-là suffiront. 
 
-> {% hint style="info" %}
-> Point de comparaison entre bibliothéques `math` et `numpy` :
-> 
-> ```python
-> import math
-> import numpy as np
-> 
-> # Utilisation de math (sur un scalaire)
-> print(math.sqrt(4))  # Résultat : 2.0
-> 
-> # Utilisation de NumPy (sur un array)
-> 
-> array = np.array([1, 4, 9])
-> print(np.sqrt(array))  # Résultat : [1. 2. 3.]
-> ```
-> {% endhint %}
+!!!info Point de comparaison entre bibliothéques `math` et `numpy` :
+
+```python
+import math as m
+import numpy as np
+
+# Utilisation de math (sur un scalaire)
+print(m.sqrt(4))  # Résultat : 2.0
+
+# Utilisation de NumPy (sur un array)
+
+array = np.array([1, 4, 9])
+print(np.sqrt(array))  # Résultat : [1. 2. 3.]
+```
+!!!
