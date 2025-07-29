@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.807127024487">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.807130263629">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title> Biblioth&#233;que numpy</title>
-    <meta name="title" content=" Bibliothéque numpy">
-    <meta name="description" content="numpy est une des bibliothéques les plus utiles pour nous en physique (mais aussi dans tout autre domaines y compris la ">
+    <title>Les Arrays</title>
+    <meta name="title" content="Les Arrays">
+    <meta name="description" content="L'objet principal que l'on utilise dans numpy est un array: un tableau multidimensionnel de valeurs. Un ">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/3-numpy/5-numpy/">
+    <link rel="canonical" href="https://python.szayyani.com/3-numpy/2-arrays/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/3-numpy/5-numpy/">
-    <meta property="og:title" content=" Bibliothéque numpy">
-    <meta property="og:description" content="numpy est une des bibliothéques les plus utiles pour nous en physique (mais aussi dans tout autre domaines y compris la ">
+    <meta property="og:url" content="https://python.szayyani.com/3-numpy/2-arrays/">
+    <meta property="og:title" content="Les Arrays">
+    <meta property="og:description" content="L'objet principal que l'on utilise dans numpy est un array: un tableau multidimensionnel de valeurs. Un ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/5-numpy/">
-    <meta property="twitter:title" content=" Bibliothéque numpy">
-    <meta property="twitter:description" content="numpy est une des bibliothéques les plus utiles pour nous en physique (mais aussi dans tout autre domaines y compris la ">
+    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/2-arrays/">
+    <meta property="twitter:title" content="Les Arrays">
+    <meta property="twitter:description" content="L'objet principal que l'on utilise dans numpy est un array: un tableau multidimensionnel de valeurs. Un ">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.807127024487" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.807130263629" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.807127024487" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.807130263629" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807127024487" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807127024487" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807130263629" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807130263629" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,41 +173,62 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="bibliothéque-numpy" class="break-words">
+<doc-anchor-target id="les-arrays" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bibliothéque-numpy">#</doc-anchor-trigger>
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></g></g></svg> Bibliothéque <code v-pre>numpy</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#les-arrays">#</doc-anchor-trigger>
+        <span>Les <code v-pre>Arrays</code></span>
     </h1>
 </doc-anchor-target>
-<p><code v-pre>numpy</code> est une des bibliothéques les plus utiles pour nous en physique (mais aussi dans tout autre domaines y compris la <em>Data Science</em> l&#x27;apprentissage machine )</p>
-<p>Il s&#x27;agit d&#x27;une bibliothéque de fonctions spécialisées pour des opérations mathématiques de toutes sorte <em>sur des séries de données</em>, c&#x27;est à dire sur des matrices ou des tables de chiffres. (<code v-pre>numpy</code> est conçu particulièrement pour des opérations d&#x27;<em>algèbre linéaire</em>.). <code v-pre>numpy</code> nous permet de manipuler des vecteurs et des matrices, qui sont d&#x27;une utilité particulièrement centrale pour nous, et omniprésents dans tout domaine de la physique (et de la chimie).</p>
-<p>C&#x27;est une bibliothéque particulièrement adaptée à ce que l&#x27;on fait en physique : l&#x27;étude des résultats expérimentaux et la modélisation. En déhors du monde de la physique, la plupart de ce que l&#x27;on appelle <em>Data Science</em> (comme par exemple l&#x27;entrainement des IA) est fait avec <code v-pre>numpy</code>.</p>
-<doc-anchor-target id="quelques-fonctions-importantes">
+<doc-anchor-target id="quest-ce-quun-array">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quelques-fonctions-importantes">#</doc-anchor-trigger>
-        <span>Quelques fonctions importantes</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#quest-ce-quun-array">#</doc-anchor-trigger>
+        <span>Qu&#x27;est-ce qu&#x27;un <code v-pre>array</code></span>
     </h2>
 </doc-anchor-target>
-<p>Sans entrer trop en détail voici une (très) petites liste des fonctions que l&#x27;on utilisera de temps, et certaines plutôt souvent</p>
+<p>L&#x27;objet principal que l&#x27;on utilise dans <code v-pre>numpy</code> est un <em><strong>array</strong></em> : un tableau multidimensionnel de valeurs. Un <em>array</em> <strong>unidimensionnell</strong> est l&#x27;équivalent d&#x27;une colonne dans un tableur comme <em>EXCEL</em> (mathémaiquement l&#x27;équivalent d&#x27;un vecteur).</p>
+<p>Ayant déjà importé la bibliothéque <code v-pre>numpy</code> et l&#x27;a renommée <code v-pre>np</code>, nous allons créer deux <em>arrays</em> <code v-pre>A</code> et <code v-pre>B</code> de manière suivante  :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python"># supposons que nous avon déjà importé la bibliothéque numpy comme np
+
+A = np.array([0,1,2,3])  
+B = np.array([0,4,9,64])</code></pre>
+</doc-codeblock></div>
+<p>Une fois ce code a été compilé on peut les appeler dans la console :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; A
+[0,1,2,3]
+&gt;&gt;&gt; B
+[0,4,9,64]</code></pre>
+</doc-codeblock></div>
+<p>maintenant je peux faire des opérations mathématiques de toute sorte <em>sur toutes les valeurs</em> dans ces tableaux.</p>
+<p>Voici quelques exemples :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; 3*A
+[0,3,6,9]
+&gt;&gt;&gt; A**3
+[0,1,8,27]
+&gt;&gt;&gt; np.sqrt(B) # sqrt (square root) est la fonction de racine carré
+[0,2,3,8]
+&gt;&gt;&gt; A + B 
+[0, 5, 11, 67]
+&gt;&gt;&gt; np.sin(A)
+[0. 0.84147098 0.90929743 0.14112001]</code></pre>
+</doc-codeblock></div>
+<p>Notez bien comment nous avons pu manipuler les valeurs dans les arrays :</p>
 <ul>
-<li><code v-pre>np.array()</code> : la commande pour créer un tableau/série de valeurs.</li>
-<li><code v-pre>np.arange()</code> : Pour créer un tableau avec des valeurs régulièrement espacées. exemple :</li>
-<li><code v-pre>np.linspace()</code> : pour créer un tableau avec des valeurs uniformément repartie dans intervalle donné. exemple :</li>
-<li><code v-pre>np.sqrt()</code> : pour calculer la racine carré des différentes valeurs dans un tableau</li>
-<li><code v-pre>np.sin()</code>, <code v-pre>np.cos()</code>, <code v-pre>np.tan()</code>,<code v-pre>np.asin()</code>, <code v-pre>np.acos()</code>, <code v-pre>np.atan()</code>, <code v-pre>np.log()</code> : des fonctions trigonométriques et logarithmique de bases.</li>
-<li><code v-pre>np.dot()</code> : pour calcul le <em>produit scalaire</em> de deux vecteurs (vous verrez ça en classe de première). Exemple :</li>
-<li><code v-pre>np.polyfit()</code> : une fonction puissant pour modélisation polynomiale des séries de valeurs. Nous sommes particulièrement intéressés par cette fonction, en physique où notre tache principale est la construction des modèles à partir des résultats et des observations expérimentaux.</li>
+<li>une opération de base comme la multiplication applique l&#x27;opération à <em>tous</em> les éléments de l&#x27;array</li>
+<li>de même pour les opérations mathématique entre deux arrays (au contraire des <code v-pre>lists</code>)</li>
 </ul>
-<p>Dans les parties suivantes nous allons plonger un plus grand détail dans l&#x27;utilisation des plus importantes de ses fonctions, avec des exemples divers.</p>
-<doc-anchor-target id="calculs-mathématiques-sur-des-séries-de-nombres">
+<doc-anchor-target id="différents-types-de-arrays">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#calculs-mathématiques-sur-des-séries-de-nombres">#</doc-anchor-trigger>
-        <span>Calculs mathématiques sur des séries de nombres</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#différents-types-de-arrays">#</doc-anchor-trigger>
+        <span>Différents types de <code v-pre>arrays</code></span>
     </h2>
 </doc-anchor-target>
-<hr>
-<p>Il y a bien sur <strong>beaucoup</strong> d&#x27;autre fonction dans <code v-pre>numpy</code> mais pour nous (en physique au lycée) celles-là suffiront.</p>
-<blockquote>
+<p>Mais ... les arrays sont bien plus que juste une &quot;liste de valeur&quot;. Ce sont des objets mathématiques, que l&#x27;on appelle des <strong>tableaux</strong> ou plus mathématiquement <em><strong>matrices</strong></em>. On ne se sert pas beaucoup (ou du tout) des <em>matrices</em> au lycée, mais ils sont partout dans le supérieure (surtout pour nous en physique). On peut visualiser une <em>matrice</em> comme une grille de valeurs : une matrice <span class="math">m\times n</span> est composée de <span class="math">n</span> colonnes et de <span class="math">m</span> lignes de valeurs :</p>
+<p><span class="math">A = \begin{bmatrix} 4 &amp; 3\\\ 3 &amp; 2\end{bmatrix} \quad B = \begin{bmatrix} 4 &amp; 3 &amp; 0 &amp; -5\end{bmatrix}\quad C = \begin{bmatrix} 4 \\\ 3 \\\ -5\end{bmatrix} \quad D = \begin{bmatrix} 4 &amp; 3 \\ 0 &amp; -5\\7 &amp; 23\end{bmatrix}</span></p>
+<p><span class="math">A</span>, <span class="math">B</span>, <span class="math">C</span> et <span class="math">D</span> sont quatre matrices différentes. Leurs dimensions sont $A\to 2\times 2 \quad ; \quad  B\to 1\times 4 \quad ; \quad C\to
+3\times 1 \quad ; \quad D\to 3\times 2$.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -219,23 +242,12 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>Point de comparaison entre bibliothéques <code v-pre>math</code> et <code v-pre>numpy</code> :</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">import math
-import numpy as np
-
-# Utilisation de math (sur un scalaire)
-print(math.sqrt(4))  # Résultat : 2.0
-
-# Utilisation de NumPy (sur un array)
-
-array = np.array([1, 4, 9])
-print(np.sqrt(array))  # Résultat : [1. 2. 3.]</code></pre>
-</doc-codeblock></div>
+            <h5>Remarque</h5>
+<p>Nous n&#x27;allons pas entrer en détail sur le sense mathématiques et physique de ces matrices encore, car le niveau est bien au-delà de ce que nous faisons au lycée, par en tant qu&#x27;exemple vous pouvez voir que matrice <span class="math">C</span> peut représent un <em>vecteur</em> : les trois chiffres représentent les coordonnées du vecteur <span class="math">\vec{v} = (4, 3, -5)</span>. Par conséquent toute opérations effectuée sur cette matrice, représentent des opérations/manipulations faites au vecteur <span class="math">\vec{v}</span>.</p>
         </div>
     </div>
 </div>
-</blockquote>
+<p>Comment peut on donc créer des <em>arrays</em>? On va apprendre trois méthodes simples.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -245,20 +257,20 @@ print(np.sqrt(array))  # Résultat : [1. 2. 3.]</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../2-math/7-math/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/1-numpy/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Bibliothéques math</span>
+                                                <span class="block mt-1"> Bibliothéque numpy</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/numpy-array/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/numpy-linalgsolve/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Comment créer des Arrays</span>
+                                                <span class="block mt-1">La fonction linalg.​solve</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -302,6 +314,6 @@ print(np.sqrt(array))  # Résultat : [1. 2. 3.]</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": " Bibliothéque numpy", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Les Arrays", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>

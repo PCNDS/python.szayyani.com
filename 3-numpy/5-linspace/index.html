@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Op&#233;rations de base</title>
-    <meta name="title" content="Opérations de base">
-    <meta name="description" content="Une fois installé PYTHON est capable d'un certain nombre d'opération mathématiques et logiques de bases.">
+    <title>5 linspace</title>
+    <meta name="title" content="5 linspace">
+    <meta name="description" content="Le fonctionnement de linspace est quasi-identique à celui de arange avec une différence principale : avec ">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/1-commencer/3-operations/">
+    <link rel="canonical" href="https://python.szayyani.com/3-numpy/5-linspace/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/1-commencer/3-operations/">
-    <meta property="og:title" content="Opérations de base">
-    <meta property="og:description" content="Une fois installé PYTHON est capable d'un certain nombre d'opération mathématiques et logiques de bases.">
+    <meta property="og:url" content="https://python.szayyani.com/3-numpy/5-linspace/">
+    <meta property="og:title" content="5 linspace">
+    <meta property="og:description" content="Le fonctionnement de linspace est quasi-identique à celui de arange avec une différence principale : avec ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/1-commencer/3-operations/">
-    <meta property="twitter:title" content="Opérations de base">
-    <meta property="twitter:description" content="Une fois installé PYTHON est capable d'un certain nombre d'opération mathématiques et logiques de bases.">
+    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/5-linspace/">
+    <meta property="twitter:title" content="5 linspace">
+    <meta property="twitter:description" content="Le fonctionnement de linspace est quasi-identique à celui de arange avec une différence principale : avec ">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -37,8 +37,6 @@
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807130263629" data-turbo-eval="false" defer></script>
     <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807130263629" defer></script>
-    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
-    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,178 +171,53 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="opérations-de-base" class="break-words">
+<doc-anchor-target id="5-linspace" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#opérations-de-base">#</doc-anchor-trigger>
-        <span>Opérations de base</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-linspace">#</doc-anchor-trigger>
+        <span>5 linspace</span>
     </h1>
 </doc-anchor-target>
-<p>Une fois installé PYTHON est capable d&#x27;un certain nombre d&#x27;opération mathématiques et logiques de bases.</p>
-<doc-anchor-target id="opérations-arithmétiques">
+<doc-anchor-target id="la-fonction-linspace">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#opérations-arithmétiques">#</doc-anchor-trigger>
-        <span>Opérations arithmétiques</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#la-fonction-linspace">#</doc-anchor-trigger>
+        <span>La fonction <code v-pre>linspace</code></span>
     </h2>
 </doc-anchor-target>
-<p>Voici une liste courte des opérations arithmétiques les plus pertinentes pour nous :</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th style="text-align: center;">Symbole</th>
-<th style="text-align: center;">Operation</th>
-<th style="text-align: left;">Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code v-pre>*</code></td>
-<td style="text-align: center;">multiplication</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;2*3</code> <br> <code v-pre>6</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>/</code></td>
-<td style="text-align: center;">division</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;6/3</code> <br> <code v-pre>2</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>+</code></td>
-<td style="text-align: center;">addition</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;2+3</code> <br> <code v-pre>5</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>-</code></td>
-<td style="text-align: center;">soustraction</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;2-3</code> <br> <code v-pre>-1</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>**</code></td>
-<td style="text-align: center;">puissance/exposant</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;2**3</code> <br> <code v-pre>8</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>%</code></td>
-<td style="text-align: center;">reste (d&#x27;une division euclidéenne</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;5%2</code> <br> <code v-pre>1</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>//</code></td>
-<td style="text-align: center;">quotient (d&#x27;une div. euclidéenne</td>
-<td style="text-align: left;"><code v-pre>&gt;&gt;5//2</code> <br> <code v-pre>2</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="opérations-daffectation">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#opérations-daffectation">#</doc-anchor-trigger>
-        <span>Opérations d&#x27;affectation</span>
-    </h2>
-</doc-anchor-target>
-<p>Même si PYTHON s&#x27;écrit preque comme une rédaction mathématique (une des raisons pour laquelle on aime bien PYTHON), il y a des différences entre des symboles identiques.</p>
-<p>L&#x27;exemple parfait est le symbole <code v-pre>=</code>. Dans PYTHON <code v-pre>=</code> est une <strong>affectation</strong> (un assignement). Cela veut dire que quand vous écrivez <code v-pre> a = 10</code>, vous êtes en train d&#x27;assigner une valeur (10) a une variable (a).</p>
-<p>Voici donc quelques opérations d&#x27;affectation (j&#x27;aurais déclaré d&#x27;amont que <code v-pre>a = 10</code>) :</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th style="text-align: center;">Symbole</th>
-<th style="text-align: center;">Opération</th>
-<th style="text-align: left;">Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code v-pre>+=</code></td>
-<td style="text-align: center;">addition</td>
-<td style="text-align: left;"><code v-pre>a += 3</code> equivaut <code v-pre>a = a + 3</code> donc <span class="math">13</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>*=</code></td>
-<td style="text-align: center;">multiplication</td>
-<td style="text-align: left;"><code v-pre>a *= 3</code> équivaut <code v-pre>a = a * 3</code>donc <span class="math">30</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code v-pre>**=</code></td>
-<td style="text-align: center;">exponentiation</td>
-<td style="text-align: left;"><code v-pre>a **= 3</code> équivaut <code v-pre>a = a**3</code> donc <span class="math">1000</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="fonctions">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fonctions">#</doc-anchor-trigger>
-        <span>Fonctions</span>
-    </h2>
-</doc-anchor-target>
-<p>Au coeur de PYTHON, et ce qui fait sa puissance calculatoire, sont les <em><strong>fonctions</strong></em>. Une fonction est un <em><strong>ensemble d&#x27;instructions, qui prendre des arguments en entrée et qui retourne un/des résultats</strong></em>.</p>
-<p>Les opérations mathématiques pré-éxistantes dans le programme de base sont des fonctions (très simples), mais l&#x27;on peut définir d&#x27;autre fonctions nous-mêmes.</p>
-<p>Les valeurs sur lesquelles une fonction fait son opération s&#x27;appelle ses <em>argument</em>. Voici un exemple :
-<code v-pre>sin(theta)</code> : ici la fonction <strong>sin</strong> a qu&#x27;un seul argument: la variable <strong>theta</strong>.</p>
-<p><strong>Une fonction peut avoir un seul ou plusieurs arguments</strong>. Les fonctions trigononmétriques par exemples prennent qu&#x27;un seul argument. Mais la majorité des fonctions dans PYTHON prennet plusieurs arguments. Par exemple, la fonction <code v-pre>plot</code> qui permet de créer des graphiques/tracés, prend <em>au moins</em> deux argument : la variable en abcisse et la variable en ordonnnées <code v-pre>plot(x,y)</code> et retourne un graphique avec le tracé de <span class="math">y=f(x)</span>.</p>
-<p>Comme vous allez voir plus tard, vous pouvez définir vos propres fonctions, pour faire n&#x27;importe quelle opération, mais il y a déjà des catalogues de fonctions prédéfinie par d&#x27;autres personnes pour l&#x27;utilisation de toute le monde: ce sont des <em><strong>bibliothéques</strong></em>.</p>
-<doc-anchor-target id="quelques-fonctions-de-bases">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quelques-fonctions-de-bases">#</doc-anchor-trigger>
-        <span>Quelques fonctions de bases</span>
-    </h2>
-</doc-anchor-target>
-<p>Vous allez voirs des fonctions et des opérations spécifiques à la physique et maths dans les parties suivantes, mais il y a des fonctions de base que tout le monde doit connaître. Voici en une petite liste :</p>
-<ul>
-<li><code v-pre>print()</code> : cette fonction donne l&#x27;instruction d&#x27;écrire et retourner un texte ou un résultats calculé. Exemple :</li>
-</ul>
+<p>Le fonctionnement de <code v-pre>linspace</code> est quasi-identique à celui de <code v-pre>arange</code> avec une différence principale : avec <code v-pre>linspace</code> on précise le nombre de valeurs dans la série entre les valeurs max/min, tandis qu&#x27;avec <code v-pre>arange</code> on précise le pas.</p>
+<p>Voici un exemple :</p>
+<doc-tabs>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; print(&quot;Hello world ! &quot;)
-Hello world !
-&gt;&gt;&gt; print(&quot;2 + 2&quot;)
-2 + 2
-&gt;&gt;&gt; print (2+2)
-4</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.linspace(0,10, 11) #une série de 11 valeurs allant de 0 à 10
+
+print(D)</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><code v-pre>len()</code> : permet de déterminer la longueur d&#x27;une séquence (de caractères, d&#x27;une liste, etc). Exemple :</li>
-</ul>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; len(&quot;PYTHON&quot;)
-6
-&gt;&gt;&gt; len([0,4,44,444, 4444])
-5</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; [ 0.  1.  2.  3.  4.  5.  6.  7.  8.  9. 10.]</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><code v-pre>type</code> : rèvle le &quot;type&quot; d&#x27;une donnée. Exemple :</li>
-</ul>
+</doc-tab>
+</doc-tabs>
+<p>et voici un autre exemple :</p>
+<doc-tabs>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; type(10)
-'int' # c'est à dire un entier
-&gt;&gt;&gt; type(10.0)
-'float' # c'est à dire un décimal</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.linspace(-5, 5, 5) #une série de 5 valeurs allant de -5 à 5
+
+print(D)</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><code v-pre>input()</code> : demande à l&#x27;utilisateur de saisir une donnée, de n&#x27;importe quel type (nombre, caractère, etc). Exemple :</li>
-</ul>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">nom = input(&quot;quel est votre nom de famille?&quot;)
-# une fois executé la console demande à l'utilisateur de saisir un numbre, que PYTHON par la suite affecte dans la variable `nom`</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; [-5.  -2.5  0.   2.5  5. ]</code></pre>
 </doc-codeblock></div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-tip" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M7.90625 2.15625C4.50944 2.15625 2.15625 4.58563 2.15625 7.54688C2.15625 8.96138 2.76575 9.88281 3.57075 10.8589L3.87837 11.2226C4.19894 11.6021 4.554 12.0218 4.84581 12.4416C5.25406 13.0324 5.61775 13.7296 5.7385 14.5834C5.76728 14.8608 5.68746 15.1386 5.51579 15.3583C5.34413 15.5781 5.09399 15.7228 4.8179 15.7621C4.5418 15.8013 4.26124 15.7321 4.03512 15.5689C3.809 15.4056 3.65493 15.1612 3.60525 14.8867C3.54775 14.4814 3.37094 14.1004 3.07338 13.6692C2.8306 13.3302 2.57055 13.0039 2.29425 12.6917C2.1735 12.5479 2.04556 12.397 1.909 12.2317C1.00769 11.1406 0 9.72613 0 7.54688C0 3.32062 3.39681 0 7.90625 0C12.4157 0 15.8125 3.32062 15.8125 7.54688C15.8125 9.72613 14.8048 11.1406 13.9035 12.2317C13.7669 12.397 13.639 12.5479 13.5183 12.6903C13.2207 13.0424 12.9677 13.3414 12.7406 13.6692C12.4416 14.1004 12.2662 14.4814 12.2087 14.8867C12.1557 15.1584 12.0003 15.3994 11.7747 15.5598C11.5492 15.7202 11.2706 15.7879 10.9965 15.7488C10.7225 15.7096 10.474 15.5667 10.3023 15.3496C10.1306 15.1325 10.0489 14.8577 10.074 14.582C10.1948 13.7296 10.5584 13.0324 10.9667 12.4416C11.2585 12.0218 11.6136 11.6021 11.9341 11.2226C12.0419 11.0961 12.1454 10.9739 12.2403 10.8589C13.0468 9.88281 13.6562 8.96138 13.6562 7.54688C13.6562 4.58563 11.3031 2.15625 7.90625 2.15625ZM4.67188 17.25H11.1406C11.4266 17.25 11.7008 17.3636 11.903 17.5658C12.1052 17.768 12.2188 18.0422 12.2188 18.3281C12.2188 18.6141 12.1052 18.8883 11.903 19.0905C11.7008 19.2927 11.4266 19.4062 11.1406 19.4062H4.67188C4.38594 19.4062 4.11171 19.2927 3.90953 19.0905C3.70734 18.8883 3.59375 18.6141 3.59375 18.3281C3.59375 18.0422 3.70734 17.768 3.90953 17.5658C4.11171 17.3636 4.38594 17.25 4.67188 17.25ZM5.03125 21.9219C5.03125 21.6359 5.14484 21.3617 5.34703 21.1595C5.54921 20.9573 5.82344 20.8438 6.10938 20.8438H9.70312C9.98906 20.8438 10.2633 20.9573 10.4655 21.1595C10.6677 21.3617 10.7812 21.6359 10.7812 21.9219C10.7812 22.2078 10.6677 22.482 10.4655 22.6842C10.2633 22.8864 9.98906 23 9.70312 23H6.10938C5.82344 23 5.54921 22.8864 5.34703 22.6842C5.14484 22.482 5.03125 22.2078 5.03125 21.9219Z" />
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Points Clefs</h5>
-<ul>
-<li></li>
-</ul>
-        </div>
-    </div>
-</div>
+</doc-tab>
+</doc-tabs>
 
                                 
                                 <!-- Required only on API pages -->
@@ -354,20 +227,20 @@ Hello world !
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../1-commencer/2-syntaxe/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/4-arange/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Règles de Syntaxe</span>
+                                                <span class="block mt-1">4 arange</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../1-commencer/4-biblis/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../4-matplotlib/6-matplotlib/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Les Bibliothéques !</span>
+                                                <span class="block mt-1">Bibliothéque matplotlib.​pyplot</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -411,6 +284,6 @@ Hello world !
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Opérations de base", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "5 linspace", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.807127024487">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.807130263629">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Comment cr&#233;er des Arrays</title>
-    <meta name="title" content="Comment créer des Arrays">
-    <meta name="description" content="L'objet principal que l'on utilise dans numpy est un array: un tableau multidimensionnel de valeurs. Un ">
+    <title>3 array</title>
+    <meta name="title" content="3 array">
+    <meta name="description" content="La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple définir">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/3-numpy/numpy-array/">
+    <link rel="canonical" href="https://python.szayyani.com/3-numpy/3-array/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/3-numpy/numpy-array/">
-    <meta property="og:title" content="Comment créer des Arrays">
-    <meta property="og:description" content="L'objet principal que l'on utilise dans numpy est un array: un tableau multidimensionnel de valeurs. Un ">
+    <meta property="og:url" content="https://python.szayyani.com/3-numpy/3-array/">
+    <meta property="og:title" content="3 array">
+    <meta property="og:description" content="La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple définir">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/numpy-array/">
-    <meta property="twitter:title" content="Comment créer des Arrays">
-    <meta property="twitter:description" content="L'objet principal que l'on utilise dans numpy est un array: un tableau multidimensionnel de valeurs. Un ">
+    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/3-array/">
+    <meta property="twitter:title" content="3 array">
+    <meta property="twitter:description" content="La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple définir">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.807127024487" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.807130263629" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.807127024487" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.807130263629" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807127024487" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807127024487" defer></script>
-    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
-    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807130263629" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807130263629" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,86 +171,17 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="comment-créer-des-arrays" class="break-words">
+<doc-anchor-target id="3-array" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#comment-créer-des-arrays">#</doc-anchor-trigger>
-        <span>Comment créer des <code v-pre>Arrays</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-array">#</doc-anchor-trigger>
+        <span>3 array</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="quest-ce-quun-array">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quest-ce-quun-array">#</doc-anchor-trigger>
-        <span>Qu&#x27;est-ce qu&#x27;un <code v-pre>array</code></span>
-    </h3>
-</doc-anchor-target>
-<p>L&#x27;objet principal que l&#x27;on utilise dans <code v-pre>numpy</code> est un <em><strong>array</strong></em> : un tableau multidimensionnel de valeurs. Un <em>array</em> <strong>unidimensionnell</strong> est l&#x27;équivalent d&#x27;une colonne dans un tableur comme <em>EXCEL</em> (mathémaiquement l&#x27;équivalent d&#x27;un vecteur).</p>
-<p>Ayant déjà importé la bibliothéque <code v-pre>numpy</code> et l&#x27;a renommée <code v-pre>np</code>, nous allons créer deux <em>arrays</em> <code v-pre>A</code> et <code v-pre>B</code> de manière suivante  :</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python"># supposons que nous avon déjà importé la bibliothéque numpy comme np
-
-A = np.array([0,1,2,3])  
-B = np.array([0,4,9,64])</code></pre>
-</doc-codeblock></div>
-<p>Une fois ce code a été compilé on peut les appeler dans la console :</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; A
-[0,1,2,3]
-&gt;&gt;&gt; B
-[0,4,9,64]</code></pre>
-</doc-codeblock></div>
-<p>maintenant je peux faire des opérations mathématiques de toute sorte <em>sur toutes les valeurs</em> dans ces tableaux.</p>
-<p>Voici quelques exemples :</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; 3*A
-[0,3,6,9]
-&gt;&gt;&gt; A**3
-[0,1,8,27]
-&gt;&gt;&gt; np.sqrt(B) # sqrt (square root) est la fonction de racine carré
-[0,2,3,8]
-&gt;&gt;&gt; A + B 
-[0, 5, 11, 67]
-&gt;&gt;&gt; np.sin(A)
-[0. 0.84147098 0.90929743 0.14112001]</code></pre>
-</doc-codeblock></div>
-<p>Notez bien comment nous avons pu manipuler les valeurs dans les arrays :</p>
-<ul>
-<li>une opération de base comme la multiplication applique l&#x27;opération à <em>tous</em> les éléments de l&#x27;array</li>
-<li>de même pour les opérations mathématique entre deux arrays (au contraire des <code v-pre>lists</code>)</li>
-</ul>
-<doc-anchor-target id="différents-types-de-arrays">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#différents-types-de-arrays">#</doc-anchor-trigger>
-        <span>Différents types de <code v-pre>arrays</code></span>
-    </h3>
-</doc-anchor-target>
-<p>Mais ... les arrays sont bien plus que juste une &quot;liste de valeur&quot;. Ce sont des objets mathématiques, que l&#x27;on appelle des <em><strong>matrices</strong></em>. On ne se sert pas beaucoup (ou du tout) des <em>matrices</em> au lycée, mais ils sont partout dans le supérieure (surtout pour nous en physique). On peut visualiser une <em>matrice</em> comme une grille de valeurs : une matrice <span class="math">m\times n</span> est composée de <span class="math">n</span> colonnes et de <span class="math">m</span> lignes de valeurs :</p>
-<p><span class="math">A = \begin{bmatrix} 4 &amp; 3\\\ 3 &amp; 2\end{bmatrix} \quad B = \begin{bmatrix} 4 &amp; 3 &amp; 0 &amp; -5\end{bmatrix}\quad C = \begin{bmatrix} 4 \\\ 3 \\\ -5\end{bmatrix} \quad D = \begin{bmatrix} 4 &amp; 3 \\ 0 &amp; -5\\7 &amp; 23\end{bmatrix}</span></p>
-<p><span class="math">A</span>, <span class="math">B</span>, <span class="math">C</span> et <span class="math">D</span> sont quatre matrices différentes. Leurs dimensions sont $A\to 2\times 2 \quad ; \quad  B\to 1\times 4 \quad ; \quad C\to
-3\times 1 \quad ; \quad D\to 3\times 2$.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Remarque</h5>
-<p>Nous n&#x27;allons pas entrer en détail sur le sense mathématiques et physique de ces matrices encore, car le niveau est bien au-delà de ce que nous faisons au lycée, par en tant qu&#x27;exemple vous pouvez voir que matrice <span class="math">C</span> peut représent un <em>vecteur</em> : les trois chiffres représentent les coordonnées du vecteur <span class="math">\vec{v} = (4, 3, -5)</span>. Par conséquent toute opérations effectuée sur cette matrice, représentent des opérations/manipulations faites au vecteur <span class="math">\vec{v}</span>.</p>
-        </div>
-    </div>
-</div>
-<p>Comment peut on donc créer des <em>arrays</em>? On va apprendre trois méthodes simples.</p>
 <doc-anchor-target id="la-fonction-array">
-    <h3>
+    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#la-fonction-array">#</doc-anchor-trigger>
         <span>La Fonction <code v-pre>array</code></span>
-    </h3>
+    </h2>
 </doc-anchor-target>
 <p>La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple <em>définir</em> l&#x27;array et ses constituants, comme dans l&#x27;exemple suivant :</p>
 <doc-tabs>
@@ -279,106 +208,6 @@ print(&quot;B est &quot;, B)</code></pre>
 <p>Il y a d&#x27;autres méthodes de créer une matrice avec la fonction <code v-pre>array</code>, mais pour le moment ce que l&#x27;on a vu suffira.</p>
 <p>Dans les cas précédents on a pu utiliser la fonction <code v-pre>array</code> car nous avions déjà les valeurs que l&#x27;on voulait mettre dans notre matrice. Cela peut être très utile par exemple dans le cas des mesures expérimentales que nous avons relevées lors d&#x27;une expérience (des distances parcourues par un objet, des valeur de pH mesurées avec un pH-mètre, etc).</p>
 <p>En revanche, parfois nous voulons juste une séries de valeurs à un intervalle régulier. Pour cela nous avons deux fonctions très pratiques et simples : <code v-pre>arange</code> et <code v-pre>linspace</code></p>
-<doc-anchor-target id="la-fonction-arange">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#la-fonction-arange">#</doc-anchor-trigger>
-        <span>La fonction <code v-pre>arange</code></span>
-    </h3>
-</doc-anchor-target>
-<p>La fonction <code v-pre>arange</code> permet la création d&#x27;un <em>array</em> en précisant <strong>la valeur minimale, la valeur minimal</strong> et <strong>le pas</strong> entre les valeurs, c&#x27;est à dire <em>l&#x27;intervalle entre valeurs successives</em>.</p>
-<p>Allons directement à un exemple pour mieux comprendre :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>code</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.arange(0, 10, 1) #une série de valeurs allant de 0 à 10 avec un pas de 1
-
-print(D)</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; [0 1 2 3 4 5 6 7 8 9]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<p>C&#x27;est aussi simple que ça. Voilà un autre exemple :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>code</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.arange(-2,2, 0.5) #une série de valeurs allant de -2 à 2 avec un pas de 0.5
-
-print(D)</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt;[-2.  -1.5 -1.  -0.5  0.   0.5  1.   1.5]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>important</h5>
-<p>Notez qu&#x27;avec la fonction <code v-pre>arange</code> la limite maximale n&#x27;est pas incluse dans l&#x27;array formé.</p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="la-fonction-linspace">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#la-fonction-linspace">#</doc-anchor-trigger>
-        <span>La fonction <code v-pre>linspace</code></span>
-    </h3>
-</doc-anchor-target>
-<p>Le fonctionnement de <code v-pre>linspace</code> est quasi-identique à celui de <code v-pre>arange</code> avec une différence principale : avec <code v-pre>linspace</code> on précise le nombre de valeurs dans la série entre les valeurs max/min, tandis qu&#x27;avec <code v-pre>arange</code> on précise le pas.</p>
-<p>Voici un exemple :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>code</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.linspace(0,10, 11) #une série de 11 valeurs allant de 0 à 10
-
-print(D)</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; [ 0.  1.  2.  3.  4.  5.  6.  7.  8.  9. 10.]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<p>et voici un autre exemple :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>code</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.linspace(-5, 5, 5) #une série de 5 valeurs allant de -5 à 5
-
-print(D)</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; [-5.  -2.5  0.   2.5  5. ]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
 
                                 
                                 <!-- Required only on API pages -->
@@ -388,20 +217,20 @@ print(D)</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/5-numpy/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/numpy-linalgsolve/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1"> Bibliothéque numpy</span>
+                                                <span class="block mt-1">La fonction linalg.​solve</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/numpy-linalgsolve/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/4-arange/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">La fonction linalg.​solve</span>
+                                                <span class="block mt-1">4 arange</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -445,6 +274,6 @@ print(D)</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Comment créer des Arrays", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "3 array", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
