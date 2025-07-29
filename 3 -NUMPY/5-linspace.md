@@ -1,9 +1,8 @@
 ---
-Title : Fonction: `linspace`
+Title : Fonction `linspace`
 order : 760
 ---
 
-## La fonction `linspace`
 
 Le fonctionnement de `linspace` est quasi-identique à celui de `arange` avec une différence principale : avec `linspace` on précise le nombre de valeurs dans la série entre les valeurs max/min, tandis qu'avec `arange` on précise le pas. 
 

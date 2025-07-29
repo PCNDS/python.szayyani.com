@@ -1,5 +1,5 @@
 ---
-Title : La fonction `linalg.solve`
+Title : Fonction `linalg.solve`
 order : 700
 ---
 

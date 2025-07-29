@@ -1,6 +1,7 @@
 ---
-title : Fonctions
+title : Les Fonctions
 order : 900
+icon : zap
 ---
 # Fonctions : un superpouvoir
 
@@ -25,6 +26,11 @@ def nom_dela_fonction(param1, param2, ...) :
     return résultat
 ```
 
+!!!warning Respecte la Syntaxe !
+* la ligne où on nomme la fonction avec `def` il est impératif de finir par `:`
+* l'indentation des lignes qui suivent est impérative aussi, et à respecter. 
+!!!
+
 Regardons un exemple simple : on va définir une fonction `carre` qui calcule le carré d'un nombre `a`. 
 
 
@@ -46,12 +52,12 @@ une fois définie nous pouvons utiliser cette fonction avec différentes valeurs
 
 Une fonction n'est pas que pour les calculs mathématiques, mais aussi d'autres opérations. Voici un exemple :
 
-+++ Code
++++ code
 ```python
 def salut(a) : 
     return print("Salut ", a,  "!")
 ```
-+++ Résultats 
++++ résultats 
 ```bash 
 >>> salut(David)
 Salut David !
@@ -62,12 +68,12 @@ Salut pénélope !
 
 Voyons quelques exemples de fonction prenant deux arguments. 
 
-+++ Code
++++ code
 ```python
 def puissance(a,b) : #on veut calculer a pris à la puissance b 
     return print(a**b)
 ```
-+++ Résultats
++++ résultats
 ```bash
 >>> puissance(2,3)
 8
@@ -78,33 +84,50 @@ def puissance(a,b) : #on veut calculer a pris à la puissance b
 
 On a une autre manière de faire la même chose que dans l'exemple précédent : 
 
-+++ Code
++++ code
 ```python
 def puissance(a,b) : #on veut calculer a pris à la puissance b 
     res = a**b
     return res
 ```
-+++ Résultats
++++ sortie
 ```bash
->>> print(puissance(2,3))
+>>> puissance(2,3)
+>>> print(res)
 8
->>> print(puissance(10,5))
+>>> puissance(10,5)
+>>> print(res)
 100000
 ```
 +++
 
 Un autre exemple plus applicable pour nous en physique : on peut définir une fonction qui calcule la vitesse à partir d'une distance et d'une durée : 
 
-+++ Code
++++ code
 ```python
 def vitesse(d,t) : 
     v = d/t
     return v)
 ```
-+++ Résultats
++++ sortie
 ```bash
 >>> vitesse(100,5) #on parcourt 100 m en 5 secondes
 >>> print("la vitesse est donc ", v, "metres par secondes")
 la vitesse est donc 20 metres par secondes
 ```
 +++
+
+Faisons quelques exercices d'application, facile et qui pourraient nous aider dans le future : 
+
+==- [!Button "Exercice d'application"]
++++ Enoncé 
+Définir une fonction `mpsKPH` qui permet de convertir une vitesse en $\frac{m}{s}$ en $\frac{km}{h}$. 
++++ Code 
+```python
+def mpsKPH(a) : #la fonction prend qu'un seul argument, la vitesse en mps
+    return a*3.6 
+```
++++
+
+
+==-

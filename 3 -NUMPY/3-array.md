@@ -1,22 +1,21 @@
 ---
-Title : Fonction: `array`
+Title : Fonction `array`
 order : 790
 ---
 
-## La Fonction `array`
 
 La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple *définir* l'array et ses constituants, comme dans l'exemple suivant : 
 
 +++ Code
 ```python
-A = np.array([[4,3],[3,2]])
-B = np.array([[4,3,0,-5]])
+A = np.array([[4,3],[3,2]]) # ici on définit un 2x2 tableau 
+B = np.array([[4,3,0,-5]]) # ici on définit un 4x1 tableau 
 
 print("A est ", A) #pour afficher l'array A
 print("B est ", B)
 ```
 +++ Sortie
-```pyton
+```python
 >>> A est  [[4 3]
  [3 2]]
  >>> B est  [[ 4  3  0 -5]]

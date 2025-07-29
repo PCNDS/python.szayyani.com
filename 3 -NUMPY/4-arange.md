@@ -1,9 +1,8 @@
 ---
-Title : Fonction: `arange`
+Title : Fonction `arange`
 order : 780
 ---
 
-## La fonction `arange`
 
 La fonction `arange` permet la création d'un *array* en précisant **la valeur minimale, la valeur minimal** et **le pas** entre les valeurs, c'est à dire *l'intervalle entre valeurs successives*. 
 
