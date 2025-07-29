@@ -5,7 +5,7 @@ order : 800
 
 ## Qu'est-ce qu'un `array`
 
-L'objet principal que l'on utilise dans `numpy` est un ***array*** : un tableau multidimensionnel de valeurs. Un *array* **unidimensionnell** est l'équivalent d'une colonne dans un tableur comme *EXCEL* (mathémaiquement l'équivalent d'un vecteur). 
+L'objet principal que l'on utilise dans `numpy` est un ***array*** : un *tableau multidimensionnel de valeurs*. Un *array* **unidimensionnell** est l'équivalent d'une colonne dans un tableur comme *EXCEL* (mathémaiquement l'équivalent d'un vecteur). 
 
 Ayant déjà importé la bibliothéque `numpy` et l'a renommée `np`, nous allons créer deux *arrays* `A` et `B` de manière suivante  : 
 ```python
@@ -52,7 +52,7 @@ $$A = \begin{bmatrix} 4 & 3\\\ 3 & 2\end{bmatrix} \quad B = \begin{bmatrix} 4 & 
 $A$, $B$, $C$ et $D$ sont quatre matrices différentes. Leurs dimensions sont $A\to 2\times 2 \quad ; \quad  B\to 1\times 4 \quad ; \quad C\to 
 3\times 1 \quad ; \quad D\to 3\times 2$. 
 
-!!! Remarque
+!!!info Remarque
 Nous n'allons pas entrer en détail sur le sense mathématiques et physique de ces matrices encore, car le niveau est bien au-delà de ce que nous faisons au lycée, par en tant qu'exemple vous pouvez voir que matrice $C$ peut représent un *vecteur* : les trois chiffres représentent les coordonnées du vecteur $\vec{v} = (4, 3, -5)$. Par conséquent toute opérations effectuée sur cette matrice, représentent des opérations/manipulations faites au vecteur $\vec{v}$. 
 !!!
 

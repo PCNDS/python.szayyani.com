@@ -121,13 +121,35 @@ Faisons quelques exercices d'application, facile et qui pourraient nous aider da
 
 ==- [!Button "Exercice d'application"]
 +++ Enoncé 
-Définir une fonction `mpsKPH` qui permet de convertir une vitesse en $\frac{m}{s}$ en $\frac{km}{h}$. 
-+++ Code 
+1. :icon-triangle: Définir une fonction `mpsKPH` qui permet de convertir une vitesse en $\frac{m}{s}$ en $\frac{km}{h}$. 
+
+
+2. :icon-triangle: Définir une fonction `Ec` qui calcule l'énergie cinétique pour une masse et une vitesse donnée. 
+
++++ Code :icon-triangle: 1
 ```python
 def mpsKPH(a) : #la fonction prend qu'un seul argument, la vitesse en mps
     return a*3.6 
 ```
+exemple : 
+```bash
+>>> mpsKPH(1)
+3.6
+>>> mpsKPH(36)
+129.6
+```
++++ Code :icon-triangle: 2
+```python
+def Ec(m,v) : 
+    return 0.5*m*v**2
+```
+exemple : 
+
+```bash
+>>> Ec(10,5) #pour une masse de 10kg et vitesse de 5 m/s
+125
+>>> Ec(0.5, 20) #pour une masse de 500g et vitesse de 20 m/s
+100 
+```
 +++
-
-
 ==-

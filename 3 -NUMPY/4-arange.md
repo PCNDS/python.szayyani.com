@@ -34,6 +34,6 @@ print(D)
 ```
 +++
 
-!!!important
+!!!caution ***Attention***
 Notez qu'avec la fonction `arange` la limite maximale n'est pas incluse dans l'array formé. 
 !!!

@@ -32,7 +32,7 @@ print(X) #pour afficher le résultat
 ```
 +++
 
-!!!danger Attention : 
+!!!warning ***Attention*** : 
 * `linalg.solve` prend comme argument des `array` et donc il faut toujours définir ses variable et données par la fonction `array`
 * `linalg.solve` est *conçu* pour résoudre des *systèmes d'équations* et donc va toujours supposer que le $A$ est une matrice au moins en 2 dimensions, d'où `A = np.array([[4]])` et non `A = np.array([4])`, tandis que `b = np.array([8])`. 
 !!!
