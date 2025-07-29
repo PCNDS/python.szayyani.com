@@ -58,6 +58,7 @@ Salut David !
 >>> salut(pénélope)
 Salut pénélope !
 ```
++++
 
 Voyons quelques exemples de fonction prenant deux arguments. 
 

@@ -1,5 +1,6 @@
 ---
 order : 999
+icon : number
 ---
 # :icon-book: Bibliothéque `numpy`
 
@@ -24,11 +25,6 @@ Sans entrer trop en détail voici une (très) petites liste des fonctions que l'
 
 Dans les parties suivantes nous allons plonger un plus grand détail dans l'utilisation des plus importantes de ses fonctions, avec des exemples divers. 
 
-## La fonction `linspace`
-
-
-## La fonction `dot`
-
 ## Calculs mathématiques sur des séries de nombres
 
 ---
@@ -45,7 +41,7 @@ Il y a bien sur **beaucoup** d'autre fonction dans `numpy` mais pour nous (en ph
 > print(math.sqrt(4))  # Résultat : 2.0
 > 
 > # Utilisation de NumPy (sur un array)
-> ```python
+> 
 > array = np.array([1, 4, 9])
 > print(np.sqrt(array))  # Résultat : [1. 2. 3.]
 > ```
