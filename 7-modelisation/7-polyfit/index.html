@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Fonction array</title>
-    <meta name="title" content="Fonction array">
-    <meta name="description" content="La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple définir">
+    <title>Mod&#233;lisation avec polyfit</title>
+    <meta name="title" content="Modélisation avec polyfit">
+    <meta name="description" content="On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque ">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/3-numpy/3-array/">
+    <link rel="canonical" href="https://python.szayyani.com/7-modelisation/7-polyfit/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/3-numpy/3-array/">
-    <meta property="og:title" content="Fonction array">
-    <meta property="og:description" content="La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple définir">
+    <meta property="og:url" content="https://python.szayyani.com/7-modelisation/7-polyfit/">
+    <meta property="og:title" content="Modélisation avec polyfit">
+    <meta property="og:description" content="On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/3-array/">
-    <meta property="twitter:title" content="Fonction array">
-    <meta property="twitter:description" content="La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple définir">
+    <meta property="twitter:url" content="https://python.szayyani.com/7-modelisation/7-polyfit/">
+    <meta property="twitter:title" content="Modélisation avec polyfit">
+    <meta property="twitter:description" content="On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque ">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -37,6 +37,8 @@
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807166462495" data-turbo-eval="false" defer></script>
     <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807166462495" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,36 +173,84 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="fonction-array" class="break-words">
+<doc-anchor-target id="modélisation-graphique-avec-python" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fonction-array">#</doc-anchor-trigger>
-        <span>Fonction <code v-pre>array</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#modélisation-graphique-avec-python">#</doc-anchor-trigger>
+        <span>Modélisation graphique avec Python</span>
     </h1>
 </doc-anchor-target>
-<p>La méthode la plus simple et la plus directe (mais pas forcément la plus utile) est de simple <em>définir</em> l&#x27;array et ses constituants, comme dans l&#x27;exemple suivant :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>Code</template>
+<p>On voudrait faire la même modélisation avec PYTHON (dans Edupython à l&#x27;école) en vous servant de la bibliothèque <code v-pre>matplotlib.pyplot</code> pour l’affichage du nuage des points.</p>
+<p>Modéliser nos résultats, c&#x27;est à dire trouver la &quot;courbe de tendance&quot; adaptée à nos données est différente avec Python.</p>
+<p>Nous avons plusieurs possibilités mais nous nous focalisons sur deux options : la fonction <code v-pre>polyfit(abscisse,ordonnee,ordre)</code> dans la bibliothèque <code v-pre>numpy</code>, ou de la fonction <code v-pre>linregress</code> dans la bibliothèque <code v-pre>scipy.stats</code>.</p>
+<doc-anchor-target id="modélisation-avec-polyfit">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#modélisation-avec-polyfit">#</doc-anchor-trigger>
+        <span>Modélisation avec <code v-pre>polyfit</code></span>
+    </h2>
+</doc-anchor-target>
+<p>La fonction <code v-pre>polyfit(abscisse,ordonnee,ordre)</code> nous propose la courbe décrite par une <em>fonction polynomial</em> (dont le <em>degrée</em> nous choisissons) la mieux adaptée à nos données. (Pour rappel une fonction polynomiale s&#x27;écrit comme une somme des puissance d&#x27;une variable <span class="math">x</span> :
+<span class="math">f(x) = a\cdot x^n + b\cdot x^{n-1} + \cdots + p\cdot x + q</span></p>
+<p>Le <strong>degrée <span class="math">n</span></strong> de la fonction correspond à la puissance de <span class="math">x</span> la plus élevée.</p>
+<p>Vous en conniassez déjà quelques exemple :</p>
+<ul>
+<li><span class="math">f(x) = a</span> la fonction constante est un polynôme de degrée <span class="math">0</span></li>
+<li><span class="math">f(x) = a\cdot x + b</span> : la fonction linéaire est une polynôme de premier degrée (<span class="math">n=1</span>)</li>
+<li><span class="math">f(x) = a\cdot x^2 + b\cdot x + c</span> : la fonction quadratique (qui décrit une parabole) est un polynôme de degree <span class="math">2</span>.</li>
+</ul>
+<p>Commençons comme toujours avec l&#x27;importation des bibliothéques <code v-pre>numpy</code> pour le traitement des séries de nombres, et <code v-pre>matplotlib</code> pour la visualisation graphique.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">A = np.array([[4,3],[3,2]]) # ici on définit un 2x2 tableau 
-B = np.array([[4,3,0,-5]]) # ici on définit un 4x1 tableau 
+<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
+import matplotlib.pyplot as plt</code></pre>
+</doc-codeblock></div>
+<p>Voici donc comment utiliser la fonction <code v-pre>polyfit</code> :</p>
+<ul>
+<li>Il est important de définir les données avec la fonction <code v-pre>np.array</code>, pour que <strong>Python</strong> les reconnaisse comme une séries de valeur numériques (<code v-pre>float</code>) et non juste une liste d&#x27;object.</li>
+<li>Une fois <code v-pre>numpy</code> importé comme np, on peut utiliser avece <code v-pre>np.polyfit(x,y,n)</code>.
+<code v-pre>polyfit</code> prend 3 arguments : <span class="math">x</span> = la grandeur en abscisse, la variable indépendante de la fonction;  <span class="math">y</span> = la grandeur en ordonnée; <span class="math">n</span> = le degrée de la fonction polynomiale qui modéliser les résultats.</li>
+<li><p>En fonction du type de fonction polynomiale utilisée pour la modélisation, la <code v-pre>polyfit</code> génère un certain nombre de paramètres. Par exemple, pour une modélisation par une fonction linéaire du type <span class="math">y = a\cdot x + b</span>, <code v-pre>polyfit</code> calcule et génère les paramètres <span class="math">a</span> et <span class="math">b</span> pour la droite la mieux adaptée aux valeurs mesurées.</p>
+<p>Ces paramètres sont stockés dans la mémoire de l&#x27;environnement de codage et afin d’y accéder il faut les &#x27;écrire&#x27; dans des variables : <code v-pre>a, b = polyfit(x,y,1)</code> (où <span class="math">x</span> et <span class="math">y</span> sont changent en fonction des noms que nous avons donnés à nos grandeurs).</p>
+<p>Grâce à cela, les paramètres caractérisant la droite de notre modèle sont désormais stockés dans les variables <span class="math">a</span> et <span class="math">b</span>.</p>
+</li>
+<li>Afin d’afficher la droite de modélisation, il faut utiliser la fonction <code v-pre>plot</code> dans <code v-pre>matplotlib</code> : <code v-pre>plt.plot(x,f(x), ...)</code> où <span class="math">x</span> = est la variable indépendante, <span class="math">f(x)</span> = ce qu’on veut faire apparaître en ordonnée, c’est à dire la fonction <span class="math">f(x)</span> ; et les paramètres de visualisation comme la couleur ou le style de ligne pour la courbe.</li>
+</ul>
+<doc-anchor-target id="exemple-dun-corrigé">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exemple-dun-corrigé">#</doc-anchor-trigger>
+        <span>Exemple d&#x27;un corrigé</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np 
+import matplotlib.pyplot as plt 
+import scipy.stats as ss
 
-print(&quot;A est &quot;, A) #pour afficher l'array A
-print(&quot;B est &quot;, B)</code></pre>
+##### Series de donnees 
+
+m = np.array([0, 10, 40, 100, 150, 200, 250]) #les masses utilisees
+P = np.array([0, 0.15 , 0.35, 1.1, 1.5, 1.9, 2.7 ]) #les poids mesures
+
+##### Trace de la courbe de tendance avec POLYFIT
+
+a, b = np.polyfit(m, P, 1) #etant donne que les resultats ont l'allure lineaire
+print(&quot;le coefficient directeur est :&quot;, a, &quot; N/g&quot;)
+
+##### Trace de la courbe de tendance avec LINREGRESS
+
+c, d, rvalue, pvalue, stderr = ss.linregress(m, P)
+print(&quot;le coefficient directeur est :&quot;, c, &quot; N/g ; et Le coefficient de correlation est :&quot;, rvalue)
+
+
+##### graphique de P = f(m)
+plt.plot(m,P, 'x', label = &quot;modèle lingress&quot;)
+plt.plot(m, a*m+b, 'r--', label = &quot;modele polyfit&quot;)
+plt.title( &quot;P = f(m)&quot;)
+plt.xlabel(&quot;masse m (kg)&quot;)
+plt.ylabel(&quot;poids P (N)&quot;)
+plt.legend(loc = &quot;best&quot;)
+plt.grid(True)
+plt.savefig(&quot;massePoids.png&quot;)
+plt.show() </code></pre>
 </doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>Sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; A est  [[4 3]
- [3 2]]
- &gt;&gt;&gt; B est  [[ 4  3  0 -5]]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<p>Il y a d&#x27;autres méthodes de créer une matrice avec la fonction <code v-pre>array</code>, mais pour le moment ce que l&#x27;on a vu suffira.</p>
-<p>Dans les cas précédents on a pu utiliser la fonction <code v-pre>array</code> car nous avions déjà les valeurs que l&#x27;on voulait mettre dans notre matrice. Cela peut être très utile par exemple dans le cas des mesures expérimentales que nous avons relevées lors d&#x27;une expérience (des distances parcourues par un objet, des valeur de pH mesurées avec un pH-mètre, etc).</p>
-<p>En revanche, parfois nous voulons juste une séries de valeurs à un intervalle régulier. Pour cela nous avons deux fonctions très pratiques et simples : <code v-pre>arange</code> et <code v-pre>linspace</code></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -210,20 +260,20 @@ print(&quot;B est &quot;, B)</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/2-arrays/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../5-fonctions/fonctions/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Les Arrays</span>
+                                                <span class="block mt-1">Les Fonctions</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/4-arange/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../6-boucles/6-1-boucles/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Fonction arange</span>
+                                                <span class="block mt-1">Qu'est-​ce qu'une boucle?</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -267,6 +317,6 @@ print(&quot;B est &quot;, B)</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Fonction array", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Modélisation avec polyfit", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>
