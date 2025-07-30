@@ -1,6 +1,7 @@
 ---
 title : Modélisation avec `polyfit`
 order : 900
+icon : gear
 ---
 # Modélisation graphique avec Python
 

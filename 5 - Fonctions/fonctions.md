@@ -119,14 +119,13 @@ la vitesse est donc 20 metres par secondes
 
 Faisons quelques exercices d'application, facile et qui pourraient nous aider dans le future : 
 
-==- [!Button "Exercice d'application"]
+[!Badge :icon-pencil: Exercice d'application]
 +++ Enoncé 
-1. :icon-triangle: Définir une fonction `mpsKPH` qui permet de convertir une vitesse en $\frac{m}{s}$ en $\frac{km}{h}$. 
+1.  Définir une fonction `mpsKPH` qui permet de convertir une vitesse en $\frac{m}{s}$ en $\frac{km}{h}$. 
 
+2.  Définir une fonction `Ec` qui calcule l'énergie cinétique pour une masse et une vitesse donnée. 
 
-2. :icon-triangle: Définir une fonction `Ec` qui calcule l'énergie cinétique pour une masse et une vitesse donnée. 
-
-+++ Code :icon-triangle: 1
++++ Code 1
 ```python
 def mpsKPH(a) : #la fonction prend qu'un seul argument, la vitesse en mps
     return a*3.6 
@@ -138,7 +137,7 @@ exemple :
 >>> mpsKPH(36)
 129.6
 ```
-+++ Code :icon-triangle: 2
++++ Code 2
 ```python
 def Ec(m,v) : 
     return 0.5*m*v**2
@@ -152,4 +151,3 @@ exemple :
 100 
 ```
 +++
-==-
