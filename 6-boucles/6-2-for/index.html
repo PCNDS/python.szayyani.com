@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Fonction arange</title>
-    <meta name="title" content="Fonction arange">
-    <meta name="description" content="La fonction arange permet la création d'un array en précisant la valeur minimale, la valeur minimal et ">
+    <title>Boucle FOR</title>
+    <meta name="title" content="Boucle FOR">
+    <meta name="description" content="On utiliser la boucle for quand nous savons combien de fois nous voulons faire un calcul, ou executer une séries d'instruction.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/3-numpy/4-arange/">
+    <link rel="canonical" href="https://python.szayyani.com/6-boucles/6-2-for/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/3-numpy/4-arange/">
-    <meta property="og:title" content="Fonction arange">
-    <meta property="og:description" content="La fonction arange permet la création d'un array en précisant la valeur minimale, la valeur minimal et ">
+    <meta property="og:url" content="https://python.szayyani.com/6-boucles/6-2-for/">
+    <meta property="og:title" content="Boucle FOR">
+    <meta property="og:description" content="On utiliser la boucle for quand nous savons combien de fois nous voulons faire un calcul, ou executer une séries d'instruction.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/4-arange/">
-    <meta property="twitter:title" content="Fonction arange">
-    <meta property="twitter:description" content="La fonction arange permet la création d'un array en précisant la valeur minimale, la valeur minimal et ">
+    <meta property="twitter:url" content="https://python.szayyani.com/6-boucles/6-2-for/">
+    <meta property="twitter:title" content="Boucle FOR">
+    <meta property="twitter:description" content="On utiliser la boucle for quand nous savons combien de fois nous voulons faire un calcul, ou executer une séries d'instruction.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -37,6 +37,8 @@
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807234968053" data-turbo-eval="false" defer></script>
     <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807234968053" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,65 +173,69 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="fonction-arange" class="break-words">
+<doc-anchor-target id="boucle-for" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fonction-arange">#</doc-anchor-trigger>
-        <span>Fonction <code v-pre>arange</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#boucle-for">#</doc-anchor-trigger>
+        <span>Boucle <code v-pre>FOR</code></span>
     </h1>
 </doc-anchor-target>
-<p>La fonction <code v-pre>arange</code> permet la création d&#x27;un <em>array</em> en précisant <strong>la valeur minimale, la valeur minimal</strong> et <strong>le pas</strong> entre les valeurs, c&#x27;est à dire <em>l&#x27;intervalle entre valeurs successives</em>.</p>
-<p>Allons directement à un exemple pour mieux comprendre :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>code</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.arange(0, 10, 1) #une série de valeurs allant de 0 à 10 avec un pas de 1
-
-print(D)</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; [0 1 2 3 4 5 6 7 8 9]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
-<p>C&#x27;est aussi simple que ça. Voilà un autre exemple :</p>
-<doc-tabs>
-<doc-tab v-cloak id="code">
-<template #title>code</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">D = np.arange(-2,2, 0.5) #une série de valeurs allant de -2 à 2 avec un pas de 0.5
-
-print(D)</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="sortie">
-<template #title>sortie</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt;[-2.  -1.5 -1.  -0.5  0.   0.5  1.   1.5]</code></pre>
-</doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
+<p>On utiliser la boucle <code v-pre>for</code> quand nous savons combien de fois nous voulons faire un calcul, ou executer une séries d&#x27;instruction.</p>
+<p>Voilà la structure générale d&#x27;une boucle <code v-pre>for</code> :</p>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-success"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
         <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-success" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M21 9.09c-.55 0-1 .45-1 1v.92c0 4.96-4.04 8.99-9 8.99-4.97 0-9-4.04-9-9s4.04-9 9-9c1.27 0 2.5.26 3.66.78.51.22 1.1 0 1.32-.51.23-.5 0-1.1-.51-1.32C14.06.32 12.56 0 11.01 0H11C4.94 0 0 4.93 0 10.99 0 17.06 4.93 22 10.99 22H11c6.06 0 11-4.93 11-10.99v-.92c0-.56-.45-1-1-1z"></path>
+                    <path d="M8.71 9.31a.996.996 0 10-1.41 1.41l3 3c.19.19.44.29.71.29.27 0 .52-.11.71-.29l10-10.01a.996.996 0 10-1.41-1.41L11 11.6 8.71 9.31z"></path>
                 </g></g>
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>caution <em><strong>Attention</strong></em></h5>
-<p>Notez qu&#x27;avec la fonction <code v-pre>arange</code> la limite maximale n&#x27;est pas incluse dans l&#x27;array formé.</p>
+            <h5>Point Syntaxe</h5>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">for élement in séquence : 
+    les instructions
+
+la suite du programme</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>important de noter le <code v-pre>:</code> à la fin de la première ligne qui est obligatoire</li>
+<li><strong>l&#x27;indentation</strong> est à respecter, car il n&#x27;y a rien pour signaler la fin de la boucle sauf le retour à la ligne à la fin de la boucle</li>
+<li>le <code v-pre>for</code> et le <code v-pre>in</code> sont obligatoire dans la déclaration des conditions de la boucle</li>
+</ul>
         </div>
     </div>
 </div>
+<p>Regardons quelques exemples simples pour mieux comprendre.</p>
+<doc-tabs>
+<doc-tab v-cloak id="description">
+<template #title>Description</template>
+<p>On veut créer un compteur, et lui dire de compter de zero à 5.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">for i in range(6) : 
+    print(i)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">&gt;&gt;&gt; 0
+1
+2
+3
+4
+5</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="explication">
+<template #title>explication</template>
+<p>la fonction <code v-pre>range(n)</code> fait un décompte de <span class="math">0\to n-1</span>.</p>
+</doc-tab>
 
                                 
                                 <!-- Required only on API pages -->
@@ -239,20 +245,20 @@ print(D)</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/3-array/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../6-boucles/6-1-boucles/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Fonction array</span>
+                                                <span class="block mt-1">Qu'est-​ce qu'une boucle?</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/5-linspace/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../7-modelisation/7-polyfit/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Fonction linspace</span>
+                                                <span class="block mt-1">Modélisation avec polyfit</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -296,6 +302,6 @@ print(D)</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Fonction arange", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Boucle FOR", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>
