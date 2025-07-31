@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.807299829864">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.807321453265">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.807299829864" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.807321453265" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.807299829864" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.807321453265" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807299829864" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807299829864" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807321453265" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807321453265" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -52,8 +52,8 @@
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
                         <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-xl">
-                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">PYTHON pour la Physique au lycée</span>
-                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">PYTHON au lycée (Pour PC)</span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Cours &amp; Exos</span>
                     </div>
         
                     <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
@@ -222,12 +222,92 @@ Babou</code></pre>
 <pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; nombres[3] #donne la 4e élément
 0</code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="opérations-avec-les-listes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#opérations-avec-les-listes">#</doc-anchor-trigger>
+        <span>Opérations avec les listes</span>
+    </h2>
+</doc-anchor-target>
+<p>Créeons deux liste <code v-pre>num1</code> et <code v-pre>num2</code>, et puis voyaons ce qu&#x27;on peut faire comme combinaisons entre les deux listes. On les définit ici directement dans la console :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; num1 = [0, 1, 2, 3, 4]
+&gt;&gt;&gt; num2 = [10, 5, -1, 0, 1]
+&gt;&gt;&gt; num1 + num2 = [0, 1, 2, 3, 4, 10, 5, -1, 0, 1]
+&gt;&gt;&gt; num1 - num2
+ERROR</code></pre>
+</doc-codeblock></div>
+<p>Ce qu&#x27;on apprend avec un exemple aussi simple c&#x27;est qu&#x27;une operation <code v-pre>+</code> entre deux listes n&#x27;est pas simplement une additions des éléments. Ceci est logique car une liste peut être un ensemble d&#x27;autres choses que nombres. Par conséquent l&#x27;opération <code v-pre>-</code> n&#x27;a pas de sens entre deux listes. Voici un autre exemple :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; prenoms = [&quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;]
+&gt;&gt;&gt; objets = [&quot;mangue&quot;, &quot;table&quot;, &quot;pc&quot;, &quot;chaise&quot;]
+&gt;&gt;&gt; prenoms + objets 
+[&quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;, &quot;mangue&quot;, &quot;table&quot;, &quot;pc&quot;, &quot;chaise&quot;]</code></pre>
+</doc-codeblock></div>
+<p>Voici un autre exemple :</p>
+<doc-tabs>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; prenoms = [&quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;]
+&gt;&gt;&gt; objets = [&quot;mangue&quot;, &quot;table&quot;, &quot;pc&quot;, &quot;chaise&quot;]
+&gt;&gt;&gt; prenom*2 </code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">[&quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;, &quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;]</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="explication">
+<template #title>explication</template>
+<p>l&#x27;operation <code v-pre>prenoms*2</code> équivaut littéralement <code v-pre>prenoms+prenoms</code>.</p>
+</doc-tab>
+</doc-tabs>
+<p>Même rien nous empêche d&#x27;utiliser des listes de nombre pour notre travail scientifique, on voit bien que les listes ne sont pas vraiment bien adaptées à la tâche (surtout quand on aura besoin de manipuler des tableaux de valeurs avec des opérations mathématiques plus complexes) : pour cela nous nous tournons vers les <code v-pre>array</code>s dans la bibliothéque <code v-pre>numpy</code>, à venir.</p>
 <doc-anchor-target id="opérations-pour-modifier-une-liste">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#opérations-pour-modifier-une-liste">#</doc-anchor-trigger>
         <span>Opérations pour modifier une liste</span>
     </h2>
 </doc-anchor-target>
+<p>Voici une petite liste de quelques opérations très utiles pour manipuler et modificer les <em>listes</em> dont on se sert très souvent (pour deux listes qu&#x27;on définit comme <code v-pre>A = [&quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;, &quot;mangue&quot;, &quot;banane&quot;, &quot;Bobo&quot;, &quot;maison&quot;]</code>et <code v-pre>B = [1, 2, 10, 10, 18, 10, 7, 0]</code>):</p>
+<ul>
+<li><code v-pre>len</code> retourne la longueur d&#x27;une liste, c&#x27;est à dire le nombre d&#x27;élément qu&#x27;elle contient :</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; len(A)
+7
+&gt;&gt;&gt; len(B)
+8</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>append</code> est très utilisé pour ajouter un élément à une liste</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; A.append(&quot;Bouba&quot;)
+&gt;&gt;&gt; A
+[&quot;Bobo&quot;, &quot;Bibi&quot;, &quot;Babou&quot;, &quot;mangue&quot;, &quot;banane&quot;, &quot;Bobo&quot;, &quot;maison&quot;, &quot;Bouba&quot;]
+&gt;&gt;&gt; B.append(&quot;Bouba&quot;)
+&gt;&gt;&gt; B
+[1, 2, 10, 10, 18, 10, 7, 0, &quot;Bouba&quot;]</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>count</code> retourne le nombre d&#x27;occurence d&#x27;un élément dans la liste</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; A.count(&quot;Bobo&quot;)
+2
+&gt;&gt;&gt; B.count(10)
+3</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>remove</code> permet d&#x27;éliminer un élément : <code v-pre>B.remove(1)</code></li>
+<li><code v-pre>sort</code> permet d&#x27;ordonner une liste : dans l&#x27;ordre alphabétique pour une les avcec des caractères, dans l&#x27;ordre numérique croissant pour une liste avec des nombres</li>
+<li><code v-pre>max</code> et <code v-pre>min</code> permettent de trouver la valeur max/min dans une liste (caractères ou nombres)</li>
+<li><code v-pre>sum</code> fait la somme arithmétique des éléments dans la liste (ne marche qu&#x27;avec une liste de nombres)</li>
+<li></li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
