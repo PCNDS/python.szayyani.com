@@ -9,8 +9,8 @@ start:
   # pro: true
 
 branding:
-  title: PYTHON pour la Physique au lycée
-  label: Docs
+  title: PYTHON au lycée (Pour PC)
+  label: Cours & Exos
 
 links:
 - text: Getting Started

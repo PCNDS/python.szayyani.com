@@ -38,7 +38,78 @@ Ou encore avec la liste `nombres` :
 0
 ```
 
+## Opérations avec les listes
+
+Créeons deux liste `num1` et `num2`, et puis voyaons ce qu'on peut faire comme combinaisons entre les deux listes. On les définit ici directement dans la console : 
+
+
+```python 
+>>> num1 = [0, 1, 2, 3, 4]
+>>> num2 = [10, 5, -1, 0, 1]
+>>> num1 + num2 = [0, 1, 2, 3, 4, 10, 5, -1, 0, 1]
+>>> num1 - num2
+ERROR
+```
+
+Ce qu'on apprend avec un exemple aussi simple c'est qu'une operation `+` entre deux listes n'est pas simplement une additions des éléments. Ceci est logique car une liste peut être un ensemble d'autres choses que nombres. Par conséquent l'opération `-` n'a pas de sens entre deux listes. Voici un autre exemple : 
+
+```python
+>>> prenoms = ["Bobo", "Bibi", "Babou"]
+>>> objets = ["mangue", "table", "pc", "chaise"]
+>>> prenoms + objets 
+["Bobo", "Bibi", "Babou", "mangue", "table", "pc", "chaise"]
+```
+
+Voici un autre exemple : 
+
++++ code
+```python
+>>> prenoms = ["Bobo", "Bibi", "Babou"]
+>>> objets = ["mangue", "table", "pc", "chaise"]
+>>> prenom*2 
+```
++++ sortie
+```python
+["Bobo", "Bibi", "Babou", "Bobo", "Bibi", "Babou"]
+```
++++ explication
+l'operation `prenoms*2` équivaut littéralement `prenoms+prenoms`. 
++++
+
+Même rien nous empêche d'utiliser des listes de nombre pour notre travail scientifique, on voit bien que les listes ne sont pas vraiment bien adaptées à la tâche (surtout quand on aura besoin de manipuler des tableaux de valeurs avec des opérations mathématiques plus complexes) : pour cela nous nous tournons vers les `array`s dans la bibliothéque `numpy`, à venir. 
+
 ## Opérations pour modifier une liste 
+
+Voici une petite liste de quelques opérations très utiles pour manipuler et modificer les *listes* dont on se sert très souvent (pour deux listes qu'on définit comme `A = ["Bobo", "Bibi", "Babou", "mangue", "banane", "Bobo", "maison"]`et `B = [1, 2, 10, 10, 18, 10, 7, 0]`): 
+
+* `len` retourne la longueur d'une liste, c'est à dire le nombre d'élément qu'elle contient : 
+```python
+>>> len(A)
+7
+>>> len(B)
+8
+```
+* `append` est très utilisé pour ajouter un élément à une liste
+```python
+>>> A.append("Bouba")
+>>> A
+["Bobo", "Bibi", "Babou", "mangue", "banane", "Bobo", "maison", "Bouba"]
+>>> B.append("Bouba")
+>>> B
+[1, 2, 10, 10, 18, 10, 7, 0, "Bouba"]
+```
+* `count` retourne le nombre d'occurence d'un élément dans la liste 
+```python
+>>> A.count("Bobo")
+2
+>>> B.count(10)
+3
+```
+* `remove` permet d'éliminer un élément : `B.remove(1)`
+* `sort` permet d'ordonner une liste : dans l'ordre alphabétique pour une les avcec des caractères, dans l'ordre numérique croissant pour une liste avec des nombres
+* `max` et `min` permettent de trouver la valeur max/min dans une liste (caractères ou nombres)
+* `sum` fait la somme arithmétique des éléments dans la liste (ne marche qu'avec une liste de nombres)
+* 
 
 
 
