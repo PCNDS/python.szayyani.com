@@ -82,4 +82,6 @@ for in range(3,11) :
 ```
 +++ remarque
 Attention au fait que pour `range(a,b)` la gamme des valeur va de $a\to b-1$. 
++++
+
 
