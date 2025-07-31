@@ -24,7 +24,7 @@ la suite du programme
 
 Regardons quelques exemples simples pour mieux comprendre. 
 
-[!Button :icon-pencil: Exemple]
+[!badge :icon-pencil: Exemple]
 +++ description
 On veut un programme qui dit bonjour dans l'ordre à une liste de nom que l'on définit au début. 
 +++ code 
@@ -47,7 +47,7 @@ Les prénoms sont des caractères d'où la nécessité de mettre les guillements
 
 Voic un autre exemple qui utiliser une nouvelle fonction `range`qui est très pratique et utile pour nous. 
 
-[!Button :icon-pencil: Exemple]
+[!badge :icon-pencil: Exemple]
 +++ Description
 On veut créer un compteur, et lui dire de compter de zero à 5. 
 +++ code
@@ -73,13 +73,32 @@ for i in range(6) :
 
 Voici un exemple où on définit nous même la gamme des valeurs dans `ranage`. 
 
-[!Button :icon-pencil: Exemple]
+[!badge :icon-pencil: Exemple]
 +++ description 
 On veut un compteure qui commence à $3$ et arrête à $10$. 
 +++ code 
 ```python
 for in range(3,11) : 
     print(i)
+```
++++ sortie
+```bash
+>>> 
+```
++++ remarque
+Attention au fait que pour `range(a,b)` la gamme des valeur va de $a\to b-1$. 
++++
+
+[!badge :icon-pencil: Exemple]
++++ description 
+On veut faire une boucle qui permet de faire la somme des entière allant de $0\to 23$.  
++++ code 
+```python
+somme = 0
+for in range(24) : 
+    somme = somme + i
+
+print(somme)
 ```
 +++ sortie
 ```bash
