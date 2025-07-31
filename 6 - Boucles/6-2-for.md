@@ -24,7 +24,7 @@ la suite du programme
 
 Regardons quelques exemples simples pour mieux comprendre. 
 
-!!!light [!Badge :icon-pencil: Exemple]
+[!Button :icon-pencil: Exemple]
 +++ description
 On veut un programme qui dit bonjour dans l'ordre à une liste de nom que l'on définit au début. 
 +++ code 
@@ -44,10 +44,10 @@ Bibi
 +++ Remarque 
 Les prénoms sont des caractères d'où la nécessité de mettre les guillements quand on définit la liste. 
 +++
-!!!
 
 Voic un autre exemple qui utiliser une nouvelle fonction `range`qui est très pratique et utile pour nous. 
 
+[!Button :icon-pencil: Exemple]
 +++ Description
 On veut créer un compteur, et lui dire de compter de zero à 5. 
 +++ code
@@ -71,6 +71,9 @@ for i in range(6) :
 * on peut préciser dans quelle *gamme* de valeur on veut utiliser `range`, comme `range(2,6)`. 
 !!!
 
+Voici un exemple où on définit nous même la gamme des valeurs dans `ranage`. 
+
+[!Button :icon-pencil: Exemple]
 +++ description 
 On veut un compteure qui commence à $3$ et arrête à $10$. 
 +++ code 
