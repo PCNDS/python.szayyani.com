@@ -24,6 +24,7 @@ la suite du programme
 
 Regardons quelques exemples simples pour mieux comprendre. 
 
+!!!light [!Badge :icon-pencil: Exemple]
 +++ description
 On veut un programme qui dit bonjour dans l'ordre à une liste de nom que l'on définit au début. 
 +++ code 
@@ -43,6 +44,7 @@ Bibi
 +++ Remarque 
 Les prénoms sont des caractères d'où la nécessité de mettre les guillements quand on définit la liste. 
 +++
+!!!
 
 Voic un autre exemple qui utiliser une nouvelle fonction `range`qui est très pratique et utile pour nous. 
 
@@ -64,7 +66,7 @@ for i in range(6) :
  ```
  +++
 
-!!!succes *** Point Syntaxe***
+!!!success *** Point Syntaxe***
 * la fonction `range(n)` fait un décompte de $0\to n-1$. Dans un premier temps la boucle commence avec une valeur par défaut $0$ (car on n'a pas précisé quel valeur pour le départ). et puis a la fin de chaque boucle $i$ passe au numéro suivant, et puis s'arrête à la valeur de $n-1$. 
 * on peut préciser dans quelle *gamme* de valeur on veut utiliser `range`, comme `range(2,6)`. 
 !!!
