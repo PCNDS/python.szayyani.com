@@ -109,7 +109,22 @@ Voici une petite liste de quelques opérations très utiles pour manipuler et mo
 * `sort` permet d'ordonner une liste : dans l'ordre alphabétique pour une les avcec des caractères, dans l'ordre numérique croissant pour une liste avec des nombres
 * `max` et `min` permettent de trouver la valeur max/min dans une liste (caractères ou nombres)
 * `sum` fait la somme arithmétique des éléments dans la liste (ne marche qu'avec une liste de nombres)
-* 
+  
+
+Quelques exos d'application : 
+
++++ énoncés 
+1. Calculer la moyenne arithmétique de la liste `B` précédément définie. 
+2. Calculer l'étendue de la liste `B`. 
++++ code 1
+
++++ code 2
+```python 
+etendu = max(B) - min(B)
+print("la liste B s'étend a une étendu de ", etendu, "allant de ",min(B), "à ", max(B))
+```
+
++++
 
 
 
