@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>R&#232;gles de Syntaxe</title>
-    <meta name="title" content="Règles de Syntaxe">
-    <meta name="description" content="PYTHON comme toute langue a des règles de syntaxe et de grammaire à respecter, d'autant plus qu'une langue parlé que la moindre irrespect de ces...">
+    <title>Mod&#233;lisation avec polyfit</title>
+    <meta name="title" content="Modélisation avec polyfit">
+    <meta name="description" content="On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque ">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/1-commencer/2-syntaxe/">
+    <link rel="canonical" href="https://python.szayyani.com/7-modelisation/7-polyfit/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/1-commencer/2-syntaxe/">
-    <meta property="og:title" content="Règles de Syntaxe">
-    <meta property="og:description" content="PYTHON comme toute langue a des règles de syntaxe et de grammaire à respecter, d'autant plus qu'une langue parlé que la moindre irrespect de ces...">
+    <meta property="og:url" content="https://python.szayyani.com/7-modelisation/7-polyfit/">
+    <meta property="og:title" content="Modélisation avec polyfit">
+    <meta property="og:description" content="On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/1-commencer/2-syntaxe/">
-    <meta property="twitter:title" content="Règles de Syntaxe">
-    <meta property="twitter:description" content="PYTHON comme toute langue a des règles de syntaxe et de grammaire à respecter, d'autant plus qu'une langue parlé que la moindre irrespect de ces...">
+    <meta property="twitter:url" content="https://python.szayyani.com/7-modelisation/7-polyfit/">
+    <meta property="twitter:title" content="Modélisation avec polyfit">
+    <meta property="twitter:description" content="On voudrait faire la même modélisation avec PYTHON (dans Edupython à l'école) en vous servant de la bibliothèque ">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -37,6 +37,8 @@
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.807341761524" data-turbo-eval="false" defer></script>
     <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.807341761524" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,111 +173,84 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="règles-de-syntaxe" class="break-words">
+<doc-anchor-target id="modélisation-graphique-avec-python" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#règles-de-syntaxe">#</doc-anchor-trigger>
-        <span>Règles de Syntaxe</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#modélisation-graphique-avec-python">#</doc-anchor-trigger>
+        <span>Modélisation graphique avec Python</span>
     </h1>
 </doc-anchor-target>
-<p>PYTHON comme toute langue a des règles de syntaxe et de grammaire à respecter, d&#x27;autant plus qu&#x27;une langue parlé que la moindre irrespect de ces règles de logique empêcherait l&#x27;execution de votre code !</p>
-<p>Sans entrer trop en détail, il est important de noter que le langage PYTHON est très sensible à certaines règles de syntaxe notamment :</p>
-<doc-anchor-target id="ordre-des-choses-">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ordre-des-choses-">#</doc-anchor-trigger>
-        <span>Ordre des choses :</span>
-    </h3>
+<p>On voudrait faire la même modélisation avec PYTHON (dans Edupython à l&#x27;école) en vous servant de la bibliothèque <code v-pre>matplotlib.pyplot</code> pour l’affichage du nuage des points.</p>
+<p>Modéliser nos résultats, c&#x27;est à dire trouver la &quot;courbe de tendance&quot; adaptée à nos données est différente avec Python.</p>
+<p>Nous avons plusieurs possibilités mais nous nous focalisons sur deux options : la fonction <code v-pre>polyfit(abscisse,ordonnee,ordre)</code> dans la bibliothèque <code v-pre>numpy</code>, ou de la fonction <code v-pre>linregress</code> dans la bibliothèque <code v-pre>scipy.stats</code>.</p>
+<doc-anchor-target id="modélisation-avec-polyfit">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#modélisation-avec-polyfit">#</doc-anchor-trigger>
+        <span>Modélisation avec <code v-pre>polyfit</code></span>
+    </h2>
 </doc-anchor-target>
-<p>PYTHON lit le code dans l&#x27;ordre du haut vers le bas. C&#x27;est à dire si vous mentionnez une variable avant de l&#x27;avoir défini/affectée PYTHON aura du mal à executer le code.</p>
-<p>De la même manière, chaque nouvelle instruction peut remplacer une ancienne instruction en cas de conflit. Exemple : Vous définissez <code v-pre>a = 10</code> au début du programme, et plus tard vous donnez l&#x27;instruction <code v-pre>a = 15</code>, pour le programme, désormais la variable <code v-pre>a</code> a une valeur de <code v-pre>15</code> et non <code v-pre>10</code>.</p>
-<doc-anchor-target id="majuscule-et-minuscule">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#majuscule-et-minuscule">#</doc-anchor-trigger>
-        <span><strong>Majuscule</strong> et <strong>minuscule</strong></span>
-    </h3>
-</doc-anchor-target>
-<p>... ne sont pas pareilles. Une <em>variable</em> nommée <code v-pre>variable</code> n&#x27;est pas la même que <code v-pre>Variable</code> et encore différent que <code v-pre>VariAblE</code>. Pour PYTHON il s&#x27;agit de trois objets différents.</p>
-<doc-anchor-target id="ponctuation">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ponctuation">#</doc-anchor-trigger>
-        <span>&quot;<strong>Ponctuation</strong>&quot;</span>
-    </h3>
-</doc-anchor-target>
-<p>... est très important : on ne peut pas remplacer des <code v-pre>: ; , . &quot; &quot; ' '</code> de manière interchangeable. Au fur et à mesur vous allez apprendre le bon usage de cela, mais il faut vraiment le respecter scrupuleusement</p>
-<doc-anchor-target id="indentation">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#indentation">#</doc-anchor-trigger>
-        <span>Indentation</span>
-    </h3>
-</doc-anchor-target>
-<p>de même pour &quot;<strong>l&#x27;indentation</strong>&quot; qui est essentielle pour la bonne organisation et structuration de votre programme. Par exemple, considérons les deux exemples suivants :</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">if 1&gt;0 :
-  print(&quot;1 est positif&quot;) 
-
-if 1&gt;0 :
-print(&quot;1 est positif&quot;)</code></pre>
-</doc-codeblock></div>
-<p>Dans le 2eme cas il y aura une erreur, car, en raison de manque d&#x27;indentation, PYTHON ne reconnait pas que le message à &quot;printer&quot; appartient à la condition précédente.
-La questions d&#x27;indentation est particulièrement important dans les &quot;boucles&quot; (<code v-pre>if</code>, <code v-pre>for</code>, <code v-pre>while</code>, etc). De manière générale, tout texte &quot;indenté&quot; qui suit une ligne apartient au même &quot;bloc&quot;.</p>
-<doc-anchor-target id="types-de-données">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#types-de-données">#</doc-anchor-trigger>
-        <span>&#x27;Types&#x27; de données</span>
-    </h3>
-</doc-anchor-target>
-<p>Un mot bref sur les différents &quot;types&quot; de données dans PYTHON. Voici une liste très brève des &quot;types&quot; les plus pertinentes pour nous :</p>
+<p>La fonction <code v-pre>polyfit(abscisse,ordonnee,ordre)</code> nous propose la courbe décrite par une <em>fonction polynomial</em> (dont le <em>degrée</em> nous choisissons) la mieux adaptée à nos données. (Pour rappel une fonction polynomiale s&#x27;écrit comme une somme des puissance d&#x27;une variable <span class="math">x</span> :
+<span class="math">f(x) = a\cdot x^n + b\cdot x^{n-1} + \cdots + p\cdot x + q</span></p>
+<p>Le <strong>degrée <span class="math">n</span></strong> de la fonction correspond à la puissance de <span class="math">x</span> la plus élevée.</p>
+<p>Vous en conniassez déjà quelques exemple :</p>
 <ul>
-<li>Types numériques :
-<ul>
-<li><code v-pre>int</code> : les entiers, positifs ou négatifs</li>
-<li><code v-pre>float</code> : les &quot;flottants&quot;, c&#x27;est à dire des nombres à virgules, c&#x27;est-à-dire décimal. Pour rappel, le décimal est, comme pour les anglophones, un <code v-pre>.</code> et non un <code v-pre>,</code></li>
-<li><code v-pre>complex</code> : les nombres complexes, avec <code v-pre>j</code> pour la partie imaginaire du nombre.</li>
+<li><span class="math">f(x) = a</span> la fonction constante est un polynôme de degrée <span class="math">0</span></li>
+<li><span class="math">f(x) = a\cdot x + b</span> : la fonction linéaire est une polynôme de premier degrée (<span class="math">n=1</span>)</li>
+<li><span class="math">f(x) = a\cdot x^2 + b\cdot x + c</span> : la fonction quadratique (qui décrit une parabole) est un polynôme de degree <span class="math">2</span>.</li>
 </ul>
+<p>Commençons comme toujours avec l&#x27;importation des bibliothéques <code v-pre>numpy</code> pour le traitement des séries de nombres, et <code v-pre>matplotlib</code> pour la visualisation graphique.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
+import matplotlib.pyplot as plt</code></pre>
+</doc-codeblock></div>
+<p>Voici donc comment utiliser la fonction <code v-pre>polyfit</code> :</p>
+<ul>
+<li>Il est important de définir les données avec la fonction <code v-pre>np.array</code>, pour que <strong>Python</strong> les reconnaisse comme une séries de valeur numériques (<code v-pre>float</code>) et non juste une liste d&#x27;object.</li>
+<li>Une fois <code v-pre>numpy</code> importé comme np, on peut utiliser avece <code v-pre>np.polyfit(x,y,n)</code>.
+<code v-pre>polyfit</code> prend 3 arguments : <span class="math">x</span> = la grandeur en abscisse, la variable indépendante de la fonction;  <span class="math">y</span> = la grandeur en ordonnée; <span class="math">n</span> = le degrée de la fonction polynomiale qui modéliser les résultats.</li>
+<li><p>En fonction du type de fonction polynomiale utilisée pour la modélisation, la <code v-pre>polyfit</code> génère un certain nombre de paramètres. Par exemple, pour une modélisation par une fonction linéaire du type <span class="math">y = a\cdot x + b</span>, <code v-pre>polyfit</code> calcule et génère les paramètres <span class="math">a</span> et <span class="math">b</span> pour la droite la mieux adaptée aux valeurs mesurées.</p>
+<p>Ces paramètres sont stockés dans la mémoire de l&#x27;environnement de codage et afin d’y accéder il faut les &#x27;écrire&#x27; dans des variables : <code v-pre>a, b = polyfit(x,y,1)</code> (où <span class="math">x</span> et <span class="math">y</span> sont changent en fonction des noms que nous avons donnés à nos grandeurs).</p>
+<p>Grâce à cela, les paramètres caractérisant la droite de notre modèle sont désormais stockés dans les variables <span class="math">a</span> et <span class="math">b</span>.</p>
 </li>
-<li>types &#x27;séquence&#x27; :
-<ul>
-<li><code v-pre>str</code> : une chaîne de caractères, c&#x27;est à dire du texte.</li>
-<li><code v-pre>list</code> : une liste, une collection ordonées d&#x27;objet.</li>
+<li>Afin d’afficher la droite de modélisation, il faut utiliser la fonction <code v-pre>plot</code> dans <code v-pre>matplotlib</code> : <code v-pre>plt.plot(x,f(x), ...)</code> où <span class="math">x</span> = est la variable indépendante, <span class="math">f(x)</span> = ce qu’on veut faire apparaître en ordonnée, c’est à dire la fonction <span class="math">f(x)</span> ; et les paramètres de visualisation comme la couleur ou le style de ligne pour la courbe.</li>
 </ul>
-</li>
-<li>type &#x27;Booléen&#x27; <code v-pre>bool</code> : représentant des vrais ou faux. Exemple : <code v-pre>true</code>, <code v-pre>false</code>.</li>
-</ul>
-<doc-anchor-target id="commentaires--">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#commentaires--">#</doc-anchor-trigger>
-        <span>Commentaires <code v-pre>#</code> :</span>
-    </h3>
+<doc-anchor-target id="exemple-dun-corrigé">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exemple-dun-corrigé">#</doc-anchor-trigger>
+        <span>Exemple d&#x27;un corrigé</span>
+    </h2>
 </doc-anchor-target>
-<p>pour faire un commentaire : Tout text qui suit le symbole <code v-pre>#</code> est considéré comme un commentaire et NON comme du code à compiler par PYTHON.  Voici deux exemple :</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python"># définissons un ARRAY avec nos mesures
+<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np 
+import matplotlib.pyplot as plt 
+import scipy.stats as ss
 
-X = np.array([0, 5, 10, 15, 20])</code></pre>
+##### Series de donnees 
+
+m = np.array([0, 10, 40, 100, 150, 200, 250]) #les masses utilisees
+P = np.array([0, 0.15 , 0.35, 1.1, 1.5, 1.9, 2.7 ]) #les poids mesures
+
+##### Trace de la courbe de tendance avec POLYFIT
+
+a, b = np.polyfit(m, P, 1) #etant donne que les resultats ont l'allure lineaire
+print(&quot;le coefficient directeur est :&quot;, a, &quot; N/g&quot;)
+
+##### Trace de la courbe de tendance avec LINREGRESS
+
+c, d, rvalue, pvalue, stderr = ss.linregress(m, P)
+print(&quot;le coefficient directeur est :&quot;, c, &quot; N/g ; et Le coefficient de correlation est :&quot;, rvalue)
+
+
+##### graphique de P = f(m)
+plt.plot(m,P, 'x', label = &quot;modèle lingress&quot;)
+plt.plot(m, a*m+b, 'r--', label = &quot;modele polyfit&quot;)
+plt.title( &quot;P = f(m)&quot;)
+plt.xlabel(&quot;masse m (kg)&quot;)
+plt.ylabel(&quot;poids P (N)&quot;)
+plt.legend(loc = &quot;best&quot;)
+plt.grid(True)
+plt.savefig(&quot;massePoids.png&quot;)
+plt.show() </code></pre>
 </doc-codeblock></div>
-<p>ici le commentaire joue le rôles - presque - de séparateur de sections dans notre programme</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">Xrad = np.radians(X) #ici on convertit les angles dans la liste X, de degrées en radians</code></pre>
-</doc-codeblock></div>
-<p>ici on s&#x27;informe du but de cette ligne de code.</p>
-<p>Vous devez utiliser les commentaires dans votre code, car cela peut vraiment aider à comprendre pourquoi vous avez inclut une ligne, après le fait.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-tip" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M7.90625 2.15625C4.50944 2.15625 2.15625 4.58563 2.15625 7.54688C2.15625 8.96138 2.76575 9.88281 3.57075 10.8589L3.87837 11.2226C4.19894 11.6021 4.554 12.0218 4.84581 12.4416C5.25406 13.0324 5.61775 13.7296 5.7385 14.5834C5.76728 14.8608 5.68746 15.1386 5.51579 15.3583C5.34413 15.5781 5.09399 15.7228 4.8179 15.7621C4.5418 15.8013 4.26124 15.7321 4.03512 15.5689C3.809 15.4056 3.65493 15.1612 3.60525 14.8867C3.54775 14.4814 3.37094 14.1004 3.07338 13.6692C2.8306 13.3302 2.57055 13.0039 2.29425 12.6917C2.1735 12.5479 2.04556 12.397 1.909 12.2317C1.00769 11.1406 0 9.72613 0 7.54688C0 3.32062 3.39681 0 7.90625 0C12.4157 0 15.8125 3.32062 15.8125 7.54688C15.8125 9.72613 14.8048 11.1406 13.9035 12.2317C13.7669 12.397 13.639 12.5479 13.5183 12.6903C13.2207 13.0424 12.9677 13.3414 12.7406 13.6692C12.4416 14.1004 12.2662 14.4814 12.2087 14.8867C12.1557 15.1584 12.0003 15.3994 11.7747 15.5598C11.5492 15.7202 11.2706 15.7879 10.9965 15.7488C10.7225 15.7096 10.474 15.5667 10.3023 15.3496C10.1306 15.1325 10.0489 14.8577 10.074 14.582C10.1948 13.7296 10.5584 13.0324 10.9667 12.4416C11.2585 12.0218 11.6136 11.6021 11.9341 11.2226C12.0419 11.0961 12.1454 10.9739 12.2403 10.8589C13.0468 9.88281 13.6562 8.96138 13.6562 7.54688C13.6562 4.58563 11.3031 2.15625 7.90625 2.15625ZM4.67188 17.25H11.1406C11.4266 17.25 11.7008 17.3636 11.903 17.5658C12.1052 17.768 12.2188 18.0422 12.2188 18.3281C12.2188 18.6141 12.1052 18.8883 11.903 19.0905C11.7008 19.2927 11.4266 19.4062 11.1406 19.4062H4.67188C4.38594 19.4062 4.11171 19.2927 3.90953 19.0905C3.70734 18.8883 3.59375 18.6141 3.59375 18.3281C3.59375 18.0422 3.70734 17.768 3.90953 17.5658C4.11171 17.3636 4.38594 17.25 4.67188 17.25ZM5.03125 21.9219C5.03125 21.6359 5.14484 21.3617 5.34703 21.1595C5.54921 20.9573 5.82344 20.8438 6.10938 20.8438H9.70312C9.98906 20.8438 10.2633 20.9573 10.4655 21.1595C10.6677 21.3617 10.7812 21.6359 10.7812 21.9219C10.7812 22.2078 10.6677 22.482 10.4655 22.6842C10.2633 22.8864 9.98906 23 9.70312 23H6.10938C5.82344 23 5.54921 22.8864 5.34703 22.6842C5.14484 22.482 5.03125 22.2078 5.03125 21.9219Z" />
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Points Clefs</h5>
-<ul>
-<li></li>
-</ul>
-        </div>
-    </div>
-</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -285,20 +260,20 @@ X = np.array([0, 5, 10, 15, 20])</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../1-commencer/1-ide/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../6-boucles/6-2-for/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">IDE - Environnement de Codage</span>
+                                                <span class="block mt-1">Boucle FOR</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../1-commencer/3-operations/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../exercices/5-b-numpy-xo/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Opérations de base</span>
+                                                <span class="block mt-1">Num​Py pour la Physique : Feuille d’Activités</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -342,6 +317,6 @@ X = np.array([0, 5, 10, 15, 20])</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Règles de Syntaxe", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Modélisation avec polyfit", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>
