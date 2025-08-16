@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.808572743715">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.808663399842">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Biblioth&#233;ques math</title>
     <meta name="title" content="Bibliothéques math">
-    <meta name="description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opération mathématiques possibles au-delà des opérations de base déjà présentes en...">
+    <meta name="description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes...">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://python.szayyani.com/2-math/7-math/">
@@ -20,22 +20,25 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://python.szayyani.com/2-math/7-math/">
     <meta property="og:title" content="Bibliothéques math">
-    <meta property="og:description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opération mathématiques possibles au-delà des opérations de base déjà présentes en...">
+    <meta property="og:description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://python.szayyani.com/2-math/7-math/">
     <meta property="twitter:title" content="Bibliothéques math">
-    <meta property="twitter:description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opération mathématiques possibles au-delà des opérations de base déjà présentes en...">
+    <meta property="twitter:description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes...">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.808572743715" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.808663399842" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.808572743715" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.808663399842" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.808572743715" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.808663399842" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.808663399842" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,13 +179,183 @@
         <span>Bibliothéques <code v-pre>math</code></span>
     </h1>
 </doc-anchor-target>
-<p>Cette bibliothéque standard de PYTHON permet d&#x27;élargir le nombre d&#x27;opération mathématiques possibles au-delà des opérations de base déjà présentes en PYTHON.</p>
+<p>Cette bibliothéque standard de PYTHON permet d&#x27;élargir le nombre d&#x27;opérations mathématiques possibles au-delà des opérations de base déjà présentes en PYTHON.</p>
 <p>Voici ce que contient (globalement) <code v-pre>math</code> :</p>
 <ul>
 <li>opérations mathématiques plus avancées : des fonction <em>trigonométriques</em> (<code v-pre>sin()</code>, <code v-pre>cos()</code>, <code v-pre>tan()</code>, <code v-pre>asin()</code>, <code v-pre>acos()</code>, <code v-pre>atan()</code>, <code v-pre>radians()</code>, etc), des fonctions <em>logarithmiques</em> et <em>exponentielles</em> (<code v-pre>exp(x)</code>, <code v-pre>log(x)</code>, <code v-pre>log10(x)</code>, <code v-pre>pow(x, y)</code>, <code v-pre>sqrt(x)</code>, etc),</li>
 <li>Des constantes importantes : <code v-pre>pi</code>, <code v-pre>e</code>, <code v-pre>inf</code>, etc</li>
 <li>d&#x27;autres fonctions <em>numériques</em> : <code v-pre>ceil(x)</code>, <code v-pre>floor(x)</code>, etc</li>
 </ul>
+<doc-anchor-target id="quelques-exemples">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#quelques-exemples">#</doc-anchor-trigger>
+        <span>Quelques exemples</span>
+    </h2>
+</doc-anchor-target>
+<p>Supposons que nous avons importé <code v-pre>maths as m</code>.</p>
+<doc-anchor-target id="fonctions-trigonométriques-">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fonctions-trigonométriques-">#</doc-anchor-trigger>
+        <span>Fonctions trigonométriques :</span>
+    </h3>
+</doc-anchor-target>
+<p>Si l&#x27;on veux utiliser les fonctions trigonométrique <span class="math">\sin/\cos/\tan</span> (et leurs inverses <span class="math">\arcsin/\arccos/\arctan</span>) en <code v-pre>Python</code> il faut obligatoirement passer par <code v-pre>math</code> (ou <code v-pre>numpy</code> mais on verra cela dans le prochain chapitre).</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-warning" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Remarque</h5>
+<p>Dans le langage <code v-pre>Python</code> l&#x27;argument des fonctions trigo est par défaut en <em>radian</em> et non en degrées; et donc par exemple, <code v-pre>m.sin(90)</code> sera interprété comme sinus de <span class="math">90\; rad</span>.</p>
+        </div>
+    </div>
+</div>
+<p>Voici quelques exemples</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.sin(0)
+0
+&gt;&gt;&gt; m.sin(m.pi)
+0
+&gt;&gt;&gt; m.tan(m.pi/8)
+1
+&gt;&gt;&gt; m.sin(m.pi/4)
+1
+&gt;&gt;&gt; m.cos(m.pi/3)
+0.5
+&gt;&gt;&gt; m.asin(1)
+pi/4</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="conversion">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#conversion">#</doc-anchor-trigger>
+        <span>Conversion <span class="math">radians \leftrightarrow °</span></span>
+    </h3>
+</doc-anchor-target>
+<p>On peut aussi convertir les angles de radians en degrées et l&#x27;inverse :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.radians(180) # pour convertir degrees en radians
+3.141592653589793
+&gt;&gt;&gt; m.degrees(m.pi) # pour convertir radians en degrees
+180.0</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="puissances-et-logarithmes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#puissances-et-logarithmes">#</doc-anchor-trigger>
+        <span>Puissances et logarithmes</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Pour calculer une puissance du genre <span class="math">x^y</span>, il y a <code v-pre>math.pow(x,y)</code> :</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.pow(2,4)
+16
+&gt;&gt;&gt; m.pow(4,0.5)
+2</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>Pour calculs une exponentielle du genre <span class="math">e^{n}</span> il y a <code v-pre>math.exp(n)</code> :</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.exp(1)
+2.718281828459045
+&gt;&gt;&gt; m.exp(-1)
+0.36787944117144233</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>pour les calcul lograithmique du genre <span class="math">\log_{base}{x}</span> il y a <code v-pre>log(x,base)</code>. Important de note que la valeur <em>par défaut</em> de la base est <span class="math">e</span>, c&#x27;est à dire <code v-pre>m.log(x)</code><span class="math">=\ln(x)</span>, et donc <code v-pre>m.log(x,10)</code><span class="math">= \log_{10}(x)</span>:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.log(1,10) #log de 0 en base 10
+0.0
+&gt;&gt;&gt; m.log10(10) # log de 10 en base 10
+1.0
+&gt;&gt;&gt; m.log(m.e) #ln(e)
+1.0
+&gt;&gt;&gt; m.log(5**2,5) # log de 5^2 en base 5
+2.0</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>calcul de la racine carré <span class="math">\sqrt{x}</span> grâce à <code v-pre>m.sqrt(x)</code> :</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.sqrt(9)
+3.0
+&gt;&gt;&gt; m.sqrt(5**10)
+3125 #c'est a dire 5 {#5}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="autres-fonction-mathématiques">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autres-fonction-mathématiques">#</doc-anchor-trigger>
+        <span>Autres fonction mathématiques</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>m.floor</code> arrondi un décimale vers le bas</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.floor(10.6)
+10</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>m.ceil</code> arrondi un décimal vers le haut</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.ceil(10.4)
+11</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>m.factorial</code> pour calculer le factoriel d&#x27;un nombre : <span class="math">x!</span></li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.factorial(3)
+6</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><code v-pre>m.gcd</code> pour calculer le <em>plus grand dénominateur commun</em> entre deux nombres</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.gcd(15,160)
+5</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="des-constantes-mathématiques">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#des-constantes-mathématiques">#</doc-anchor-trigger>
+        <span>Des constantes mathématiques</span>
+    </h2>
+</doc-anchor-target>
+<p et="">Une autre utilisation importante de cette bibliothéque est la présence des constantes importantes en maths, notamment : $\pi ; e ; \text \infty $.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th style="text-align: center;">constante</th>
+<th style="text-align: center;">fonction <code v-pre>math</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="math">e</span> constante d&#x27;Euler</td>
+<td style="text-align: center;"><code v-pre>math.e</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="math">\pi</span> pi</td>
+<td style="text-align: center;"><code v-pre>math.pi</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="math">\infty</span></td>
+<td style="text-align: center;"><code v-pre>math.inf</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -265,6 +438,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Bibliothéques math", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Bibliothéques math", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>
