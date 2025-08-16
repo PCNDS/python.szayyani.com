@@ -49,12 +49,11 @@ Mais ... les arrays sont bien plus que juste une "liste de valeur". Ce sont des 
 
 $$A = \begin{bmatrix} 4 & 3\\\ 3 & 2\end{bmatrix} \quad B = \begin{bmatrix} 4 & 3 & 0 & -5\end{bmatrix}\quad C = \begin{bmatrix} 4 \\\ 3 \\\ -5\end{bmatrix} \quad D = \begin{bmatrix} 4 & 3 \\ 0 & -5\\7 & 23\end{bmatrix}$$ 
 
-$A$, $B$, $C$ et $D$ sont quatre matrices différentes. Leurs dimensions sont $A\to 2\times 2 \quad ; \quad  B\to 1\times 4 \quad ; \quad C\to 
-3\times 1 \quad ; \quad D\to 3\times 2$. 
+$A$, $B$, $C$ et $D$ sont quatre matrices différentes. Leurs dimensions sont $A\to 2\times 2 \quad ; \quad  B\to 1\times 4 \quad ; \quad C\to 3\times 1 \quad ; \quad D\to 3\times 2$. 
 
-!!!info Remarque
+!!!warning Remarque
 Nous n'allons pas entrer en détail sur le sense mathématiques et physique de ces matrices encore, car le niveau est bien au-delà de ce que nous faisons au lycée, par en tant qu'exemple vous pouvez voir que matrice $C$ peut représent un *vecteur* : les trois chiffres représentent les coordonnées du vecteur $\vec{v} = (4, 3, -5)$. Par conséquent toute opérations effectuée sur cette matrice, représentent des opérations/manipulations faites au vecteur $\vec{v}$. 
 !!!
 
-Comment peut on donc créer des *arrays*? On va apprendre trois méthodes simples. 
+Comment peut on donc créer des *arrays*? On va apprendre trois méthodes simples dans les parties suivantes. 
 
