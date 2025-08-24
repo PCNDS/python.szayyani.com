@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Biblioth&#233;ques math</title>
-    <meta name="title" content="Bibliothéques math">
-    <meta name="description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes...">
+    <title>Exercices - Math</title>
+    <meta name="title" content="Exercices - Math">
+    <meta name="description" content="Écris une fonction hypotenuse(a, b) qui calcule la longueur de l'hypoténuse d'un triangle rectangle dont les côtés adjacents à l'angle droit ont pour...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/2-math/7-math/">
+    <link rel="canonical" href="https://python.szayyani.com/exercices/xoap-math/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/2-math/7-math/">
-    <meta property="og:title" content="Bibliothéques math">
-    <meta property="og:description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes...">
+    <meta property="og:url" content="https://python.szayyani.com/exercices/xoap-math/">
+    <meta property="og:title" content="Exercices - Math">
+    <meta property="og:description" content="Écris une fonction hypotenuse(a, b) qui calcule la longueur de l'hypoténuse d'un triangle rectangle dont les côtés adjacents à l'angle droit ont pour...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/2-math/7-math/">
-    <meta property="twitter:title" content="Bibliothéques math">
-    <meta property="twitter:description" content="Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes...">
+    <meta property="twitter:url" content="https://python.szayyani.com/exercices/xoap-math/">
+    <meta property="twitter:title" content="Exercices - Math">
+    <meta property="twitter:description" content="Écris une fonction hypotenuse(a, b) qui calcule la longueur de l'hypoténuse d'un triangle rectangle dont les côtés adjacents à l'angle droit ont pour...">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -37,8 +37,6 @@
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.809351263649" data-turbo-eval="false" defer></script>
     <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.809351263649" defer></script>
-    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
-    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,204 +171,305 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="bibliothéques-math" class="break-words">
+<doc-anchor-target id="exercices---math" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bibliothéques-math">#</doc-anchor-trigger>
-        <span>Bibliothéques <code v-pre>math</code></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercices---math">#</doc-anchor-trigger>
+        <span>Exercices - Math</span>
     </h1>
 </doc-anchor-target>
-<p>Cette bibliothéque standard de PYTHON permet d&#x27;élargir le nombre d&#x27;opérations mathématiques possibles au-delà des opérations de base déjà présentes en PYTHON.</p>
-<p>Voici ce que contient (globalement) <code v-pre>math</code> :</p>
-<ul>
-<li>opérations mathématiques plus avancées : des fonction <em>trigonométriques</em> (<code v-pre>sin()</code>, <code v-pre>cos()</code>, <code v-pre>tan()</code>, <code v-pre>asin()</code>, <code v-pre>acos()</code>, <code v-pre>atan()</code>, <code v-pre>radians()</code>, etc), des fonctions <em>logarithmiques</em> et <em>exponentielles</em> (<code v-pre>exp(x)</code>, <code v-pre>log(x)</code>, <code v-pre>log10(x)</code>, <code v-pre>pow(x, y)</code>, <code v-pre>sqrt(x)</code>, etc),</li>
-<li>Des constantes importantes : <code v-pre>pi</code>, <code v-pre>e</code>, <code v-pre>inf</code>, etc</li>
-<li>d&#x27;autres fonctions <em>numériques</em> : <code v-pre>ceil(x)</code>, <code v-pre>floor(x)</code>, etc</li>
-</ul>
-<doc-anchor-target id="quelques-exemples">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quelques-exemples">#</doc-anchor-trigger>
-        <span>Quelques exemples</span>
-    </h2>
-</doc-anchor-target>
-<p>Supposons que nous avons importé <code v-pre>maths as m</code>.</p>
-<doc-anchor-target id="fonctions-trigonométriques-">
+<doc-anchor-target id="exercice-3--hypothénuse-dun-triangle">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fonctions-trigonométriques-">#</doc-anchor-trigger>
-        <span>Fonctions trigonométriques :</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-3--hypothénuse-dun-triangle">#</doc-anchor-trigger>
+        <span>Exercice 3 : Hypothénuse d&#x27;un triangle</span>
     </h3>
 </doc-anchor-target>
-<p>Si l&#x27;on veux utiliser les fonctions trigonométrique <span class="math">\sin/\cos/\tan</span> (et leurs inverses <span class="math">\arcsin/\arccos/\arctan</span>) en <code v-pre>Python</code> il faut obligatoirement passer par <code v-pre>math</code> (ou <code v-pre>numpy</code> mais on verra cela dans le prochain chapitre).</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-warning" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
-                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Remarque</h5>
-<p>Dans le langage <code v-pre>Python</code> l&#x27;argument des fonctions trigo est par défaut en <em>radian</em> et non en degrées; et donc par exemple, <code v-pre>m.sin(90)</code> sera interprété comme sinus de <span class="math">90\; rad</span>.</p>
-        </div>
-    </div>
-</div>
-<p>Voici quelques exemples</p>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Écris une fonction <code v-pre>hypotenuse(a, b)</code> qui calcule la longueur de l&#x27;hypoténuse d&#x27;un triangle rectangle dont les côtés adjacents à l&#x27;angle droit ont pour longueurs <code v-pre>a</code> et <code v-pre>b</code>.
+Utilise la fonction <code v-pre>math.hypot</code> et vérifie avec le théorème de Pythagore <code v-pre>math.sqrt(a**2 + b**2)</code>.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.sin(0)
-0
-&gt;&gt;&gt; m.sin(m.pi)
-0
-&gt;&gt;&gt; m.tan(m.pi/8)
-1
-&gt;&gt;&gt; m.sin(m.pi/4)
-1
-&gt;&gt;&gt; m.cos(m.pi/3)
-0.5
-&gt;&gt;&gt; m.asin(1)
-pi/4</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+def hypotenuse(a, b):
+    # Méthode 1 : Fonction dédiée
+    resultat_hypot = math.hypot(a, b)
+    # Méthode 2 : Théorème de Pythagore
+    resultat_pythagore = math.sqrt(a**2 + b**2)
+
+    print(f&quot;Avec math.hypot({a}, {b}) : {resultat_hypot}&quot;)
+    print(f&quot;Avec Pythagore sqrt({a}² + {b}²) : {resultat_pythagore}&quot;)
+    return resultat_hypot
+
+# Test avec un triangle 3-4-5
+hypotenuse(3, 4)</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="conversion">
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; Avec math.hypot(3, 4) : 5.0
+&gt;&gt;&gt; Avec Pythagore sqrt(3² + 4²) : 5.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Excellent exercice pour faire le lien entre les mathématiques et la programmation. Montre qu&#x27;il existe souvent plusieurs solutions.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-4--conversion-degrésradians">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#conversion">#</doc-anchor-trigger>
-        <span>Conversion <span class="math">radians \leftrightarrow °</span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-4--conversion-degrésradians">#</doc-anchor-trigger>
+        <span>Exercice 4 : Conversion degrés/radians</span>
     </h3>
 </doc-anchor-target>
-<p>On peut aussi convertir les angles de radians en degrées et l&#x27;inverse :</p>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Le module <code v-pre>math</code> travaille principalement en radians.</p>
+<ol>
+<li>Crée une fonction <code v-pre>degres_vers_radians(angle_deg)</code> qui convertit un angle de degrés en radians.</li>
+<li>Crée une fonction <code v-pre>radians_vers_degres(angle_rad)</code> qui fait la conversion inverse.</li>
+<li>Teste avec 180°, 90° et 45°.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.radians(180) # pour convertir degrees en radians
-3.141592653589793
-&gt;&gt;&gt; m.degrees(m.pi) # pour convertir radians en degrees
-180.0</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+def degres_vers_radians(angle_deg):
+    return angle_deg * (math.pi / 180)
+
+def radians_vers_degres(angle_rad):
+    return angle_rad * (180 / math.pi)
+
+# Tests
+angles_test = [180, 90, 45]
+for angle in angles_test:
+    rad = degres_vers_radians(angle)
+    deg = radians_vers_degres(rad)
+    print(f&quot;{angle}° -&gt; {rad:.4f} rad -&gt; {deg:.1f}°&quot;)</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="puissances-et-logarithmes">
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">180° -&gt; 3.1416 rad -&gt; 180.0°
+90° -&gt; 1.5708 rad -&gt; 90.0°
+45° -&gt; 0.7854 rad -&gt; 45.0°</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Fondamental pour la suite, car les fonctions trigonométriques de <code v-pre>math</code> nécessitent des angles en radians.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-7--distance-entre-deux-points">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#puissances-et-logarithmes">#</doc-anchor-trigger>
-        <span>Puissances et logarithmes</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-7--distance-entre-deux-points">#</doc-anchor-trigger>
+        <span>Exercice 7 : Distance entre deux points</span>
     </h3>
 </doc-anchor-target>
-<ul>
-<li>Pour calculer une puissance du genre <span class="math">x^y</span>, il y a <code v-pre>math.pow(x,y)</code> :</li>
-</ul>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Écris une fonction <code v-pre>distance(x1, y1, x2, y2)</code> qui calcule la distance entre deux points A(x1, y1) et B(x2, y2) dans un plan 2D en utilisant le théorème de Pythagore.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.pow(2,4)
-16
-&gt;&gt;&gt; m.pow(4,0.5)
-2</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+def distance(x1, y1, x2, y2):
+    dx = x2 - x1  # Différence des abscisses
+    dy = y2 - y1  # Différence des ordonnées
+    return math.sqrt(dx**2 + dy**2)
+
+# Test avec les points A(1, 1) et B(4, 5)
+d = distance(1, 1, 4, 5)
+print(f&quot;La distance entre A(1,1) et B(4,5) est : {d:.2f}&quot;)</code></pre>
 </doc-codeblock></div>
-<ul>
-<li>Pour calculs une exponentielle du genre <span class="math">e^{n}</span> il y a <code v-pre>math.exp(n)</code> :</li>
-</ul>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.exp(1)
-2.718281828459045
-&gt;&gt;&gt; m.exp(-1)
-0.36787944117144233</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">La distance entre A(1,1) et B(4,5) est : 5.00</code></pre>
 </doc-codeblock></div>
-<ul>
-<li>pour les calcul lograithmique du genre <span class="math">\log_{base}{x}</span> il y a <code v-pre>log(x,base)</code>. Important de note que la valeur <em>par défaut</em> de la base est <span class="math">e</span>, c&#x27;est à dire <code v-pre>m.log(x)</code><span class="math">=\ln(x)</span>, et donc <code v-pre>m.log(x,10)</code><span class="math">= \log_{10}(x)</span>:</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.log(1,10) #log de 0 en base 10
-0.0
-&gt;&gt;&gt; m.log10(10) # log de 10 en base 10
-1.0
-&gt;&gt;&gt; m.log(m.e) #ln(e)
-1.0
-&gt;&gt;&gt; m.log(5**2,5) # log de 5^2 en base 5
-2.0</code></pre>
-</doc-codeblock></div>
-<ul>
-<li>calcul de la racine carré <span class="math">\sqrt{x}</span> grâce à <code v-pre>m.sqrt(x)</code> :</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.sqrt(9)
-3.0
-&gt;&gt;&gt; m.sqrt(5**10)
-3125 #c'est a dire 5 {#5}</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="autres-fonction-mathématiques">
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Application géométrique classique et très visuelle. On peut facilement dessiner le triangle rectangle pour illustrer.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-5--trigonométrie-et-triangle-rectangle">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#autres-fonction-mathématiques">#</doc-anchor-trigger>
-        <span>Autres fonction mathématiques</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-5--trigonométrie-et-triangle-rectangle">#</doc-anchor-trigger>
+        <span>Exercice 5 : Trigonométrie et triangle rectangle</span>
     </h3>
 </doc-anchor-target>
-<ul>
-<li><code v-pre>m.floor</code> arrondi un décimale vers le bas</li>
-</ul>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Dans un triangle rectangle, l&#x27;hypoténuse mesure 10 cm et un angle mesure 35°.
+Calcule la longueur du côté adjacent et du côté opposé à cet angle en utilisant <code v-pre>math.cos</code> et <code v-pre>math.sin</code>.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.floor(10.6)
-10</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+hypotenuse = 10
+angle_deg = 35
+
+# Conversion de l'angle en radians
+angle_rad = math.radians(angle_deg)
+
+# Calcul des côtés
+cote_adjacent = hypotenuse * math.cos(angle_rad)
+cote_oppose = hypotenuse * math.sin(angle_rad)
+
+print(f&quot;Pour un angle de {angle_deg}° et une hypoténuse de {hypotenuse} cm :&quot;)
+print(f&quot;- Côté adjacent : {cote_adjacent:.2f} cm&quot;)
+print(f&quot;- Côté opposé : {cote_oppose:.2f} cm&quot;)</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><code v-pre>m.ceil</code> arrondi un décimal vers le haut</li>
-</ul>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.ceil(10.4)
-11</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">Pour un angle de 35° et une hypoténuse de 10 cm :
+- Côté adjacent : 8.19 cm
+- Côté opposé : 5.74 cm</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><code v-pre>m.factorial</code> pour calculer le factoriel d&#x27;un nombre : <span class="math">x!</span></li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.factorial(3)
-6</code></pre>
-</doc-codeblock></div>
-<ul>
-<li><code v-pre>m.gcd</code> pour calculer le <em>plus grand dénominateur commun</em> entre deux nombres</li>
-</ul>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; m.gcd(15,160)
-5</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="des-constantes-mathématiques">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#des-constantes-mathématiques">#</doc-anchor-trigger>
-        <span>Des constantes mathématiques</span>
-    </h2>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Application concrète de la trigonométrie. Montre l&#x27;utilité de la conversion degrés/radians.</p>
+<hr>
+<doc-anchor-target id="exercice-9--résolution-dune-équation-du-second-degré">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-9--résolution-dune-équation-du-second-degré">#</doc-anchor-trigger>
+        <span>Exercice 9 : Résolution d&#x27;une équation du second degré</span>
+    </h3>
 </doc-anchor-target>
-<p et="">Une autre utilisation importante de cette bibliothéque est la présence des constantes importantes en maths, notamment : $\pi ; e ; \text \infty $.</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th style="text-align: center;">constante</th>
-<th style="text-align: center;">fonction <code v-pre>math</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><span class="math">e</span> constante d&#x27;Euler</td>
-<td style="text-align: center;"><code v-pre>math.e</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span class="math">\pi</span> pi</td>
-<td style="text-align: center;"><code v-pre>math.pi</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span class="math">\infty</span></td>
-<td style="text-align: center;"><code v-pre>math.inf</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-tip" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M7.90625 2.15625C4.50944 2.15625 2.15625 4.58563 2.15625 7.54688C2.15625 8.96138 2.76575 9.88281 3.57075 10.8589L3.87837 11.2226C4.19894 11.6021 4.554 12.0218 4.84581 12.4416C5.25406 13.0324 5.61775 13.7296 5.7385 14.5834C5.76728 14.8608 5.68746 15.1386 5.51579 15.3583C5.34413 15.5781 5.09399 15.7228 4.8179 15.7621C4.5418 15.8013 4.26124 15.7321 4.03512 15.5689C3.809 15.4056 3.65493 15.1612 3.60525 14.8867C3.54775 14.4814 3.37094 14.1004 3.07338 13.6692C2.8306 13.3302 2.57055 13.0039 2.29425 12.6917C2.1735 12.5479 2.04556 12.397 1.909 12.2317C1.00769 11.1406 0 9.72613 0 7.54688C0 3.32062 3.39681 0 7.90625 0C12.4157 0 15.8125 3.32062 15.8125 7.54688C15.8125 9.72613 14.8048 11.1406 13.9035 12.2317C13.7669 12.397 13.639 12.5479 13.5183 12.6903C13.2207 13.0424 12.9677 13.3414 12.7406 13.6692C12.4416 14.1004 12.2662 14.4814 12.2087 14.8867C12.1557 15.1584 12.0003 15.3994 11.7747 15.5598C11.5492 15.7202 11.2706 15.7879 10.9965 15.7488C10.7225 15.7096 10.474 15.5667 10.3023 15.3496C10.1306 15.1325 10.0489 14.8577 10.074 14.582C10.1948 13.7296 10.5584 13.0324 10.9667 12.4416C11.2585 12.0218 11.6136 11.6021 11.9341 11.2226C12.0419 11.0961 12.1454 10.9739 12.2403 10.8589C13.0468 9.88281 13.6562 8.96138 13.6562 7.54688C13.6562 4.58563 11.3031 2.15625 7.90625 2.15625ZM4.67188 17.25H11.1406C11.4266 17.25 11.7008 17.3636 11.903 17.5658C12.1052 17.768 12.2188 18.0422 12.2188 18.3281C12.2188 18.6141 12.1052 18.8883 11.903 19.0905C11.7008 19.2927 11.4266 19.4062 11.1406 19.4062H4.67188C4.38594 19.4062 4.11171 19.2927 3.90953 19.0905C3.70734 18.8883 3.59375 18.6141 3.59375 18.3281C3.59375 18.0422 3.70734 17.768 3.90953 17.5658C4.11171 17.3636 4.38594 17.25 4.67188 17.25ZM5.03125 21.9219C5.03125 21.6359 5.14484 21.3617 5.34703 21.1595C5.54921 20.9573 5.82344 20.8438 6.10938 20.8438H9.70312C9.98906 20.8438 10.2633 20.9573 10.4655 21.1595C10.6677 21.3617 10.7812 21.6359 10.7812 21.9219C10.7812 22.2078 10.6677 22.482 10.4655 22.6842C10.2633 22.8864 9.98906 23 9.70312 23H6.10938C5.82344 23 5.54921 22.8864 5.34703 22.6842C5.14484 22.482 5.03125 22.2078 5.03125 21.9219Z" />
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>La particularité de la bibliothéques <code v-pre>math</code> est le fait qu&#x27;elle est conçu pour opérer sur des <em><strong>scalaires</strong></em>, c&#x27;est à dire un seul nombre à chaque fois, et <em>non</em> une série de nombre.</p>
-        </div>
-    </div>
-</div>
+</doc-tab>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Écris un programme qui résoud une équation du second degré de la forme <code v-pre>ax² + bx + c = 0</code>.
+Le programme doit demander les coefficients a, b et c à l&#x27;utilisateur, calculer le discriminant (<code v-pre>delta = b² - 4ac</code>) et afficher les solutions en utilisant <code v-pre>math.sqrt</code>.
+Gère le cas où le discriminant est négatif.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">
+print(&quot;Résolution de l'équation ax² + bx + c = 0&quot;)
+a = float(input(&quot;Entrez le coefficient a : &quot;))
+b = float(input(&quot;Entrez le coefficient b : &quot;))
+c = float(input(&quot;Entrez le coefficient c : &quot;))
+
+# Calcul du discriminant
+delta = b**2 - 4*a*c
+
+print(f&quot;\nPour l'équation {a}x² + {b}x + {c} = 0&quot;)
+print(f&quot;Delta = {delta}&quot;)
+
+if delta &gt; 0:
+    # Deux solutions réelles
+    x1 = (-b - math.sqrt(delta)) / (2*a)
+    x2 = (-b + math.sqrt(delta)) / (2*a)
+    print(&quot;Deux solutions réelles :&quot;)
+    print(f&quot;x1 = {x1:.2f}&quot;)
+    print(f&quot;x2 = {x2:.2f}&quot;)
+elif delta == 0:
+    # Une solution réelle
+    x0 = -b / (2*a)
+    print(&quot;Une solution réelle double :&quot;)
+    print(f&quot;x0 = {x0:.2f}&quot;)
+else:
+    # Discriminant négatif
+    print(&quot;Le discriminant est négatif. Aucune solution réelle.&quot;)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">Résolution de l'équation ax² + bx + c = 0
+Entrez le coefficient a : 1
+Entrez le coefficient b : -3
+Entrez le coefficient c : 2
+
+Pour l'équation 1.0x² + -3.0x + 2.0 = 0
+Delta = 1.0
+Deux solutions réelles :
+x1 = 1.00
+x2 = 2.00</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Exercice de synthèse plus complexe. Fait appel aux conditions, aux formules mathématiques et à la fonction <code v-pre>sqrt</code>.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-10--approximation-de-π-par-la-formule-de-leibniz">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-10--approximation-de-π-par-la-formule-de-leibniz">#</doc-anchor-trigger>
+        <span>Exercice 10 : Approximation de π par la formule de Leibniz</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Utilise la formule de Leibniz pour approximer la valeur de π :
+π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
+Demande à l&#x27;utilisateur le nombre d&#x27;itérations <code v-pre>n</code> et calcule une approximation de π. Compare le résultat avec <code v-pre>math.pi</code>.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+n = int(input(&quot;Entrez le nombre d'itérations pour l'approximation de π : &quot;))
+
+approximation_pi = 0
+signe = 1  # Gère l'alternance des signes +/-
+
+for i in range(n):
+    terme = 1 / (2*i + 1)  # Dénominateur: 1, 3, 5, 7, ...
+    approximation_pi += signe * terme
+    signe *= -1  # Change le signe pour le terme suivant
+
+approximation_pi *= 4  # On a calculé π/4, donc on multiplie par 4
+
+print(f&quot;\nAprès {n} itérations :&quot;)
+print(f&quot;- Approximation de π : {approximation_pi}&quot;)
+print(f&quot;- Vraie valeur de π  : {math.pi}&quot;)
+print(f&quot;- Erreur            : {abs(math.pi - approximation_pi)}&quot;)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">Entrez le nombre d'itérations pour l'approximation de π : 1000
+
+Après 1000 itérations :
+- Approximation de π : 3.140592653839794
+- Vraie valeur de π  : 3.141592653589793
+- Erreur            : 0.000999999749998981</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Exercice avancé qui introduit les notions de série, d&#x27;approximation et de boucles. Montre comment les mathématiques et l&#x27;informatique peuvent collaborer pour résoudre des problèmes.</p>
+<hr>
+</doc-tab>
 
                                 
                                 <!-- Required only on API pages -->
@@ -380,20 +479,20 @@ pi/4</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../1-commencer/5-biblis/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../7-modelisation/7-polyfit/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Les Bibliothéques</span>
+                                                <span class="block mt-1">Modélisation avec polyfit</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../2-math/xo-math/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../exercices/5-b-numpy-xo/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Exercices d'entraînment</span>
+                                                <span class="block mt-1">Num​Py pour la Physique : Feuille d’Activités</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -437,6 +536,6 @@ pi/4</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Bibliothéques math", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Exercices - Math", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Exercices - Array</title>
-    <meta name="title" content="Exercices - Array">
-    <meta name="description" content="Crée un tableau contenant les nombres 1, 2, 3, 4, 5 en utilisant la fonction array du module numpy.">
+    <title>Exercices d&#39;entra&#238;nment</title>
+    <meta name="title" content="Exercices d'entraînment">
+    <meta name="description" content="Absolument ! Voici 10 exercices progressifs sur le module math de Python, parfaits pour des lycéens.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://python.szayyani.com/3-numpy/xo-array/">
+    <link rel="canonical" href="https://python.szayyani.com/2-math/xo-math/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://python.szayyani.com/3-numpy/xo-array/">
-    <meta property="og:title" content="Exercices - Array">
-    <meta property="og:description" content="Crée un tableau contenant les nombres 1, 2, 3, 4, 5 en utilisant la fonction array du module numpy.">
+    <meta property="og:url" content="https://python.szayyani.com/2-math/xo-math/">
+    <meta property="og:title" content="Exercices d'entraînment">
+    <meta property="og:description" content="Absolument ! Voici 10 exercices progressifs sur le module math de Python, parfaits pour des lycéens.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://python.szayyani.com/3-numpy/xo-array/">
-    <meta property="twitter:title" content="Exercices - Array">
-    <meta property="twitter:description" content="Crée un tableau contenant les nombres 1, 2, 3, 4, 5 en utilisant la fonction array du module numpy.">
+    <meta property="twitter:url" content="https://python.szayyani.com/2-math/xo-math/">
+    <meta property="twitter:title" content="Exercices d'entraînment">
+    <meta property="twitter:description" content="Absolument ! Voici 10 exercices progressifs sur le module math de Python, parfaits pour des lycéens.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -37,6 +37,8 @@
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.809351263649" data-turbo-eval="false" defer></script>
     <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.809351263649" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,122 +173,478 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="exercices---array" class="break-words">
+<doc-anchor-target id="exercices-dentraînment" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercices---array">#</doc-anchor-trigger>
-        <span>Exercices - Array</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercices-dentraînment">#</doc-anchor-trigger>
+        <span>Exercices d&#x27;entraînment</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="exercices-sur-la-fonction-array">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercices-sur-la-fonction-array">#</doc-anchor-trigger>
-        <span>Exercices sur la fonction <code v-pre>array</code></span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="exercice-1--création-dun-tableau-simple">
+<p>Absolument ! Voici 10 exercices progressifs sur le module <code v-pre>math</code> de Python, parfaits pour des lycéens.</p>
+<doc-anchor-target id="exercice-1--les-bases">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-1--création-dun-tableau-simple">#</doc-anchor-trigger>
-        <span>Exercice 1 : Création d&#x27;un tableau simple</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-1--les-bases">#</doc-anchor-trigger>
+        <span>Exercice 1 : Les bases</span>
     </h3>
 </doc-anchor-target>
 <doc-tabs>
 <doc-tab v-cloak id="enoncé">
 <template #title>Enoncé</template>
-<p>Crée un tableau contenant les nombres 1, 2, 3, 4, 5 en utilisant la fonction <code v-pre>array</code> du module <code v-pre>numpy</code>.</p>
+<p>Écris un programme qui calcule et affiche :</p>
+<ol>
+<li>La valeur de π (pi)</li>
+<li>La racine carrée de 16</li>
+<li>5 à la puissance 3 (en utilisant <code v-pre>math.pow</code>)</li>
+</ol>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>Code</template>
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
-tableau = np.array([1, 2, 3, 4, 5])
-print(tableau)</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+print(&quot;1. La valeur de π est :&quot;, math.pi)
+print(&quot;2. La racine carrée de 16 est :&quot;, math.sqrt(16))
+print(&quot;3. 5 à la puissance 3 est :&quot;, math.pow(5, 3))</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; 1. La valeur de π est : 3.141592653589793
+&gt;&gt;&gt; 2. La racine carrée de 16 est : 4.0
+&gt;&gt;&gt; 3. 5 à la puissance 3 est : 125.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Exercice d&#x27;introduction pour se familiariser avec l&#x27;import du module et l&#x27;utilisation des fonctions de base.</p>
 </doc-tab>
 </doc-tabs>
 <hr>
-<doc-anchor-target id="exercice-2--tableau-de-nombres-flottants">
+<doc-anchor-target id="exercice-2--arrondis-et-troncature">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-2--tableau-de-nombres-flottants">#</doc-anchor-trigger>
-        <span>Exercice 2 : Tableau de nombres flottants</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-2--arrondis-et-troncature">#</doc-anchor-trigger>
+        <span>Exercice 2 : Arrondis et troncature</span>
     </h3>
 </doc-anchor-target>
 <doc-tabs>
 <doc-tab v-cloak id="enoncé">
 <template #title>Enoncé</template>
-<p>Crée un tableau contenant les nombres flottants 1.5, 2.5, 3.5, 4.5 en utilisant <code v-pre>array</code>.</p>
+<p>Soit le nombre <code v-pre>x = 3.7</code>. Utilise le module <code v-pre>math</code> pour :</p>
+<ol>
+<li>Arrondir à l&#x27;entier inférieur (<code v-pre>floor</code>)</li>
+<li>Arrondir à l&#x27;entier supérieur (<code v-pre>ceil</code>)</li>
+<li>Obtenir la valeur tronquée (<code v-pre>trunc</code>)</li>
+</ol>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>Code</template>
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
-tableau = np.array([1.5, 2.5, 3.5, 4.5])
-print(tableau)</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+x = 3.7
+print(&quot;1. Floor de&quot;, x, &quot;:&quot;, math.floor(x))
+print(&quot;2. Ceil de&quot;, x, &quot;:&quot;, math.ceil(x))
+print(&quot;3. Trunc de&quot;, x, &quot;:&quot;, math.trunc(x))</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">&gt;&gt;&gt; 1. Floor de 3.7 : 3
+&gt;&gt;&gt; 2. Ceil de 3.7 : 4
+&gt;&gt;&gt; 3. Trunc de 3.7 : 3</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Permet de comprendre la différence entre ces trois méthodes d&#x27;arrondi, une notion importante.</p>
 </doc-tab>
 </doc-tabs>
 <hr>
-<doc-anchor-target id="exercice-3--tableau-à-deux-dimensions">
+<doc-anchor-target id="exercice-3--factorielle-et-constante-deuler">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-3--tableau-à-deux-dimensions">#</doc-anchor-trigger>
-        <span>Exercice 3 : Tableau à deux dimensions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-3--factorielle-et-constante-deuler">#</doc-anchor-trigger>
+        <span>Exercice 3 : Factorielle et constante d&#x27;Euler</span>
     </h3>
 </doc-anchor-target>
 <doc-tabs>
 <doc-tab v-cloak id="enoncé">
 <template #title>Enoncé</template>
-<p>Crée un tableau à deux dimensions (matrice) contenant les lignes [1, 2, 3] et [4, 5, 6] en utilisant <code v-pre>array</code>.</p>
+<p>Calculer la somme des sinus des angles 0°, 30°, 45°, 60°, 90° (en radians).</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>Code</template>
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
-tableau = np.array([[1, 2, 3], [4, 5, 6]])
-print(tableau)</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+angles_degres = [0, 30, 45, 60, 90]
+somme_sinus = sum(math.sin(math.radians(a)) for a in angles_degres)
+print(somme_sinus)</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">3.2071067811865475</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Il faut convertir les degrés en radians avant de calculer le sinus. <code v-pre>sum()</code> additionne tous les résultats.</p>
 </doc-tab>
 </doc-tabs>
 <hr>
-<doc-anchor-target id="exercice-4--tableau-de-chaînes-de-caractères">
+<doc-anchor-target id="exercice-4--arrondir">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-4--tableau-de-chaînes-de-caractères">#</doc-anchor-trigger>
-        <span>Exercice 4 : Tableau de chaînes de caractères</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-4--arrondir">#</doc-anchor-trigger>
+        <span>Exercice 4 : Arrondir</span>
     </h3>
 </doc-anchor-target>
 <doc-tabs>
 <doc-tab v-cloak id="enoncé">
 <template #title>Enoncé</template>
-<p>Crée un tableau contenant les chaînes de caractères &quot;bonjour&quot;, &quot;le&quot;, &quot;monde&quot; en utilisant <code v-pre>array</code>.</p>
+<p>Pour un angle en degrés donné (45°), calculer sa tangente et afficher la valeur arrondie à 4 décimales.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>Code</template>
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
-tableau = np.array([&quot;bonjour&quot;, &quot;le&quot;, &quot;monde&quot;])
-print(tableau)</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+angle = 45
+tangente = math.tan(math.radians(angle))
+print(round(tangente, 4))</code></pre>
 </doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">1.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>La tangente de 45° est exactement 1. La fonction <code v-pre>round</code> est utile pour arrondir le résultat.</p>
 </doc-tab>
 </doc-tabs>
 <hr>
-<doc-anchor-target id="exercice-5--tableau-avec-des-zéros">
+<doc-anchor-target id="exercice-5--utilisation-de-fonction-trigonométrique-inverse">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-5--tableau-avec-des-zéros">#</doc-anchor-trigger>
-        <span>Exercice 5 : Tableau avec des zéros</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-5--utilisation-de-fonction-trigonométrique-inverse">#</doc-anchor-trigger>
+        <span>Exercice 5 : Utilisation de fonction trigonométrique inverse</span>
     </h3>
 </doc-anchor-target>
 <doc-tabs>
 <doc-tab v-cloak id="enoncé">
 <template #title>Enoncé</template>
-<p>Crée un tableau de 5 zéros en utilisant <code v-pre>array</code> et <code v-pre>zeros</code> de <code v-pre>numpy</code>.</p>
+<p>Calculer l’angle (en degrés) dont le sinus vaut 0.5, en utilisant la fonction d’arc sinus.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>Code</template>
+<template #title>code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">import numpy as np
-tableau = np.zeros(5)
-print(tableau)</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+valeur_sin = 0.5
+angle_radians = math.asin(valeur_sin)
+angle_degres = math.degrees(angle_radians)
+print(angle_degres)</code></pre>
 </doc-codeblock></div>
 </doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">30.000000000000004</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p><code v-pre>math.asin()</code> retourne l’arc sinus en radians. <code v-pre>math.degrees()</code> convertit ce résultat en degrés.</p>
+</doc-tab>
 </doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-6--calcul-trigonométrique">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-6--calcul-trigonométrique">#</doc-anchor-trigger>
+        <span>Exercice 6 : Calcul trigonométrique</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Calculer l’angle (en degrés) dont le cosinus est égal à <span class="math">\sqrt{2}/2</span>.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+valeur_cos = math.sqrt(2)/2
+angle_radians = math.acos(valeur_cos)
+angle_degres = math.degrees(angle_radians)
+print(angle_degres)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">45.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p><code v-pre>math.acos()</code> est la fonction d’arc cosinus, inverse du cosinus.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-7--aire-dun-triangle">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-7--aire-dun-triangle">#</doc-anchor-trigger>
+        <span>Exercice 7 : Aire d&#x27;un triangle</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Calculer l’aire d’un triangle dont deux côtés mesurent 7 et 10, et l’angle entre eux est de 40° (formule : <span class="math">\text{aire} = \frac{1}{2}ab\sin(C)</span>).</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+a = 7
+b = 10
+angle_C_deg = 40
+angle_C_rad = math.radians(angle_C_deg)
+aire = 0.5 * a * b * math.sin(angle_C_rad)
+print(round(aire, 2))</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">22.57</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>La fonction sinus est utilisée pour calculer l’aire du triangle selon la formule trigonométrique classique.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-8--factorielle-et-constante-deuler">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-8--factorielle-et-constante-deuler">#</doc-anchor-trigger>
+        <span>Exercice 8 : Factorielle et constante d&#x27;Euler</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Calcule et affiche :</p>
+<ol>
+<li>La factorielle de 5 (<code v-pre>5!</code>)</li>
+<li>La constante d&#x27;Euler <code v-pre>e</code> (base du logarithme népérien)</li>
+<li>Le logarithme népérien de la constante <code v-pre>e</code> (doit donner 1)</li>
+<li>Le logarithme en base 10 de 100 (doit donner 2)</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+
+print(&quot;1. Factorielle de 5 :&quot;, math.factorial(5))
+print(&quot;2. Constante e :&quot;, math.e)
+print(&quot;3. ln(e) :&quot;, math.log(math.e))
+print(&quot;4. log10(100) :&quot;, math.log10(100))</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">1. Factorielle de 5 : 120
+2. Constante e : 2.718281828459045
+3. ln(e) : 1.0
+4. log10(100) : 2.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Introduit les concepts de factorielle (récursivité possible plus tard) et de logarithmes.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-9--périmètre-et-aire-dun-cercle">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-9--périmètre-et-aire-dun-cercle">#</doc-anchor-trigger>
+        <span>Exercice 9 : Périmètre et Aire d&#x27;un cercle</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Demande à l&#x27;utilisateur de saisir le rayon d&#x27;un cercle.
+Calcule et affiche :</p>
+<ol>
+<li>Le périmètre du cercle (<code v-pre>2 * π * rayon</code>)</li>
+<li>L&#x27;aire du cercle (<code v-pre>π * rayon²</code>)</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">rayon = float(input(&quot;Entrez le rayon du cercle : &quot;))
+
+perimetre = 2 * math.pi * rayon
+aire = math.pi * math.pow(rayon, 2)  # On pourrait aussi utiliser rayon**2
+
+print(f&quot;Pour un cercle de rayon {rayon} :&quot;)
+print(f&quot;- Périmètre : {perimetre:.2f}&quot;)
+print(f&quot;- Aire : {aire:.2f}&quot;)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">Entrez le rayon du cercle : 5
+Pour un cercle de rayon 5.0 :
+- Périmètre : 31.42
+- Aire : 78.54</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>Combine l&#x27;interaction utilisateur (<code v-pre>input</code>) avec les calculs mathématiques. Très satisfaisant pour les élèves.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-10--calcul-de-tangente">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-10--calcul-de-tangente">#</doc-anchor-trigger>
+        <span>Exercice 10 : Calcul de tangente</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Pour un angle en degrés donné (45°), calculer sa tangente et afficher la valeur arrondie à 4 décimales.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+angle = 45
+tangente = math.tan(math.radians(angle))
+print(round(tangente, 4))</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">1.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>La tangente de 45° est exactement 1. La fonction <code v-pre>round</code> est utile pour arrondir le résultat.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exerice-11--calcul-darcsin">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exerice-11--calcul-darcsin">#</doc-anchor-trigger>
+        <span>Exerice 11 : Calcul d&#x27;arcsin</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Calculer l’angle (en degrés) dont le sinus vaut 0.5, en utilisant la fonction d’arc sinus.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+valeur_sin = 0.5
+angle_radians = math.asin(valeur_sin)
+angle_degres = math.degrees(angle_radians)
+print(angle_degres)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">30.000000000000004</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p><code v-pre>math.asin()</code> retourne l’arc sinus en radians. <code v-pre>math.degrees()</code> convertit ce résultat en degrés.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-12--trigonométrie">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-12--trigonométrie">#</doc-anchor-trigger>
+        <span>Exercice 12 : Trigonométrie</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Calculer l’angle (en degrés) dont le cosinus est égal à <span class="math">\sqrt{2}/2</span>.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+valeur_cos = math.sqrt(2)/2
+angle_radians = math.acos(valeur_cos)
+angle_degres = math.degrees(angle_radians)
+print(angle_degres)</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">45.0</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p><code v-pre>math.acos()</code> est la fonction d’arc cosinus, inverse du cosinus.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-13--aire-dun-triangle">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-13--aire-dun-triangle">#</doc-anchor-trigger>
+        <span>Exercice 13 : Aire d&#x27;un triangle</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Calculer l’aire d’un triangle dont deux côtés mesurent 7 et 10, et l’angle entre eux est de 40° (formule : <span class="math">\text{aire} = \frac{1}{2}ab\sin(C)</span>).</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import math
+a = 7
+b = 10
+angle_C_deg = 40
+angle_C_rad = math.radians(angle_C_deg)
+aire = 0.5 * a * b * math.sin(angle_C_rad)
+print(round(aire, 2))</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">22.57</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="commentaire">
+<template #title>commentaire</template>
+<p>La fonction sinus est utilisée pour calculer l’aire du triangle selon la formule trigonométrique classique.</p>
+<hr>
+</doc-tab>
 
                                 
                                 <!-- Required only on API pages -->
@@ -296,20 +654,20 @@ print(tableau)</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/numpy-linalgsolve/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../2-math/7-math/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Fonction linalg.​solve</span>
+                                                <span class="block mt-1">Bibliothéques math</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/xo-arange/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../3-numpy/1-numpy/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Exercices - arange</span>
+                                                <span class="block mt-1"> Bibliothéque numpy</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -353,6 +711,6 @@ print(tableau)</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Exercices - Array", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Exercices d'entraînment", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>
