@@ -1,4 +1,7 @@
-# Bibliothéques `math`
+---
+title : Bibliothéques `math`
+order : 0
+---
 
 Cette bibliothéque standard de PYTHON permet d'élargir le nombre d'opérations mathématiques possibles au-delà des opérations de base déjà présentes en PYTHON. 
 
