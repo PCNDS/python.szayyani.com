@@ -1,6 +1,6 @@
 {
   "version": "3.11.0",
-  "created": "2025-08-01T06:20:44Z",
+  "created": "2025-08-23T22:18:40Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -60,6 +60,18 @@
     },
     {
       "path": "3-numpy/numpy-linalgsolve/index.html"
+    },
+    {
+      "path": "3-numpy/xo-arange/index.html"
+    },
+    {
+      "path": "3-numpy/xo-array/index.html"
+    },
+    {
+      "path": "3-numpy/xo-general/index.html"
+    },
+    {
+      "path": "3-numpy/xo-linspace/index.html"
     },
     {
       "path": "3-numpy\\5-numpy\\index.html",

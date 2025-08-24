@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://python.szayyani.com/sitemap.xml.gz

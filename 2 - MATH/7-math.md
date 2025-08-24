@@ -108,5 +108,6 @@ Une autre utilisation importante de cette bibliothéque est la présence des con
 |$\infty$| `math.inf`|
 
 
-> [!TIP]
-> La particularité de la bibliothéques `math` est le fait qu'elle est conçu pour opérer sur des ***scalaires***, c'est à dire un seul nombre à chaque fois, et *non* une série de nombre. 
+!!!tip 
+La particularité de la bibliothéques `math` est le fait qu'elle est conçu pour opérer sur des ***scalaires***, c'est à dire un seul nombre à chaque fois, et *non* une série de nombre. 
+!!!
