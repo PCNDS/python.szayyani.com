@@ -17,7 +17,7 @@ Produire un graphique de nuages de points à partir des listes suivenantes : `A 
 +++ sortie 
 
 +++ commentaire
-
++++
 
 ## Exercice 1 : Tracer une ligne simple
 +++ Enoncé  
@@ -38,6 +38,7 @@ Une ligne brisée passant par les points (0,1), (1,3), (2,2), (3,4).
 +++ Commentaires  
 Si on ne donne qu’une liste, matplotlib utilise automatiquement l’index (0,1,2,…) comme axe des abscisses.  
 
++++
 ---
 
 ## Exercice 2 : Tracer deux courbes sur le même graphique
@@ -62,6 +63,7 @@ Deux courbes apparaissent : l’une croissante et l’autre décroissante.
 +++ Commentaires  
 Plusieurs appels à `plt.plot()` permettent d’afficher plusieurs courbes sur le même graphique.  
 
++++
 ---
 
 ## Exercice 3 : Ajouter un titre et des labels
@@ -87,6 +89,7 @@ Un graphique avec un titre "Courbe simple", l’axe des abscisses nommé "Indice
 +++ Commentaires  
 Les fonctions `plt.title()`, `plt.xlabel()` et `plt.ylabel()` permettent d’ajouter des annotations au graphique.  
 
++++
 ---
 
 ## Exercice 4 : Tracer une fonction mathématique
@@ -111,6 +114,7 @@ Une parabole symétrique centrée en 0.
 +++ Commentaires  
 On peut calculer les valeurs d’une fonction mathématique avec une boucle ou une liste en compréhension.  
 
++++
 ---
 
 ## Exercice 5 : Modifier l’apparence d’une courbe
@@ -135,6 +139,7 @@ Une courbe cubique rouge en pointillés.
 +++ Commentaires  
 Les arguments de style dans `plt.plot()` permettent de changer couleur, forme des points et type de ligne.  
 
++++
 ---
 
 ## Exercice 6 : Ajouter une légende
@@ -161,6 +166,7 @@ Deux courbes avec une légende en haut à droite.
 +++ Commentaires  
 `plt.legend()` affiche la légende basée sur les labels fournis dans `plt.plot()`.  
 
++++
 ---
 
 ## Exercice 7 : Tracer un nuage de points (scatter plot)
@@ -185,6 +191,7 @@ Un nuage de points verts en diagonale décroissante.
 +++ Commentaires  
 `plt.scatter()` permet de faire des graphiques de dispersion au lieu de courbes continues.  
 
++++
 ---
 
 ## Exercice 8 : Tracer un histogramme
@@ -208,6 +215,7 @@ Un histogramme montrant la fréquence d’apparition de chaque valeur.
 +++ Commentaires  
 Un histogramme est utile pour visualiser la répartition d’un jeu de données.  
 
++++
 ---
 
 ## Exercice 9 : Tracer plusieurs sous-graphiques
@@ -240,6 +248,7 @@ Deux graphiques superposés : une droite et une parabole.
 +++ Commentaires  
 `plt.subplot(n,m,i)` divise la fenêtre en `n × m` graphiques et affiche le i-ème.  
 
++++
 ---
 
 ## Exercice 10 : Tracer une courbe avec style avancé
