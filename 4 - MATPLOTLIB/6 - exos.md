@@ -286,10 +286,10 @@ Cet exercice combine plusieurs notions : styles, légende, grille, et utilisatio
 
 ### Exercice 1
 
-+++Enoncé
++++ Enoncé
 Trace la courbe de la fonction \$ y = 2x \$ pour \$ x \$ allant de -10 à 10.
 
-+++code
++++ code
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -300,9 +300,9 @@ y = 2*x
 plt.plot(x, y)
 plt.show()
 ```
-+++sortie
++++ sortie
 ![exercice_1](https://hackmd.io/_uploads/S1Wz3wiqeg.png)
-+++remarques
++++ Remarquess
 Premier contact avec `plot()`, qui trace une courbe à partir de deux séries de valeurs.
 +++
 
@@ -311,10 +311,10 @@ Premier contact avec `plot()`, qui trace une courbe à partir de deux séries de
 
 ### Exercice 2
 
-+++Enoncé
++++ Enoncé
 Reprends le graphique précédent et ajoute un titre, ainsi que des noms aux axes.
 
-+++code
++++ code
 ```python
 plt.plot(x, y)
 plt.title("Graphique de y = 2x")
@@ -322,10 +322,9 @@ plt.xlabel("x")
 plt.ylabel("y")
 plt.show()
 ```
-
-+++sortie
++++ sortie
 ![exercice_2](https://hackmd.io/_uploads/BJPmhvi9xl.png)
-+++remarques
++++ remarques
 On introduit ici les fonctions `title()`, `xlabel()` et `ylabel()`.
 +++
 
@@ -334,10 +333,10 @@ On introduit ici les fonctions `title()`, `xlabel()` et `ylabel()`.
 
 ### Exercice 3
 
-+++Enoncé
++++ Enoncé
 Trace la courbe \$ y = x^2 \$ pour \$ x \$ entre -10 et 10, en rouge pointillé et épaisseur 2.
 
-+++code
++++ Code
 ```python
 x = np.linspace(-10, 10, 200)
 y = x**2
@@ -349,12 +348,8 @@ plt.show()
 +++sortie
 ![exercice_3](https://hackmd.io/_uploads/BJED3wsqeg.png)
 
-+++remarques
++++ Remarques
 On introduit le choix du style avec `"r--"` (rouge, ligne pointillée).
-
-
-
-
 
 +++
 
@@ -363,10 +358,10 @@ On introduit le choix du style avec `"r--"` (rouge, ligne pointillée).
 
 ### Exercice 4
 
-+++Enoncé
++++ Enoncé
 Sur un même graphique, trace \$ y = x \$, \$ y = x^2 \$, et \$ y = x^3 \$, avec légende.
 
-+++code
++++ Code
 ```python
 x = np.linspace(-10, 10, 200)
 plt.plot(x, x, label="y=x")
@@ -379,7 +374,7 @@ plt.show()
 +++sortie
 ![exercice_4](https://hackmd.io/_uploads/r1hR3wo9el.png)
 
-+++remarques
++++ Remarquess
 Une même figure peut afficher plusieurs fonctions, et `legend()` automatise l’affichage des noms.
 
 +++
@@ -389,10 +384,10 @@ Une même figure peut afficher plusieurs fonctions, et `legend()` automatise l�
 
 ### Exercice 5
 
-+++Enoncé
++++ Enoncé
 Trace \$ y = \sin(x) \$ avec des marqueurs au lieu d’une ligne continue.
 
-+++code
++++ Code
 ```python
 x = np.linspace(0, 2*np.pi, 20)
 y = np.sin(x)
@@ -404,7 +399,7 @@ plt.show()
 +++sortie
 ![exercice_5](https://hackmd.io/_uploads/SyNZpDs9le.png)
 
-+++remarques
++++ Remarquess
 L’option `"o"` permet de remplacer la ligne par des cercles aux positions données.
 
 +++
@@ -414,10 +409,10 @@ L’option `"o"` permet de remplacer la ligne par des cercles aux positions donn
 
 ### Exercice 6
 
-+++Enoncé
++++ Enoncé
 Trace \$ y = \cos(x) \$ entre -10 et 10, avec des limites d’axes fixées.
 
-+++code
++++ Code
 ```python
 x = np.linspace(-10, 10, 400)
 y = np.cos(x)
@@ -431,12 +426,8 @@ plt.show()
 +++sortie
 ![exercice_6](https://hackmd.io/_uploads/r1jMTwocee.png)
 
-+++remarques
++++ Remarquess
 Avec `xlim()` et `ylim()`, on définit précisément la zone affichée.
-
-
-
-
 
 +++
 
@@ -445,10 +436,10 @@ Avec `xlim()` et `ylim()`, on définit précisément la zone affichée.
 
 ### Exercice 7
 
-+++Enoncé
++++ Enoncé
 Trace \$ y = e^x \$ pour \$ x \$ entre -2 et 2. Ajoute une grille.
 
-+++code
++++ Code
 ```python
 x = np.linspace(-2, 2, 200)
 y = np.exp(x)
@@ -461,12 +452,8 @@ plt.show()
 +++sortie
 ![exercice_7](https://hackmd.io/_uploads/Hks76Diqee.png)
 
-+++remarques
++++ Remarquess
 L’option `grid(True)` rend la lecture plus précise.
-
-
-
-
 
 +++
 
@@ -475,10 +462,10 @@ L’option `grid(True)` rend la lecture plus précise.
 
 ### Exercice 8
 
-+++Enoncé
++++ Enoncé
 Crée une figure avec **deux sous-graphes** côte à côte : $\sin(x)$ et $\cos(x)$.
 
-+++code
++++ Code
 ```python
 x = np.linspace(0, 2*np.pi, 200)
 
@@ -496,12 +483,8 @@ plt.show()
 +++sortie
 ![exercice_8](https://hackmd.io/_uploads/rkuNTDo5xe.png)
 
-+++remarques
++++ Remarquess
 Avec `subplot(lignes, colonnes, position)`, on affiche plusieurs figures dans une seule fenêtre.
-
-
-
-
 
 +++
 
@@ -510,10 +493,10 @@ Avec `subplot(lignes, colonnes, position)`, on affiche plusieurs figures dans un
 
 ### Exercice 9
 
-+++Enoncé
++++ Enoncé
 Génère 100 valeurs aléatoires suivant une loi normale et trace l’histogramme.
 
-+++code
++++ Code
 ```python
 data = np.random.normal(0, 1, 100)
 
@@ -524,12 +507,8 @@ plt.show()
 +++sortie
 ![exercice_9](https://hackmd.io/_uploads/SyVPpDoqlg.png)
 
-+++remarques
++++ Remarquess
 `hist()` permet de visualiser la répartition de données expérimentales ou aléatoires.
-
-
-
-
 
 +++
 
@@ -538,13 +517,13 @@ plt.show()
 
 ### Exercice 10
 
-+++Enoncé
++++ Enoncé
 Crée une figure avec deux sous-graphes :
 
   - en haut la courbe \$ y = \sin(x) \$,
   - en bas un histogramme de 200 valeurs aléatoires uniformes entre 0 et 10.
 
-+++code
++++ Code
 ```python
 x = np.linspace(0, 2*np.pi, 200)
 y = np.sin(x)
@@ -563,14 +542,10 @@ plt.show()
 ```
 
 +++sortie
-![exercice_10](https://hackmd.io/_uploads/ry0OTPi9le.png)
+![exercice_10](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/05ddc7ef-dae1-4d8f-ad7d-066a7178e983/5e329622.png)
 
-+++remarques
++++ Remarquess
 On combine deux types de graphes (courbes et histogrammes) et `tight_layout()` ajuste les espaces.
-
-
-
-
 
 +++
 
@@ -596,5 +571,5 @@ Veux-tu que je regroupe directement ces fichiers pour téléchargement ?
 
 [^6]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/30598b08-136e-4dbc-bfee-4633652fd73a/120c01c1.png
 
-[^7]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/05ddc7ef-dae1-4d8f-ad7d-066a7178e983/5e329622.png
+[^7]: 
 
