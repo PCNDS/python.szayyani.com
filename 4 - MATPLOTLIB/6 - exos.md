@@ -271,12 +271,12 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
-
 +++ Sortie  
 Une sinusoïde bleue avec des cercles sur chaque point, une grille et une légende.  
 
 +++ Commentaires  
 Cet exercice combine plusieurs notions : styles, légende, grille, et utilisation de `numpy` pour générer des points.  
++++
 
 ***
 
