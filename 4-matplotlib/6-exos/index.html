@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809472972839">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810593384243">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,12 +31,14 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.809472972839" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810593384243" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.809472972839" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810593384243" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.809472972839" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.809472972839" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810593384243" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.810593384243" defer></script>
+    <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
+    <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -551,7 +553,349 @@ plt.show()</code></pre>
 <doc-tab v-cloak id="commentaires">
 <template #title>Commentaires</template>
 <p>Cet exercice combine plusieurs notions : styles, légende, grille, et utilisation de <code v-pre>numpy</code> pour générer des points.</p>
+<hr>
+<doc-anchor-target id="feuille-dexercices--premiers-graphiques-avec-matplotlib">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#feuille-dexercices--premiers-graphiques-avec-matplotlib">#</doc-anchor-trigger>
+        <span>Feuille d’exercices : Premiers graphiques avec Matplotlib</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="exercice-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-1">#</doc-anchor-trigger>
+        <span>Exercice 1</span>
+    </h3>
+</doc-anchor-target>
 </doc-tab>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Trace la courbe de la fonction $ y = 2x $ pour $ x $ allant de -10 à 10.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-10, 10, 100)
+y = 2*x
+
+plt.plot(x, y)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Une droite passant par l’origine, de pente 2.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>Premier contact avec <code v-pre>plot()</code>, qui trace une courbe à partir de deux séries de valeurs.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-2">#</doc-anchor-trigger>
+        <span>Exercice 2</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Reprends le graphique précédent et ajoute un titre, ainsi que des noms aux axes.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">plt.plot(x, y)
+plt.title(&quot;Graphique de y = 2x&quot;)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Le même graphique avec un titre et des intitulés d’axes.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>On introduit ici les fonctions <code v-pre>title()</code>, <code v-pre>xlabel()</code> et <code v-pre>ylabel()</code>.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-3">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-3">#</doc-anchor-trigger>
+        <span>Exercice 3</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Trace la courbe $ y = x^2 $ pour $ x $ entre -10 et 10, en rouge pointillé et épaisseur 2.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-10, 10, 200)
+y = x**2
+
+plt.plot(x, y, &quot;r--&quot;, linewidth=2)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Une parabole rouge en pointillés, plus épaisse qu’avant.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>On introduit le choix du style avec <code v-pre>&quot;r--&quot;</code> (rouge, ligne pointillée).</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-4">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-4">#</doc-anchor-trigger>
+        <span>Exercice 4</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Sur un même graphique, trace $ y = x $, $ y = x<sup>2 $, et $ y = x</sup>3 $, avec légende.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-10, 10, 200)
+plt.plot(x, x, label=&quot;y=x&quot;)
+plt.plot(x, x**2, label=&quot;y=x²&quot;)
+plt.plot(x, x**3, label=&quot;y=x³&quot;)
+plt.legend()
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Trois courbes distinctes, avec une légende permettant d’identifier chacune.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>Une même figure peut afficher plusieurs fonctions, et <code v-pre>legend()</code> automatise l’affichage des noms.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-5">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-5">#</doc-anchor-trigger>
+        <span>Exercice 5</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Trace $ y = \sin(x) $ avec des marqueurs au lieu d’une ligne continue.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(0, 2*np.pi, 20)
+y = np.sin(x)
+
+plt.plot(x, y, &quot;o&quot;)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Une série de points disposés suivant une sinusoïde.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>L’option <code v-pre>&quot;o&quot;</code> permet de remplacer la ligne par des cercles aux positions données.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-6">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-6">#</doc-anchor-trigger>
+        <span>Exercice 6</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Trace $ y = \cos(x) $ entre -10 et 10, avec des limites d’axes fixées.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-10, 10, 400)
+y = np.cos(x)
+
+plt.plot(x, y)
+plt.xlim(-2*np.pi, 2*np.pi)
+plt.ylim(-1.5, 1.5)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>La courbe du cosinus bien cadrée dans la fenêtre définie.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>Avec <code v-pre>xlim()</code> et <code v-pre>ylim()</code>, on définit précisément la zone affichée.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-7">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-7">#</doc-anchor-trigger>
+        <span>Exercice 7</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Trace $ y = e^x $ pour $ x $ entre -2 et 2. Ajoute une grille.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-2, 2, 200)
+y = np.exp(x)
+
+plt.plot(x, y)
+plt.grid(True)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Une courbe exponentielle ascendante avec un quadrillage.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>L’option <code v-pre>grid(True)</code> rend la lecture plus précise.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-8">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-8">#</doc-anchor-trigger>
+        <span>Exercice 8</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Crée une figure avec <strong>deux sous-graphes</strong> côte à côte : <span class="math">\sin(x)</span> et <span class="math">\cos(x)</span>.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(0, 2*np.pi, 200)
+
+plt.subplot(1,2,1)
+plt.plot(x, np.sin(x))
+plt.title(&quot;sin(x)&quot;)
+
+plt.subplot(1,2,2)
+plt.plot(x, np.cos(x))
+plt.title(&quot;cos(x)&quot;)
+
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Deux graphiques apparaissent côte à côte : un pour sin, un pour cos.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>Avec <code v-pre>subplot(lignes, colonnes, position)</code>, on affiche plusieurs figures dans une seule fenêtre.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-9">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-9">#</doc-anchor-trigger>
+        <span>Exercice 9</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Génère 100 valeurs aléatoires suivant une loi normale et trace l’histogramme.</p>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">data = np.random.normal(0, 1, 100)
+
+plt.hist(data, bins=20)
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Un histogramme avec une distribution en forme de cloche (approximation d’une gaussienne).</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p><code v-pre>hist()</code> permet de visualiser la répartition de données expérimentales ou aléatoires.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<doc-anchor-target id="exercice-10">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#exercice-10">#</doc-anchor-trigger>
+        <span>Exercice 10</span>
+    </h3>
+</doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="enoncé">
+<template #title>Enoncé</template>
+<p>Crée une figure avec deux sous-graphes :</p>
+<ul>
+<li>en haut la courbe $ y = \sin(x) $,</li>
+<li>en bas un histogramme de 200 valeurs aléatoires uniformes entre 0 et 10.</li>
+</ul>
+</doc-tab>
+<doc-tab v-cloak id="code">
+<template #title>code</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(0, 2*np.pi, 200)
+y = np.sin(x)
+data = np.random.uniform(0, 10, 200)
+
+plt.subplot(2,1,1)
+plt.plot(x, y)
+plt.title(&quot;sin(x)&quot;)
+
+plt.subplot(2,1,2)
+plt.hist(data, bins=20)
+plt.title(&quot;Histogramme [0,10]&quot;)
+
+plt.tight_layout()
+plt.show()</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="sortie">
+<template #title>sortie</template>
+<p>Une fenêtre divisée en deux : en haut une sinusoïde, en bas un histogramme.</p>
+</doc-tab>
+<doc-tab v-cloak id="remarques">
+<template #title>remarques</template>
+<p>On combine deux types de graphes (courbes et histogrammes) et <code v-pre>tight_layout()</code> ajuste les espaces.</p>
+</doc-tab>
+</doc-tabs>
+<hr>
+<p>Ce fichier est prêt à être sauvegardé en <code v-pre>.md</code>. Il peut être ouvert dans n’importe quel éditeur Markdown ou plateforme compatible, et utilisé avec les élèves pour s’exercer à matplotlib.pyplot.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -618,6 +962,6 @@ plt.show()</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Exercice d'application", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Exercice d'application", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: true, tocDepth: 23 }</script>
 </body>
 </html>
