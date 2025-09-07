@@ -278,3 +278,325 @@ Une sinusoïde bleue avec des cercles sur chaque point, une grille et une légen
 +++ Commentaires  
 Cet exercice combine plusieurs notions : styles, légende, grille, et utilisation de `numpy` pour générer des points.  
 
+***
+
+
+# Feuille d’exercices : Premiers graphiques avec Matplotlib
+
+
+### Exercice 1
+
++++ Enoncé
+Trace la courbe de la fonction \$ y = 2x \$ pour \$ x \$ allant de -10 à 10.
+
++++code
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-10, 10, 100)
+y = 2*x
+
+plt.plot(x, y)
+plt.show()
+```
+
++++sortie
+Une droite passant par l’origine, de pente 2.
+
++++remarques
+Premier contact avec `plot()`, qui trace une courbe à partir de deux séries de valeurs.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 2
+
++++Enoncé
+Reprends le graphique précédent et ajoute un titre, ainsi que des noms aux axes.
+
++++code
+```python
+plt.plot(x, y)
+plt.title("Graphique de y = 2x")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+```
+
++++sortie
+Le même graphique avec un titre et des intitulés d’axes.
+
++++remarques
+On introduit ici les fonctions `title()`, `xlabel()` et `ylabel()`.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 3
+
++++Enoncé
+Trace la courbe \$ y = x^2 \$ pour \$ x \$ entre -10 et 10, en rouge pointillé et épaisseur 2.
+
++++code
+```python
+x = np.linspace(-10, 10, 200)
+y = x**2
+
+plt.plot(x, y, "r--", linewidth=2)
+plt.show()
+```
+
++++sortie
+Une parabole rouge en pointillés, plus épaisse qu’avant.
+
++++remarques
+On introduit le choix du style avec `"r--"` (rouge, ligne pointillée).
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 4
+
++++Enoncé
+Sur un même graphique, trace \$ y = x \$, \$ y = x^2 \$, et \$ y = x^3 \$, avec légende.
+
++++code
+```python
+x = np.linspace(-10, 10, 200)
+plt.plot(x, x, label="y=x")
+plt.plot(x, x**2, label="y=x²")
+plt.plot(x, x**3, label="y=x³")
+plt.legend()
+plt.show()
+```
+
++++sortie
+Trois courbes distinctes, avec une légende permettant d’identifier chacune.
+
++++remarques
+Une même figure peut afficher plusieurs fonctions, et `legend()` automatise l’affichage des noms.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 5
+
++++Enoncé
+Trace \$ y = \sin(x) \$ avec des marqueurs au lieu d’une ligne continue.
+
++++code
+```python
+x = np.linspace(0, 2*np.pi, 20)
+y = np.sin(x)
+
+plt.plot(x, y, "o")
+plt.show()
+```
+
++++sortie
+Une série de points disposés suivant une sinusoïde.
+
++++remarques
+L’option `"o"` permet de remplacer la ligne par des cercles aux positions données.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 6
+
++++Enoncé
+Trace \$ y = \cos(x) \$ entre -10 et 10, avec des limites d’axes fixées.
+
++++code
+```python
+x = np.linspace(-10, 10, 400)
+y = np.cos(x)
+
+plt.plot(x, y)
+plt.xlim(-2*np.pi, 2*np.pi)
+plt.ylim(-1.5, 1.5)
+plt.show()
+```
+
++++sortie
+La courbe du cosinus bien cadrée dans la fenêtre définie.
+
++++remarques
+Avec `xlim()` et `ylim()`, on définit précisément la zone affichée.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 7
+
++++Enoncé
+Trace \$ y = e^x \$ pour \$ x \$ entre -2 et 2. Ajoute une grille.
+
++++code
+```python
+x = np.linspace(-2, 2, 200)
+y = np.exp(x)
+
+plt.plot(x, y)
+plt.grid(True)
+plt.show()
+```
+
++++sortie
+Une courbe exponentielle ascendante avec un quadrillage.
+
++++remarques
+L’option `grid(True)` rend la lecture plus précise.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 8
+
++++Enoncé
+Crée une figure avec **deux sous-graphes** côte à côte : $\sin(x)$ et $\cos(x)$.
+
++++code
+```python
+x = np.linspace(0, 2*np.pi, 200)
+
+plt.subplot(1,2,1)
+plt.plot(x, np.sin(x))
+plt.title("sin(x)")
+
+plt.subplot(1,2,2)
+plt.plot(x, np.cos(x))
+plt.title("cos(x)")
+
+plt.show()
+```
+
++++sortie
+Deux graphiques apparaissent côte à côte : un pour sin, un pour cos.
+
++++remarques
+Avec `subplot(lignes, colonnes, position)`, on affiche plusieurs figures dans une seule fenêtre.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 9
+
++++Enoncé
+Génère 100 valeurs aléatoires suivant une loi normale et trace l’histogramme.
+
++++code
+```python
+data = np.random.normal(0, 1, 100)
+
+plt.hist(data, bins=20)
+plt.show()
+```
+
++++sortie
+Un histogramme avec une distribution en forme de cloche (approximation d’une gaussienne).
+
++++remarques
+`hist()` permet de visualiser la répartition de données expérimentales ou aléatoires.
+
+
+
+
+
++++
+
+
+***
+
+### Exercice 10
+
++++Enoncé
+Crée une figure avec deux sous-graphes :
+
+  - en haut la courbe \$ y = \sin(x) \$,
+  - en bas un histogramme de 200 valeurs aléatoires uniformes entre 0 et 10.
+
++++code
+```python
+x = np.linspace(0, 2*np.pi, 200)
+y = np.sin(x)
+data = np.random.uniform(0, 10, 200)
+
+plt.subplot(2,1,1)
+plt.plot(x, y)
+plt.title("sin(x)")
+
+plt.subplot(2,1,2)
+plt.hist(data, bins=20)
+plt.title("Histogramme [0,10]")
+
+plt.tight_layout()
+plt.show()
+```
+
++++sortie
+Une fenêtre divisée en deux : en haut une sinusoïde, en bas un histogramme.
+
++++remarques
+On combine deux types de graphes (courbes et histogrammes) et `tight_layout()` ajuste les espaces.
+
+
+
+
+
++++
+
+
+***
+
+Ce fichier est prêt à être sauvegardé en `.md`. Il peut être ouvert dans n’importe quel éditeur Markdown ou plateforme compatible, et utilisé avec les élèves pour s’exercer à matplotlib.pyplot.
+
