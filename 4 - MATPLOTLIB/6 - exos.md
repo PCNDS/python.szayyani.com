@@ -280,13 +280,13 @@ Cet exercice combine plusieurs notions : styles, légende, grille, et utilisatio
 
 ***
 
-
 # Feuille d’exercices : Premiers graphiques avec Matplotlib
 
+***
 
 ### Exercice 1
 
-+++ Enoncé
++++Enoncé
 Trace la courbe de la fonction \$ y = 2x \$ pour \$ x \$ allant de -10 à 10.
 
 +++code
@@ -300,17 +300,10 @@ y = 2*x
 plt.plot(x, y)
 plt.show()
 ```
-
 +++sortie
-Une droite passant par l’origine, de pente 2.
-
+![exercice_1](https://hackmd.io/_uploads/S1Wz3wiqeg.png)
 +++remarques
 Premier contact avec `plot()`, qui trace une courbe à partir de deux séries de valeurs.
-
-
-
-
-
 +++
 
 
@@ -331,15 +324,9 @@ plt.show()
 ```
 
 +++sortie
-Le même graphique avec un titre et des intitulés d’axes.
-
+![exercice_2](https://hackmd.io/_uploads/BJPmhvi9xl.png)
 +++remarques
 On introduit ici les fonctions `title()`, `xlabel()` et `ylabel()`.
-
-
-
-
-
 +++
 
 
@@ -360,7 +347,7 @@ plt.show()
 ```
 
 +++sortie
-Une parabole rouge en pointillés, plus épaisse qu’avant.
+![exercice_3](https://hackmd.io/_uploads/BJED3wsqeg.png)
 
 +++remarques
 On introduit le choix du style avec `"r--"` (rouge, ligne pointillée).
@@ -390,14 +377,10 @@ plt.show()
 ```
 
 +++sortie
-Trois courbes distinctes, avec une légende permettant d’identifier chacune.
+![exercice_4](https://hackmd.io/_uploads/r1hR3wo9el.png)
 
 +++remarques
 Une même figure peut afficher plusieurs fonctions, et `legend()` automatise l’affichage des noms.
-
-
-
-
 
 +++
 
@@ -419,14 +402,10 @@ plt.show()
 ```
 
 +++sortie
-Une série de points disposés suivant une sinusoïde.
+![exercice_5](https://hackmd.io/_uploads/SyNZpDs9le.png)
 
 +++remarques
 L’option `"o"` permet de remplacer la ligne par des cercles aux positions données.
-
-
-
-
 
 +++
 
@@ -450,7 +429,7 @@ plt.show()
 ```
 
 +++sortie
-La courbe du cosinus bien cadrée dans la fenêtre définie.
+![exercice_6](https://hackmd.io/_uploads/r1jMTwocee.png)
 
 +++remarques
 Avec `xlim()` et `ylim()`, on définit précisément la zone affichée.
@@ -480,7 +459,7 @@ plt.show()
 ```
 
 +++sortie
-Une courbe exponentielle ascendante avec un quadrillage.
+![exercice_7](https://hackmd.io/_uploads/Hks76Diqee.png)
 
 +++remarques
 L’option `grid(True)` rend la lecture plus précise.
@@ -515,7 +494,7 @@ plt.show()
 ```
 
 +++sortie
-Deux graphiques apparaissent côte à côte : un pour sin, un pour cos.
+![exercice_8](https://hackmd.io/_uploads/rkuNTDo5xe.png)
 
 +++remarques
 Avec `subplot(lignes, colonnes, position)`, on affiche plusieurs figures dans une seule fenêtre.
@@ -543,7 +522,7 @@ plt.show()
 ```
 
 +++sortie
-Un histogramme avec une distribution en forme de cloche (approximation d’une gaussienne).
+![exercice_9](https://hackmd.io/_uploads/SyVPpDoqlg.png)
 
 +++remarques
 `hist()` permet de visualiser la répartition de données expérimentales ou aléatoires.
@@ -584,7 +563,7 @@ plt.show()
 ```
 
 +++sortie
-Une fenêtre divisée en deux : en haut une sinusoïde, en bas un histogramme.
+![exercice_10](https://hackmd.io/_uploads/ry0OTPi9le.png)
 
 +++remarques
 On combine deux types de graphes (courbes et histogrammes) et `tight_layout()` ajuste les espaces.
@@ -598,5 +577,24 @@ On combine deux types de graphes (courbes et histogrammes) et `tight_layout()` a
 
 ***
 
-Ce fichier est prêt à être sauvegardé en `.md`. Il peut être ouvert dans n’importe quel éditeur Markdown ou plateforme compatible, et utilisé avec les élèves pour s’exercer à matplotlib.pyplot.
+Tu peux maintenant télécharger les fichiers image et copier ce texte dans un fichier Markdown.
+Pour obtenir le fichier Markdown complet avec les liens d’images prêts à l’emploi, télécharge toutes les images (exercice_1.png à exercice_10.png) et place-les dans le même dossier que ton fichier .md.
+Veux-tu que je regroupe directement ces fichiers pour téléchargement ?
+<span style="display:none">[^1][^2][^3][^4][^5][^6][^7]</span>
+
+<div style="text-align: center">⁂</div>
+
+[^1]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/d5ef153c-e59b-4872-9d1f-97d2e16c7012/894572af.png
+
+[^2]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/d5ef153c-e59b-4872-9d1f-97d2e16c7012/222af4bc.png
+
+[^3]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/d5ef153c-e59b-4872-9d1f-97d2e16c7012/ea4f3ded.png
+
+[^4]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/30598b08-136e-4dbc-bfee-4633652fd73a/45634041.png
+
+[^5]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/30598b08-136e-4dbc-bfee-4633652fd73a/f71606a4.png
+
+[^6]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/30598b08-136e-4dbc-bfee-4633652fd73a/120c01c1.png
+
+[^7]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/05ddc7ef-dae1-4d8f-ad7d-066a7178e983/5e329622.png
 
