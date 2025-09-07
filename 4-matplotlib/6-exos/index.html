@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810593651111">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810594288273">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -33,12 +33,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.810593651111" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810594288273" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810593651111" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810594288273" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810593651111" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.810593651111" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810594288273" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.810594288273" defer></script>
     <link href="../../resources/css/katex.css?v=3.11.0" rel="stylesheet">
     <script id="katex-js" data-cfasync="false" src="../../resources/js/katex.js?v=3.11.0" defer></script>
 </head>
@@ -595,8 +595,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>Premier contact avec <code v-pre>plot()</code>, qui trace une courbe à partir de deux séries de valeurs.</p>
 </doc-tab>
 </doc-tabs>
@@ -648,7 +648,7 @@ plt.show()</code></pre>
 <p>Trace la courbe $ y = x^2 $ pour $ x $ entre -10 et 10, en rouge pointillé et épaisseur 2.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-10, 10, 200)
 y = x**2
@@ -666,7 +666,7 @@ plt.show()</code></pre>
 </p>
 </doc-tab>
 <doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<template #title>Remarques</template>
 <p>On introduit le choix du style avec <code v-pre>&quot;r--&quot;</code> (rouge, ligne pointillée).</p>
 </doc-tab>
 </doc-tabs>
@@ -683,7 +683,7 @@ plt.show()</code></pre>
 <p>Sur un même graphique, trace $ y = x $, $ y = x<sup>2 $, et $ y = x</sup>3 $, avec légende.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-10, 10, 200)
 plt.plot(x, x, label=&quot;y=x&quot;)
@@ -701,8 +701,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>Une même figure peut afficher plusieurs fonctions, et <code v-pre>legend()</code> automatise l’affichage des noms.</p>
 </doc-tab>
 </doc-tabs>
@@ -719,7 +719,7 @@ plt.show()</code></pre>
 <p>Trace $ y = \sin(x) $ avec des marqueurs au lieu d’une ligne continue.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(0, 2*np.pi, 20)
 y = np.sin(x)
@@ -736,8 +736,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>L’option <code v-pre>&quot;o&quot;</code> permet de remplacer la ligne par des cercles aux positions données.</p>
 </doc-tab>
 </doc-tabs>
@@ -754,7 +754,7 @@ plt.show()</code></pre>
 <p>Trace $ y = \cos(x) $ entre -10 et 10, avec des limites d’axes fixées.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-10, 10, 400)
 y = np.cos(x)
@@ -773,8 +773,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>Avec <code v-pre>xlim()</code> et <code v-pre>ylim()</code>, on définit précisément la zone affichée.</p>
 </doc-tab>
 </doc-tabs>
@@ -791,7 +791,7 @@ plt.show()</code></pre>
 <p>Trace $ y = e^x $ pour $ x $ entre -2 et 2. Ajoute une grille.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(-2, 2, 200)
 y = np.exp(x)
@@ -809,8 +809,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>L’option <code v-pre>grid(True)</code> rend la lecture plus précise.</p>
 </doc-tab>
 </doc-tabs>
@@ -827,7 +827,7 @@ plt.show()</code></pre>
 <p>Crée une figure avec <strong>deux sous-graphes</strong> côte à côte : <span class="math">\sin(x)</span> et <span class="math">\cos(x)</span>.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(0, 2*np.pi, 200)
 
@@ -850,8 +850,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>Avec <code v-pre>subplot(lignes, colonnes, position)</code>, on affiche plusieurs figures dans une seule fenêtre.</p>
 </doc-tab>
 </doc-tabs>
@@ -868,7 +868,7 @@ plt.show()</code></pre>
 <p>Génère 100 valeurs aléatoires suivant une loi normale et trace l’histogramme.</p>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">data = np.random.normal(0, 1, 100)
 
@@ -884,8 +884,8 @@ plt.show()</code></pre>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p><code v-pre>hist()</code> permet de visualiser la répartition de données expérimentales ou aléatoires.</p>
 </doc-tab>
 </doc-tabs>
@@ -906,7 +906,7 @@ plt.show()</code></pre>
 </ul>
 </doc-tab>
 <doc-tab v-cloak id="code">
-<template #title>code</template>
+<template #title>Code</template>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-python"><code v-pre class="language-python">x = np.linspace(0, 2*np.pi, 200)
 y = np.sin(x)
@@ -927,13 +927,13 @@ plt.show()</code></pre>
 <doc-tab v-cloak id="sortie">
 <template #title>sortie</template>
 <p><figure class="content-center">
-    <img src="https://hackmd.io/_uploads/ry0OTPi9le.png" alt="exercice_10" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/05ddc7ef-dae1-4d8f-ad7d-066a7178e983/5e329622.png" alt="exercice_10" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption">exercice_10</figcaption>
 </figure>
 </p>
 </doc-tab>
-<doc-tab v-cloak id="remarques">
-<template #title>remarques</template>
+<doc-tab v-cloak id="remarquess">
+<template #title>Remarquess</template>
 <p>On combine deux types de graphes (courbes et histogrammes) et <code v-pre>tight_layout()</code> ajuste les espaces.</p>
 </doc-tab>
 </doc-tabs>
@@ -956,7 +956,7 @@ Veux-tu que je regroupe directement ces fichiers pour téléchargement ?
 <p><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/30598b08-136e-4dbc-bfee-4633652fd73a/120c01c1.png">https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/30598b08-136e-4dbc-bfee-4633652fd73a/120c01c1.png</a><a href="#fnref:3" class="footnote-back-ref">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p><a href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/05ddc7ef-dae1-4d8f-ad7d-066a7178e983/5e329622.png">https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/f8fe95b8b4478bd4066d2efa8cb04187/05ddc7ef-dae1-4d8f-ad7d-066a7178e983/5e329622.png</a><a href="#fnref:4" class="footnote-back-ref">&#8617;</a></p>
+<p><a href="#fnref:4" class="footnote-back-ref">&#8617;</a></p>
 </li>
 </ol>
 </div>
